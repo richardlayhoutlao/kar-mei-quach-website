@@ -13,7 +13,7 @@ export default function Page() {
 
     <div>
       <label>Message *</label>
-      <textarea name="message" rows="5"></textarea>
+      <textarea name="message" rows={5}></textarea>
     </div>
 
     <button type="submit">Send Message</button>
