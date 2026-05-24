@@ -27,10 +27,10 @@ importers:
         specifier: ^1.4.3
         version: 1.4.3(@types/react-dom@19.2.3(@types/react@19.2.15))(@types/react@19.2.15)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       react:
-        specifier: ^19.2.4
+        specifier: ^19.2.6
         version: 19.2.6
       react-dom:
-        specifier: ^19.2.4
+        specifier: ^19.2.6
         version: 19.2.6(react@19.2.6)
       shadcn:
         specifier: ^4.8.0
@@ -52,7 +52,7 @@ importers:
         specifier: ^25.5.0
         version: 25.9.1
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.2.15
         version: 19.2.15
       '@types/react-dom':
         specifier: ^19.2.3
