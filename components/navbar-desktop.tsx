@@ -3,6 +3,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "@/public/Logo_2.png"
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
 
 import {
   NavigationMenu,
@@ -21,7 +23,10 @@ type NavbarDesktopProps = {
   moreItems: NavItem[]
 }
 
-const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => (
+const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
+  const { resolvedTheme, setTheme } = useTheme()
+
+  return (
   <div className="hidden lg:flex justify-center">
     <NavigationMenu viewport={false} className="flex justify-center w-full max-w-full h-60">
       <NavigationMenuList className="lg:gap-8 xl:gap-12 2xl:gap-16">
@@ -78,9 +83,32 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => (
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+          <button
+            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+            className="cursor-pointer p-2 rounded-md hover:bg-accent transition-colors"
+            aria-label="Toggle theme"
+          >
+            <div className="relative size-6">
+              <Sun
+                size={24}
+                className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+                  resolvedTheme === "dark" ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-0 opacity-0"
+                }`}
+              />
+              <Moon
+                size={24}
+                className={`absolute inset-0 transition-all duration-500 ease-in-out ${
+                  resolvedTheme === "dark" ? "-rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
+                }`}
+              />
+            </div>
+          </button>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   </div>
-)
+  )
+}
 
 export default NavbarDesktop
