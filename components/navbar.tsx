@@ -26,21 +26,21 @@ const moreItems = [
 
 export default function Navbar() {
   return (
-      <NavigationMenu viewport={false} className=" flex justify-center w-full max-w-full h-14 md:h-16 lg:h-20 2xl:h-40">
-        <NavigationMenuList className="gap-6">
+      <NavigationMenu viewport={false} className=" flex justify-center w-full max-w-full h-60">
+        <NavigationMenuList className="gap-10">
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="/">Home</Link>
+              <Link className="uppercase" href="/">Home</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="/about">About</Link>
+              <Link className="uppercase" href="/about">About</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="/pricing">Pricing</Link>
+              <Link className="uppercase" href="/pricing">Pricing</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -51,13 +51,13 @@ export default function Navbar() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Portfolio</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[160px]">
+            <NavigationMenuTrigger className="uppercase">Portfolio</NavigationMenuTrigger>
+            <NavigationMenuContent className="left-1/2 -translate-x-1/2">
+              <ul className="grid w-30">
                 {portfolioItems.map((item) => (
                   <li key={item.title}>
                     <NavigationMenuLink asChild>
-                      <Link href={item.href}>{item.title}</Link>
+                      <Link className="uppercase justify-center" href={item.href}>{item.title}</Link>
                     </NavigationMenuLink>
                   </li>
                 ))}
@@ -66,17 +66,17 @@ export default function Navbar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="/contact">Contact</Link>
+              <Link className="uppercase" href="/contact">Contact</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>More</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[160px]">
+            <NavigationMenuTrigger className="uppercase">More</NavigationMenuTrigger>
+            <NavigationMenuContent className="left-1/2 -translate-x-1/2">
+              <ul className="grid w-30">
                 {moreItems.map((item) => (
                   <li key={item.title}>
                     <NavigationMenuLink asChild>
-                      <Link href={item.href}>{item.title}</Link>
+                      <Link className="uppercase justify-center" href={item.href}>{item.title}</Link>
                     </NavigationMenuLink>
                   </li>
                 ))}
