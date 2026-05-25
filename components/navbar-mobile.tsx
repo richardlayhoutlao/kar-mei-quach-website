@@ -17,26 +17,40 @@ type MobileNavDropdownProps = {
   label: string
   items: NavItem[]
   onClose: () => void
+  isMenuOpen: boolean
 }
 
-const MobileNavDropdown = ({ label, items, onClose }: MobileNavDropdownProps) => {
+const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropdownProps) => {
   const [open, setOpen] = useState(false)
+  const [shouldAnimate, setShouldAnimate] = useState(false)
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      setShouldAnimate(false)
+      setOpen(false)
+    }
+  }, [isMenuOpen])
+
+  const handleToggle = () => {
+    setShouldAnimate(true)
+    setOpen(!open)
+  }
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center">
       <button
         className="uppercase tracking-widest text-sm flex items-center gap-1"
-        onClick={() => setOpen(!open)}
+        onClick={handleToggle}
       >
         {label}
         <ChevronDown
           size={14}
-          className={`transition-transform duration-300 ${open ? "rotate-180" : "rotate-0"}`}
+          className={`${shouldAnimate ? "transition-transform duration-300" : ""} ${open ? "rotate-180" : "rotate-0"}`}
         />
       </button>
       <div
-        className={`flex flex-col items-center gap-4 overflow-hidden transition-all duration-300 ease-in-out ${
-          open ? "max-h-40 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+        className={`flex flex-col items-center gap-4 overflow-hidden ${shouldAnimate ? "transition-all duration-300 ease-in-out" : ""} ${
+          open ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0 pointer-events-none mt-0"
         }`}
       >
         {items.map((item) => (
@@ -109,9 +123,9 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
           <Link className="uppercase tracking-widest text-sm" href="/" onClick={() => setMobileOpen(false)}>Home</Link>
           <Link className="uppercase tracking-widest text-sm" href="/about" onClick={() => setMobileOpen(false)}>About</Link>
           <Link className="uppercase tracking-widest text-sm" href="/pricing" onClick={() => setMobileOpen(false)}>Pricing</Link>
-          <MobileNavDropdown label="Portfolio" items={portfolioItems} onClose={() => setMobileOpen(false)} />
+          <MobileNavDropdown label="Portfolio" items={portfolioItems} onClose={() => setMobileOpen(false)} isMenuOpen={mobileOpen} />
           <Link className="uppercase tracking-widest text-sm" href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
-          <MobileNavDropdown label="More" items={moreItems} onClose={() => setMobileOpen(false)} />
+          <MobileNavDropdown label="More" items={moreItems} onClose={() => setMobileOpen(false)} isMenuOpen={mobileOpen} />
         </nav>
       </div>
     </div>
