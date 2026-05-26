@@ -14,7 +14,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/NavigationMenu"
 
 type NavItem = { title: string; href: string }
 
@@ -27,8 +27,8 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
   const { resolvedTheme, setTheme } = useTheme()
 
   return (
-  <div className="hidden lg:flex justify-center">
-    <NavigationMenu viewport={false} className="flex justify-center w-full max-w-full h-60">
+  <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center h-60 lg:gap-8 xl:gap-12 2xl:gap-16">
+    <NavigationMenu viewport={false} className="justify-end ml-auto">
       <NavigationMenuList className="lg:gap-8 xl:gap-12 2xl:gap-16">
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
@@ -45,11 +45,15 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
             <Link className="uppercase" href="/pricing">Pricing</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/">
-            <Image src={Logo} alt="Logo" width={150} height={150} />
-          </Link>
-        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+
+    <Link href="/">
+      <Image src={Logo} alt="Logo" width={150} height={150} />
+    </Link>
+
+    <NavigationMenu viewport={false} className="justify-start mr-auto">
+      <NavigationMenuList className="lg:gap-8 xl:gap-12 2xl:gap-16">
         <NavigationMenuItem>
           <NavigationMenuTrigger className="uppercase">Portfolio</NavigationMenuTrigger>
           <NavigationMenuContent className="left-1/2 -translate-x-1/2">

@@ -1,5 +1,5 @@
-import NavbarDesktop from "@/components/navbar-desktop"
-import NavbarMobile from "@/components/navbar-mobile"
+import NavbarDesktop from "@/components/layout/NavbarDesktop"
+import NavbarMobile from "@/components/layout/NavbarMobile"
 
 const portfolioItems = [
   { title: "Couple", href: "/portfolio/couple" },
@@ -14,7 +14,7 @@ const moreItems = [
 ]
 
 const Navbar = () => (
-  <header className="w-full">
+  <header className="relative z-10 w-full">
     <NavbarDesktop portfolioItems={portfolioItems} moreItems={moreItems} />
     <NavbarMobile portfolioItems={portfolioItems} moreItems={moreItems} />
   </header>
