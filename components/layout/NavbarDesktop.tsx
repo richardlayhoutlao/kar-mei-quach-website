@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 import Logo from "@/public/Logo_2.png"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
@@ -25,6 +26,8 @@ type NavbarDesktopProps = {
 
 const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
   const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
 
   return (
   <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center h-60 lg:gap-8 xl:gap-12 2xl:gap-16">
@@ -87,7 +90,7 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden xl:flex">
           <button
             onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
             className="cursor-pointer p-2 rounded-md hover:bg-accent transition-colors"
@@ -97,13 +100,13 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
               <Sun
                 size={24}
                 className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-                  resolvedTheme === "dark" ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-0 opacity-0"
+                  mounted && resolvedTheme === "dark" ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-0 opacity-0"
                 }`}
               />
               <Moon
                 size={24}
                 className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-                  resolvedTheme === "dark" ? "-rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
+                  mounted && resolvedTheme === "dark" ? "-rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
                 }`}
               />
             </div>

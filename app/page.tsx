@@ -44,7 +44,8 @@ const Page = () => (
         alt=""
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
-      <div className="absolute inset-0 bg-linear-to-t from-neutral-800/80 via-neutral-600/30 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-neutral-800/90 via-neutral-600/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-16 bg-linear-to-b from-background to-transparent dark:hidden" />
       <div className="absolute bottom-0 left-0 right-0 px-8 pb-12 md:px-16 md:pb-16 lg:px-24 lg:pb-20 flex flex-col items-center text-center">
         <h2 className="text-white/70 text-[10px] tracking-[0.45em] uppercase mb-5 font-medium">
           Couples&nbsp;&nbsp;·&nbsp;&nbsp;Maternity&nbsp;&nbsp;·&nbsp;&nbsp;Family&nbsp;&nbsp;·&nbsp;&nbsp;Kids
