@@ -1,6 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
-import { HeartHandshake, Baby, Home, Smile, type LucideIcon } from "lucide-react"
+import {
+  HeartHandshake,
+  Baby,
+  Home,
+  Smile,
+  type LucideIcon,
+} from "lucide-react"
 import { FeatureCard } from "@/components/ui/FeatureCard"
 
 type Service = {
@@ -39,25 +45,38 @@ const services: Service[] = [
 const Page = () => (
   <main>
     {/* Hero */}
-    <section className="relative w-full h-[calc(100vh-7rem)] lg:h-[calc(100vh-15rem)] min-h-[560px] overflow-hidden">
-      <Image src="/White.png" alt="Hero" className="object-cover" />
-      <div className="absolute inset-x-0 bottom-0 top-16 bg-linear-to-t from-neutral-800/90 via-neutral-600/30 to-transparent pointer-events-none" />
-        
+    <section className="relative h-[calc(100vh-7rem)] min-h-[560px] w-full overflow-hidden lg:h-[calc(100vh-15rem)]">
+      <div className="pointer-events-none absolute inset-x-0 top-16 bottom-0 bg-linear-to-t from-neutral-800/90 via-neutral-600/30 to-transparent" />
+
+          <Image
+            src="/White.png"
+            alt="Hero"
+            width={1440}
+            height={960}
+            className="hidden lg:block mx-auto"
+          />
       <div className="absolute inset-0 flex flex-col justify-end pb-24 md:pb-12 lg:pb-0">
-        <div className="px-8 pb-12 md:px-16 md:pb-16 lg:px-24 lg:pb-20 flex flex-col items-center text-center text-white">
-          <h2 className="text-[8px] sm:text-[10px] tracking-[0.45em] uppercase mb-5 font-medium">
+        <div className="flex flex-col items-center px-8 pb-12 text-center text-white md:px-16 md:pb-16 lg:px-24 lg:pb-20">
+          <Image
+            src="/White.png"
+            alt="Hero"
+            width={1440}
+            height={960}
+            className="block lg:hidden"
+          />
+          <h2 className="mb-5 text-[8px] font-medium tracking-[0.45em] uppercase sm:text-[10px]">
             Couples · Maternity · Family · Kids
           </h2>
-          <h3 className=" text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-[1.1] tracking-tight mb-8">
+          <h3 className="mb-8 max-w-2xl text-3xl leading-[1.1] font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
             When Vision Meets Memories
           </h3>
-        <Link
-          href="/about"
-          className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
-        >
-          More About Me
-          <span className="block h-px w-8 bg-white/50 transition-all duration-300 group-hover:w-14 group-hover:bg-white/80" />
-        </Link>
+          <Link
+            href="/about"
+            className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
+          >
+            More About Me
+            <span className="block h-px w-8 bg-white/50 transition-all duration-300 group-hover:w-14 group-hover:bg-white/80" />
+          </Link>
         </div>
       </div>
     </section>
