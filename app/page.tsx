@@ -45,25 +45,33 @@ const services: Service[] = [
 const Page = () => (
   <main>
     {/* Hero */}
-    <section className="relative h-[calc(100vh-7rem)] min-h-[560px] w-full overflow-hidden lg:h-[calc(100vh-15rem)]">
+    <section className="relative h-[calc(100vh-7rem)] min-h-[600px] sm:min-h-[80vh] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px] 2xl:min-h-[1100px] w-full overflow-hidden lg:h-[calc(100vh-15rem)]">
+      <Image
+        src="/White.png"
+        alt="Hero"
+        width={2400}
+        height={1792}
+        className="absolute 
+        inset-0 
+        m-auto 
+        w-full 
+        pb-20
+        max-w-sm
+        sm:max-w-sm 
+        md:max-w-2xl 
+        lg:max-w-3xl
+        xl:max-w-4xl
+        2xl:max-w-7xl
+        xl:pb-48
+        2xl:pb-8
+        h-auto"
+        priority
+      />
       <div className="pointer-events-none absolute inset-x-0 top-16 bottom-0 bg-linear-to-t from-neutral-800/90 via-neutral-600/30 to-transparent" />
-
-          <Image
-            src="/White.png"
-            alt="Hero"
-            width={1440}
-            height={960}
-            className="hidden lg:block mx-auto"
-          />
       <div className="absolute inset-0 flex flex-col justify-end pb-24 md:pb-12 lg:pb-0">
-        <div className="flex flex-col items-center px-8 pb-12 text-center text-white md:px-16 md:pb-16 lg:px-24 lg:pb-20">
-          <Image
-            src="/White.png"
-            alt="Hero"
-            width={1440}
-            height={960}
-            className="block lg:hidden"
-          />
+        <div className="flex flex-col items-center 
+        px-8 text-center text-white md:px-16 md:pb-16 lg:px-24 lg:pb-20
+        ">
           <h2 className="mb-5 text-[8px] font-medium tracking-[0.45em] uppercase sm:text-[10px]">
             Couples · Maternity · Family · Kids
           </h2>
