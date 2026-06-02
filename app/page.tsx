@@ -45,7 +45,7 @@ const services: Service[] = [
 const Page = () => (
   <main>
     {/* Hero */}
-    <section className="relative h-[calc(100vh-7rem)] min-h-[600px] sm:min-h-[80vh] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px] 2xl:min-h-[1100px] w-full overflow-hidden lg:h-[calc(100vh-15rem)]">
+    <section className="relative h-[calc(100vh-7rem)] min-h-[600px] sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px] 2xl:min-h-[10vh] w-full overflow-hidden lg:h-[calc(100vh-15rem)]">
       <Image
         src="/White.png"
         alt="Hero"
@@ -56,21 +56,26 @@ const Page = () => (
         m-auto 
         w-full 
         pb-20
+        sm:pb-0
+        xl:pb-48
+        2xl:pb-8
         max-w-sm
         sm:max-w-sm 
         md:max-w-2xl 
         lg:max-w-3xl
         xl:max-w-4xl
         2xl:max-w-7xl
-        xl:pb-48
-        2xl:pb-8
+
         h-auto"
         priority
       />
       <div className="pointer-events-none absolute inset-x-0 top-16 bottom-0 bg-linear-to-t from-neutral-800/90 via-neutral-600/30 to-transparent" />
-      <div className="absolute inset-0 flex flex-col justify-end pb-24 md:pb-12 lg:pb-0">
-        <div className="flex flex-col items-center 
-        px-8 text-center text-white md:px-16 md:pb-16 lg:px-24 lg:pb-20
+      <div className="absolute inset-0 flex flex-col justify-end">
+        <div className="flex flex-col items-center px-6 text-center text-white md:px-16 lg:px-24 
+        pb-[13vh]
+        md:pb-[9vh]
+        lg:pb-[12vh]
+        2xl:pb-[3vh]
         ">
           <h2 className="mb-5 text-[8px] font-medium tracking-[0.45em] uppercase sm:text-[10px]">
             Couples · Maternity · Family · Kids
@@ -90,7 +95,7 @@ const Page = () => (
     </section>
 
     {/* Services */}
-    {/* <section className="px-8 md:px-16 lg:px-24 py-20 md:py-32">
+    <section className="px-8 md:px-16 lg:px-24 py-20 md:py-32">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16 md:mb-24">
           <h1 className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium">
@@ -111,7 +116,7 @@ const Page = () => (
           ))}
         </div>
       </div>
-    </section> */}
+    </section>
   </main>
 )
 
