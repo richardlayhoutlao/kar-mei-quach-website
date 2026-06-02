@@ -83,7 +83,7 @@ export default function Page() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex h-[85vh] min-h-[520px] md:h-[calc(100vh-4.5rem)] w-full overflow-hidden">
+      <section className="relative flex h-[80vh] min-h-[520px] md:h-[80vh] w-full overflow-hidden">
 
         {/* ── Mobile: full-bleed image + overlay text ── */}
         <div className="absolute inset-0 md:hidden">
@@ -124,7 +124,7 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: left text panel ── */}
-        <div className="hidden md:flex relative z-10 flex-col justify-between py-16 lg:py-20 px-12 lg:px-20 xl:px-28 w-[44%] shrink-0 border-r border-border/30">
+        <div className="hidden md:flex relative z-10 flex-col justify-between py-16 lg:py-20 px-12 lg:px-20 xl:px-28 w-1/2 shrink-0 border-r border-border/30">
           <motion.p
             className="text-[9px] tracking-[0.55em] uppercase text-muted-foreground font-medium"
             initial={{ opacity: 0, y: 12 }}
@@ -172,7 +172,7 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: right image panel (1 tall + 2 stacked) ── */}
-        <div className="hidden md:flex flex-1 gap-2 p-2 overflow-hidden">
+        <div className="hidden md:flex w-1/2 shrink-0 gap-2 overflow-hidden">
           {/* single full-height portrait */}
           <div className="relative flex-1 overflow-hidden">
             <motion.div
@@ -194,7 +194,7 @@ export default function Page() {
 
           {/* two stacked portraits */}
           <div className="flex flex-1 flex-col gap-2 overflow-hidden">
-            <div className="relative flex-1 overflow-hidden">
+            <div className="relative flex-1 overflow-hidden bg-background">
               <motion.div
                 className="absolute inset-0"
                 initial={{ opacity: 0, scale: 1.06 }}
@@ -205,12 +205,11 @@ export default function Page() {
                   src={heroImages[1].src}
                   alt={heroImages[1].alt}
                   fill
-                  className="object-cover object-top"
-                  sizes="22vw"
+                  className="object-cover object-[center_45%]"
                 />
               </motion.div>
             </div>
-            <div className="relative flex-1 overflow-hidden">
+            <div className="relative flex-1 overflow-hidden bg-background">
               <motion.div
                 className="absolute inset-0"
                 initial={{ opacity: 0, scale: 1.06 }}
@@ -221,8 +220,7 @@ export default function Page() {
                   src={heroImages[2].src}
                   alt={heroImages[2].alt}
                   fill
-                  className="object-cover object-top"
-                  sizes="22vw"
+                  className="object-cover object-[center_45%]"
                 />
               </motion.div>
             </div>
