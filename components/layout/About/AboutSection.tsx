@@ -17,8 +17,8 @@ function fadeUp(delay: number) {
 
 export function AboutSection() {
   return (
-    <main className="px-8 md:px-16 lg:px-24 py-20 md:py-32">
-      <div className="max-w-5xl mx-auto">
+    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
+      <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
         <motion.p
           className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-10 md:mb-14"
@@ -30,7 +30,7 @@ export function AboutSection() {
           About Me
         </motion.p>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-24 items-start">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-32 2xl:gap-52 items-start">
 
           <motion.div
             className="relative aspect-[3/4] w-full overflow-hidden"
@@ -50,7 +50,7 @@ export function AboutSection() {
 
           <div className="flex flex-col justify-center">
             <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-10"
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-10 xl:whitespace-nowrap"
               {...fadeUp(0.2)}
             >
               Who is<br />Kar-Mei Quach?
