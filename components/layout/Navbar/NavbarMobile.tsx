@@ -4,7 +4,8 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "@/public/Logo_2.png"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import { motion } from "framer-motion"
 
 type NavItem = { title: string; href: string }
 
@@ -43,10 +44,17 @@ const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropd
         onClick={handleToggle}
       >
         {label}
-        <ChevronDown
-          size={14}
-          className={`${shouldAnimate ? "transition-transform duration-300" : ""} ${open ? "rotate-180" : "rotate-0"}`}
-        />
+        <motion.svg
+          width="14" height="14" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" strokeWidth="2"
+          strokeLinecap="round" strokeLinejoin="round"
+        >
+          <motion.path
+            d="M6 9 L12 15 L18 9"
+            animate={{ d: open ? "M6 15 L12 9 L18 15" : "M6 9 L12 15 L18 9" }}
+            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+          />
+        </motion.svg>
       </button>
       <div
         className={`flex flex-col items-center gap-4 overflow-hidden ${shouldAnimate ? "transition-all duration-300 ease-in-out" : ""} ${
