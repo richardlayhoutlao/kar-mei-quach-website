@@ -1,23 +1,282 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Lightbox } from "@/components/ui/Lightbox";
+
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
+const heroImages = [
+  {
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1069-65f0e999-1500.jpg",
+    alt: "Maternity portrait",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2370-b619cda2-1500.jpg",
+    alt: "Victoria maternity session",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1140-d5cce64a-1500.jpg",
+    alt: "Maternity portrait outdoors",
+  },
+];
+
+const images = [
+  {
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1069-65f0e999-1500.jpg",
+    alt: "Maternity portrait",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1257-d7ec256d-1500.jpg",
+    alt: "Maternity session",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1140-d5cce64a-1500.jpg",
+    alt: "Maternity portrait outdoors",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2370-b619cda2-1500.jpg",
+    alt: "Victoria maternity session",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2419-Edit-44ae4f51-1500.jpg",
+    alt: "Victoria pregnancy portrait",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2481-Edit-9ff98595-1500.jpg",
+    alt: "Victoria maternity close-up",
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+};
+
 export default function Page() {
-  return <div>
-    
-<section>
-  <div>
-    <h1>Maternity</h1>
-  </div>
-</section>
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-<section>
-  <div>
-    <img src="//images-pw.pixieset.com/elementfield/qyJM74p/8E9A1069-65f0e999-1500.jpg" alt=""/>
-    <img src="//images-pw.pixieset.com/elementfield/qyJM74p/8E9A1257-d7ec256d-1500.jpg" alt=""/>
-    <img src="//images-pw.pixieset.com/elementfield/qyJM74p/8E9A1140-d5cce64a-1500.jpg" alt=""/>
-    <img src="//images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2370-b619cda2-1500.jpg" alt=""/>
-    <img src="//images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2419-Edit-44ae4f51-1500.jpg" alt=""/>
-    <img src="//images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2481-Edit-9ff98595-1500.jpg" alt=""/>
-  </div>
-</section>
+  const open = (i: number) => setLightboxIndex(i);
+  const close = () => setLightboxIndex(null);
+  const prev = () => setLightboxIndex((i) => (i === null ? 0 : (i - 1 + images.length) % images.length));
+  const next = () => setLightboxIndex((i) => (i === null ? 0 : (i + 1) % images.length));
 
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative flex h-[85vh] min-h-[520px] md:h-[calc(100vh-4.5rem)] w-full overflow-hidden">
 
-  </div>
+        {/* ── Mobile: full-bleed image + overlay text ── */}
+        <div className="absolute inset-0 md:hidden">
+          <motion.div
+            className="absolute inset-0"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.8, ease }}
+          >
+            <Image
+              src={heroImages[0].src}
+              alt={heroImages[0].alt}
+              fill
+              className="object-cover object-top"
+              priority
+              sizes="100vw"
+            />
+          </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 px-8 pb-14 z-10">
+            <motion.p
+              className="text-[9px] tracking-[0.5em] uppercase text-white/60 font-medium mb-3"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease, delay: 0.8 }}
+            >
+              Portfolio — Maternity
+            </motion.p>
+            <motion.h1
+              className="text-[2.5rem] font-bold tracking-tight leading-[1.05] text-white"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease, delay: 1.0 }}
+            >
+              Before<br />Hello.
+            </motion.h1>
+          </div>
+        </div>
+
+        {/* ── Desktop: left text panel ── */}
+        <div className="hidden md:flex relative z-10 flex-col justify-between py-16 lg:py-20 px-12 lg:px-20 xl:px-28 w-[44%] shrink-0 border-r border-border/30">
+          <motion.p
+            className="text-[9px] tracking-[0.55em] uppercase text-muted-foreground font-medium"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease, delay: 0.2 }}
+          >
+            Portfolio — Maternity
+          </motion.p>
+
+          <div className="flex flex-col gap-10">
+            <motion.h1
+              className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight leading-[1.0]"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease, delay: 0.4 }}
+            >
+              Before<br />
+              <span className="font-light italic text-muted-foreground">Hello.</span>
+            </motion.h1>
+
+            <div>
+              <motion.p
+                className="text-sm text-muted-foreground font-light leading-relaxed max-w-[22ch] mb-8"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease, delay: 0.65 }}
+              >
+                The quiet anticipation before everything changes — preserved with tenderness.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease, delay: 0.8 }}
+              >
+                <Link
+                  href="/contact"
+                  className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
+                >
+                  Book a session
+                  <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Desktop: right image panel (1 tall + 2 stacked) ── */}
+        <div className="hidden md:flex flex-1 gap-2 p-2 overflow-hidden">
+          <div className="relative flex-1 overflow-hidden">
+            <motion.div
+              className="absolute inset-0"
+              initial={{ opacity: 0, scale: 1.06 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.6, ease, delay: 0.1 }}
+            >
+              <Image
+                src={heroImages[0].src}
+                alt={heroImages[0].alt}
+                fill
+                className="object-cover object-top"
+                priority
+                sizes="22vw"
+              />
+            </motion.div>
+          </div>
+
+          <div className="flex flex-1 flex-col gap-2 overflow-hidden">
+            <div className="relative flex-1 overflow-hidden">
+              <motion.div
+                className="absolute inset-0"
+                initial={{ opacity: 0, scale: 1.06 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.6, ease, delay: 0.25 }}
+              >
+                <Image
+                  src={heroImages[1].src}
+                  alt={heroImages[1].alt}
+                  fill
+                  className="object-cover object-top"
+                  sizes="22vw"
+                />
+              </motion.div>
+            </div>
+            <div className="relative flex-1 overflow-hidden">
+              <motion.div
+                className="absolute inset-0"
+                initial={{ opacity: 0, scale: 1.06 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.6, ease, delay: 0.4 }}
+              >
+                <Image
+                  src={heroImages[2].src}
+                  alt={heroImages[2].alt}
+                  fill
+                  className="object-cover object-top"
+                  sizes="22vw"
+                />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-14 md:pt-20 pb-20 md:pb-32 xl:pb-56">
+        <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
+
+          <motion.div
+            className="columns-2 md:columns-3 gap-3 md:gap-4"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.05 }}
+          >
+            {images.map((img, i) => (
+              <motion.div
+                key={img.src}
+                variants={itemVariants}
+                className="break-inside-avoid mb-3 md:mb-4 group overflow-hidden cursor-pointer"
+                onClick={() => open(i)}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  width={750}
+                  height={1000}
+                  className="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            className="mt-20 md:mt-28 pt-10 border-t border-border"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease, delay: 0.1 }}
+          >
+            <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
+              This chapter only happens once. These sessions honour the beauty of
+              expectation — soft, intimate, and entirely unforgettable.
+            </p>
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
+              >
+                Book a session
+                <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
+              </Link>
+            </div>
+          </motion.div>
+
+        </div>
+      </main>
+
+      <Lightbox
+        images={images}
+        index={lightboxIndex}
+        onClose={close}
+        onPrev={prev}
+        onNext={next}
+      />
+    </>
+  );
 }
