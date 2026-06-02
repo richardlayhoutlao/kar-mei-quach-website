@@ -115,17 +115,18 @@ export default function Page() {
           </div>
         </div>
 
-        {/* ── Desktop: left text panel ── */}
-        <div className="hidden md:flex relative z-10 flex-col justify-between py-16 lg:py-20 px-12 lg:px-20 xl:px-28 w-1/2 shrink-0 border-r border-border/30">
-          <motion.p
-            className="text-[9px] tracking-[0.55em] uppercase text-muted-foreground font-medium"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.2 }}
-          >
-            Portfolio — Family
-          </motion.p>
+        {/* ── Desktop label ── */}
+        <motion.p
+          className="hidden md:block absolute top-8 xl:top-10 left-8 md:left-16 lg:left-24 xl:left-48 z-20 max-w-5xl xl:max-w-screen-2xl text-[9px] tracking-[0.55em] uppercase text-muted-foreground font-medium"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease, delay: 0.2 }}
+        >
+          Portfolio — Family
+        </motion.p>
 
+        {/* ── Desktop: left text panel ── */}
+        <div className="hidden md:flex relative z-10 flex-col justify-end py-16 lg:py-20 px-12 lg:px-20 xl:px-28 w-1/2 shrink-0 border-r border-border/30">
           <div className="flex flex-col gap-10">
             <motion.h1
               className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight leading-[1.0]"
