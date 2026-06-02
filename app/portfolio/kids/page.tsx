@@ -8,42 +8,57 @@ import { Lightbox } from "@/components/ui/Lightbox";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
-const images = [
+const heroImages = [
   {
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
     alt: "Portrait of Chloe",
-  },
-  {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KenjiColour_Quach_CleanBG-b560c226-1500.jpg",
-    alt: "Portrait of Kenji",
-  },
-  {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_AylaColour_Quach_CleanBG-f7eb4f06-1500.jpg",
-    alt: "Portrait of Ayla",
-  },
-  {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_JayceColour_Quach_CleanBG-055ccdf5-1500.jpg",
-    alt: "Portrait of Jayce",
-  },
-  {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KittyColour_Quach_CleanBG-a1fc63e1-1500.jpg",
-    alt: "Portrait of Kitty",
   },
   {
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ThomasColor_Quach_CleanedBG-842f3eb0-1500.jpg",
     alt: "Portrait of Thomas",
   },
   {
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KenjiColour_Quach_CleanBG-b560c226-1500.jpg",
+    alt: "Portrait of Kenji",
+  },
+];
+
+const images = [
+  {
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KittyColour_Quach_CleanBG-a1fc63e1-1500.jpg",
+    alt: "Portrait of Kitty",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KenjiColour_Quach_CleanBG-b560c226-1500.jpg",
+    alt: "Portrait of Kenji",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_JayceColour_Quach_CleanBG-055ccdf5-1500.jpg",
+    alt: "Portrait of Jayce",
+  },
+  {
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_LiliaColour_Expand_Quach_CleanBG-25ea78a0-1500.jpg",
     alt: "Portrait of Lilia",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ThomasColor_Quach_CleanedBG-842f3eb0-1500.jpg",
+    alt: "Portrait of Thomas",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/Lucas2915-7698bc43-1500.jpg",
+    alt: "Portrait of Lucas",
   },
   {
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_MilanaColour2_Quach_CleanBG-d75dfa53-1500.jpg",
     alt: "Portrait of Milana",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/Lucas2915-7698bc43-1500.jpg",
-    alt: "Portrait of Lucas",
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
+    alt: "Portrait of Chloe",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_AylaColour_Quach_CleanBG-f7eb4f06-1500.jpg",
+    alt: "Portrait of Ayla",
   },
 ];
 
@@ -67,28 +82,156 @@ export default function Page() {
 
   return (
     <>
-      <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
-        <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
+      {/* Hero */}
+      <section className="relative flex h-[85vh] min-h-[520px] md:h-[calc(100vh-4.5rem)] w-full overflow-hidden">
 
+        {/* ── Mobile: full-bleed image + overlay text ── */}
+        <div className="absolute inset-0 md:hidden">
+          <motion.div
+            className="absolute inset-0"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.8, ease }}
+          >
+            <Image
+              src={heroImages[0].src}
+              alt={heroImages[0].alt}
+              fill
+              className="object-cover object-top"
+              priority
+              sizes="100vw"
+            />
+          </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 px-8 pb-14 z-10">
+            <motion.p
+              className="text-[9px] tracking-[0.5em] uppercase text-white/60 font-medium mb-3"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease, delay: 0.8 }}
+            >
+              Portfolio — Kids
+            </motion.p>
+            <motion.h1
+              className="text-[2.5rem] font-bold tracking-tight leading-[1.05] text-white"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease, delay: 1.0 }}
+            >
+              Little Ones,<br />Big Moments.
+            </motion.h1>
+          </div>
+        </div>
+
+        {/* ── Desktop: left text panel ── */}
+        <div className="hidden md:flex relative z-10 flex-col justify-between py-16 lg:py-20 px-12 lg:px-20 xl:px-28 w-[44%] shrink-0 border-r border-border/30">
           <motion.p
-            className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-10 md:mb-14"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease }}
+            className="text-[9px] tracking-[0.55em] uppercase text-muted-foreground font-medium"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease, delay: 0.2 }}
           >
             Portfolio — Kids
           </motion.p>
 
-          <motion.h1
-            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight max-w-lg mb-16 md:mb-24"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease, delay: 0.1 }}
-          >
-            Little Ones,<br />Big Moments.
-          </motion.h1>
+          <div className="flex flex-col gap-10">
+            <motion.h1
+              className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight leading-[1.0]"
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease, delay: 0.4 }}
+            >
+              Little<br />Ones,<br />
+              <span className="font-light italic text-muted-foreground">Big<br />Moments.</span>
+            </motion.h1>
+
+            <div>
+              <motion.p
+                className="text-sm text-muted-foreground font-light leading-relaxed max-w-[22ch] mb-8"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease, delay: 0.65 }}
+              >
+                Every child is a world of their own — captured at their own pace.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease, delay: 0.8 }}
+              >
+                <Link
+                  href="/contact"
+                  className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
+                >
+                  Book a session
+                  <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Desktop: right image panel (1 tall + 2 stacked) ── */}
+        <div className="hidden md:flex flex-1 gap-2 p-2 overflow-hidden">
+          {/* single full-height portrait */}
+          <div className="relative flex-1 overflow-hidden">
+            <motion.div
+              className="absolute inset-0"
+              initial={{ opacity: 0, scale: 1.06 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.6, ease, delay: 0.1 }}
+            >
+              <Image
+                src={heroImages[0].src}
+                alt={heroImages[0].alt}
+                fill
+                className="object-cover object-top"
+                priority
+                sizes="22vw"
+              />
+            </motion.div>
+          </div>
+
+          {/* two stacked portraits */}
+          <div className="flex flex-1 flex-col gap-2 overflow-hidden">
+            <div className="relative flex-1 overflow-hidden">
+              <motion.div
+                className="absolute inset-0"
+                initial={{ opacity: 0, scale: 1.06 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.6, ease, delay: 0.25 }}
+              >
+                <Image
+                  src={heroImages[1].src}
+                  alt={heroImages[1].alt}
+                  fill
+                  className="object-cover object-top"
+                  sizes="22vw"
+                />
+              </motion.div>
+            </div>
+            <div className="relative flex-1 overflow-hidden">
+              <motion.div
+                className="absolute inset-0"
+                initial={{ opacity: 0, scale: 1.06 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.6, ease, delay: 0.4 }}
+              >
+                <Image
+                  src={heroImages[2].src}
+                  alt={heroImages[2].alt}
+                  fill
+                  className="object-cover object-top"
+                  sizes="22vw"
+                />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-14 md:pt-20 pb-20 md:pb-32 xl:pb-56">
+        <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
           <motion.div
             className="columns-2 md:columns-3 gap-3 md:gap-4"
