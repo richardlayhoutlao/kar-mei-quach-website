@@ -1,5 +1,5 @@
-import NavbarDesktop from "@/components/layout/NavbarDesktop"
-import NavbarMobile from "@/components/layout/NavbarMobile"
+import NavbarDesktop from "@/components/layout/Navbar/NavbarDesktop"
+import NavbarMobile from "@/components/layout/Navbar/NavbarMobile"
 
 const portfolioItems = [
   { title: "Couple", href: "/portfolio/couple" },
