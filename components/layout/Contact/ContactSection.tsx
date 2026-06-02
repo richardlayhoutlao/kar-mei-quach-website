@@ -127,7 +127,7 @@ export function ContactSection() {
               className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-10"
               {...fadeUp(0.2)}
             >
-              Let&apos;s work<br />together.
+              Let&apos;s Work<br />Together.
             </motion.h1>
 
             <motion.div className="space-y-6" {...fadeUp(0.35)}>

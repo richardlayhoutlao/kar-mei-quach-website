@@ -79,7 +79,7 @@ export function PricingSection() {
           className="mb-8 md:mb-16"
         >
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight max-w-lg">
-            Investment in moments<br />that last forever.
+            Investment In Moments<br />That Last Forever.
           </h1>
         </motion.div>
 
