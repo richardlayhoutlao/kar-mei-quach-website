@@ -4,14 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  show: (delay: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.9, ease: [0.25, 0.1, 0.25, 1], delay },
-  }),
-};
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
+function fadeUp(delay: number) {
+  return {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.9, ease, delay },
+  };
+}
 
 export function HeroSection() {
   return (
@@ -20,7 +21,7 @@ export function HeroSection() {
         className="absolute inset-0 flex items-center justify-center"
         initial={{ opacity: 0, scale: 1.04 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.8, ease: [0.25, 0.1, 0.25, 1] }}
+        transition={{ duration: 1.8, ease }}
       >
         <Image
           src="/White.png"
@@ -57,29 +58,20 @@ export function HeroSection() {
         <div className="flex flex-col items-center px-6 text-center text-white md:px-16 lg:px-24 pb-[13vh] md:pb-[9vh] lg:pb-[12vh] 2xl:pb-[3vh]">
           <motion.h2
             className="mb-5 text-[8px] font-medium tracking-[0.45em] uppercase sm:text-[10px]"
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={0.6}
+            {...fadeUp(0.6)}
           >
             Couples · Maternity · Family · Kids
           </motion.h2>
 
           <motion.h3
             className="mb-8 max-w-2xl text-3xl leading-[1.1] font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={0.85}
+            {...fadeUp(0.85)}
           >
             When Vision Meets Memories
           </motion.h3>
 
           <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={1.1}
+            {...fadeUp(1.1)}
           >
             <Link
               href="/about"

@@ -46,12 +46,14 @@ const container = {
   },
 };
 
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
 const cardVariant = {
   hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.9, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: 0.9, ease },
   },
 };
 
@@ -64,7 +66,7 @@ export function ServicesSection() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.7, ease }}
         >
           <h1 className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium">
             What I Do
