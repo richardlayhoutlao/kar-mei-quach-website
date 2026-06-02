@@ -1,17 +1,25 @@
 import { type LucideIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface FeatureCardProps {
   title: string;
   description: string;
   Icon: LucideIcon;
-  isBottom?: boolean;
-  isLeft?: boolean;
+  index: number;
 }
 
-export function FeatureCard({ title, description, Icon, isBottom, isLeft }: FeatureCardProps) {
+export function FeatureCard({ title, description, Icon, index }: FeatureCardProps) {
+  const isLeft = index % 2 === 0;
+  const isBottom = index >= 2;
+  const hasMobileTopBorder = index === 1;
   return (
     <div
-      className={`group border-border pt-8 pb-12 md:py-12 cursor-default${isBottom ? " border-t" : ""}${isLeft ? " md:pr-16 md:border-r" : " md:pl-16"}`}
+      className={cn(
+        "group border-border pt-8 pb-12 md:py-12 cursor-default",
+        isBottom && "border-t",
+        hasMobileTopBorder && "border-t md:border-t-0",
+        isLeft ? "md:pr-16 md:border-r" : "md:pl-16",
+      )}
     >
       <div className="flex items-center gap-2.5 mb-4">
         <Icon size={18} className="text-muted-foreground/40 transition-colors duration-300 group-hover:text-foreground" />

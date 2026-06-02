@@ -110,8 +110,7 @@ const Page = () => (
               title={title}
               description={description}
               Icon={Icon}
-              isLeft={i % 2 === 0}
-              isBottom={i >= 2}
+              index={i}
             />
           ))}
         </div>
