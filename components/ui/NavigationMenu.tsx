@@ -1,9 +1,15 @@
+"use client"
+
 import * as React from "react"
 import { cva } from "class-variance-authority"
 import { NavigationMenu as NavigationMenuPrimitive } from "radix-ui"
+import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
-import { ChevronDownIcon } from "lucide-react"
+
+const ease = [0.25, 0.1, 0.25, 1] as const
+const chevronDown = "M6 9 L12 15 L18 9"
+const chevronUp = "M6 15 L12 9 L18 15"
 
 const NavigationMenu = ({
   className,
@@ -60,16 +66,48 @@ const NavigationMenuTrigger = ({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>) => (
-  <NavigationMenuPrimitive.Trigger
-    data-slot="navigation-menu-trigger"
-    className={cn(navigationMenuTriggerStyle(), "group", className)}
-    {...props}
-  >
-    {children}{" "}
-    <ChevronDownIcon className="relative top-px ml-1 size-3 transition duration-300 group-data-popup-open/navigation-menu-trigger:rotate-180 group-data-open/navigation-menu-trigger:rotate-180" aria-hidden="true" />
-  </NavigationMenuPrimitive.Trigger>
-)
+}: React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>) => {
+  const triggerRef = React.useRef<HTMLButtonElement>(null)
+  const [isOpen, setIsOpen] = React.useState(false)
+
+  React.useEffect(() => {
+    const el = triggerRef.current
+    if (!el) return
+    const observer = new MutationObserver(() => {
+      setIsOpen(
+        el.dataset.state === "open" ||
+        el.hasAttribute("data-open") ||
+        el.hasAttribute("data-popup-open")
+      )
+    })
+    observer.observe(el, { attributes: true })
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <NavigationMenuPrimitive.Trigger
+      ref={triggerRef}
+      data-slot="navigation-menu-trigger"
+      className={cn(navigationMenuTriggerStyle(), "group", className)}
+      {...props}
+    >
+      {children}{" "}
+      <motion.svg
+        width="12" height="12" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" strokeWidth="2"
+        strokeLinecap="round" strokeLinejoin="round"
+        aria-hidden="true"
+        className="relative top-px ml-1"
+      >
+        <motion.path
+          d={chevronDown}
+          animate={{ d: isOpen ? chevronUp : chevronDown }}
+          transition={{ duration: 0.3, ease }}
+        />
+      </motion.svg>
+    </NavigationMenuPrimitive.Trigger>
+  )
+}
 
 const NavigationMenuContent = ({
   className,
