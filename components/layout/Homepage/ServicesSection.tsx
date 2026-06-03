@@ -62,7 +62,7 @@ export function ServicesSection() {
     <section className="px-8 md:px-16 lg:px-24 py-20 md:py-32">
       <div className="max-w-5xl mx-auto">
         <motion.div
-          className="mb-16 md:mb-24"
+          className="mb-10 md:mb-14"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
