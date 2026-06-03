@@ -24,7 +24,7 @@ export function HeroSection() {
         transition={{ duration: 1.8, ease }}
       >
         <Image
-          src="/White.png"
+          src="/Homepage.png"
           alt="Hero"
           width={2400}
           height={1792}
