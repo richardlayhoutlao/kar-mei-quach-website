@@ -115,6 +115,9 @@ export default function Page() {
           </div>
         </div>
 
+        {/* ── Desktop: cream background for left text panel ── */}
+        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-[#faf7f4]" />
+
         {/* ── Desktop: images on right half ── */}
         <div className="hidden md:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
           {/* single full-height portrait */}
@@ -200,12 +203,12 @@ export default function Page() {
               </motion.h1>
               <div>
                 <motion.p
-                  className="text-sm text-muted-foreground font-light leading-relaxed max-w-[22ch] mb-8"
+                  className="text-sm text-muted-foreground font-light leading-relaxed max-w-[30ch] mb-8"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, ease, delay: 0.65 }}
                 >
-                  Family isn&apos;t just who you&apos;re born to — it&apos;s the moments you choose to keep.
+                  Family isn&apos;t just who you&apos;re born to — it&apos;s the moments you choose to keep. These sessions honour the warmth between you, candid and unhurried.
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 12 }}
@@ -228,6 +231,17 @@ export default function Page() {
 
       <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-14 md:pt-20 pb-20 md:pb-32 xl:pb-56">
         <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
+
+          <motion.div
+            className="mb-10 md:mb-14 flex items-center gap-6"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease }}
+          >
+            <span className="text-[10px] tracking-[0.45em] uppercase text-muted-foreground shrink-0">Selected Work</span>
+            <span className="block h-px flex-1 bg-border" />
+          </motion.div>
 
           <motion.div
             className="columns-2 md:columns-3 gap-3 md:gap-4"
@@ -263,8 +277,8 @@ export default function Page() {
             transition={{ duration: 0.8, ease, delay: 0.1 }}
           >
             <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
-              Every family has its own rhythm. These sessions are crafted to
-              honour the warmth between you — candid, unhurried, and entirely yours.
+              Families grow and change faster than you realise. Let&apos;s capture
+              exactly where you are right now — before this chapter becomes the last one.
             </p>
             <div className="mt-8">
               <Link

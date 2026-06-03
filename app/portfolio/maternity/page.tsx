@@ -111,6 +111,9 @@ export default function Page() {
           </div>
         </div>
 
+        {/* ── Desktop: cream background for left text panel ── */}
+        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-[#faf7f4]" />
+
         {/* ── Desktop: images on right half ── */}
         <div className="hidden md:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
           <div className="relative flex-1 overflow-hidden">
@@ -194,12 +197,12 @@ export default function Page() {
               </motion.h1>
               <div>
                 <motion.p
-                  className="text-sm text-muted-foreground font-light leading-relaxed max-w-[22ch] mb-8"
+                  className="text-sm text-muted-foreground font-light leading-relaxed max-w-[30ch] mb-8"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, ease, delay: 0.65 }}
                 >
-                  The quiet anticipation before everything changes — preserved with tenderness.
+                  The quiet anticipation before everything changes — preserved with tenderness. A chapter that deserves to be remembered exactly as it felt.
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 12 }}
@@ -222,6 +225,17 @@ export default function Page() {
 
       <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-14 md:pt-20 pb-20 md:pb-32 xl:pb-56">
         <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
+
+          <motion.div
+            className="mb-10 md:mb-14 flex items-center gap-6"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease }}
+          >
+            <span className="text-[10px] tracking-[0.45em] uppercase text-muted-foreground shrink-0">Selected Work</span>
+            <span className="block h-px flex-1 bg-border" />
+          </motion.div>
 
           <motion.div
             className="columns-2 md:columns-3 gap-3 md:gap-4"
