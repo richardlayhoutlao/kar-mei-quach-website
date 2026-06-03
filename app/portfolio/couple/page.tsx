@@ -103,57 +103,8 @@ export default function Page() {
           </div>
         </div>
 
-        {/* ── Desktop label ── */}
-        <motion.p
-          className="hidden md:block absolute top-8 xl:top-10 left-8 md:left-16 lg:left-24 xl:left-48 z-20 text-[9px] tracking-[0.55em] uppercase text-muted-foreground font-medium"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease, delay: 0.2 }}
-        >
-          Portfolio — Couple
-        </motion.p>
-
-        {/* ── Desktop: left text panel ── */}
-        <div className="hidden md:flex relative z-10 flex-col justify-end py-16 lg:py-20 px-12 lg:px-20 xl:px-28 w-1/2 shrink-0 border-r border-border/30">
-          <div className="flex flex-col gap-10">
-            <motion.h1
-              className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight leading-[1.0]"
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease, delay: 0.4 }}
-            >
-              Just the<br />
-              <span className="font-light italic text-muted-foreground">Two of You.</span>
-            </motion.h1>
-
-            <div>
-              <motion.p
-                className="text-sm text-muted-foreground font-light leading-relaxed max-w-[22ch] mb-8"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease, delay: 0.65 }}
-              >
-                Love looks best when it&apos;s not performing — relaxed, real, and entirely yours.
-              </motion.p>
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease, delay: 0.8 }}
-              >
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
-                >
-                  Book a session
-                  <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-
-        {/* ── Desktop: right image panel (1 tall + 2 stacked) ── */}
-        <div className="hidden md:flex w-1/2 shrink-0 gap-2 overflow-hidden">
+        {/* ── Desktop: images on right half ── */}
+        <div className="hidden md:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
           <div className="relative flex-1 overflow-hidden">
             <motion.div
               className="absolute inset-0"
@@ -204,6 +155,58 @@ export default function Page() {
                   sizes="22vw"
                 />
               </motion.div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Desktop: text — identical container to gallery ── */}
+        <div className="hidden md:flex absolute inset-0 flex-col justify-between pt-4 md:pt-8 xl:pt-10 pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
+          <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
+            <div className="w-1/2 pr-8 md:pr-12 lg:pr-16">
+              <motion.p
+                className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease, delay: 0.2 }}
+              >
+                Portfolio — Couple
+              </motion.p>
+            </div>
+          </div>
+          <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
+            <div className="w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
+              <motion.h1
+                className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight leading-[1.0]"
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, ease, delay: 0.4 }}
+              >
+                Just the<br />
+                <span className="font-light italic text-muted-foreground">Two of You.</span>
+              </motion.h1>
+              <div>
+                <motion.p
+                  className="text-sm text-muted-foreground font-light leading-relaxed max-w-[22ch] mb-8"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease, delay: 0.65 }}
+                >
+                  Love looks best when it&apos;s not performing — relaxed, real, and entirely yours.
+                </motion.p>
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease, delay: 0.8 }}
+                >
+                  <Link
+                    href="/contact"
+                    className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
+                  >
+                    Book a session
+                    <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
+                  </Link>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
