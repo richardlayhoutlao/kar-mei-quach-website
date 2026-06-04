@@ -189,33 +189,20 @@ export default function Page() {
               </motion.h1>
               <div>
                 <motion.p
-                  className="text-sm text-muted-foreground font-light leading-relaxed max-w-[30ch] mb-8"
+                  className="text-sm text-muted-foreground font-light leading-relaxed max-w-[30ch]"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, ease, delay: 0.65 }}
                 >
                   Love looks best when it&apos;s not performing — relaxed, real, and entirely yours. These sessions are built around you, unhurried and authentic.
                 </motion.p>
-                <motion.div
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, ease, delay: 0.8 }}
-                >
-                  <Link
-                    href="/contact"
-                    className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
-                  >
-                    Book a session
-                    <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
-                  </Link>
-                </motion.div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-20 md:pt-32 pb-20 md:pb-32 xl:pb-56">
+      <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-20 md:pt-32 pb-20 md:pb-32">
         <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
           <motion.div
@@ -266,15 +253,6 @@ export default function Page() {
               Whether you&apos;re newly together or celebrating years of &apos;us&apos; — these
               sessions are an excuse to slow down and just be with each other.
             </p>
-            <div className="mt-8">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
-              >
-                Book a session
-                <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
-              </Link>
-            </div>
           </motion.div>
 
         </div>
