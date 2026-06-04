@@ -14,7 +14,7 @@ const moreItems = [
 ]
 
 const Navbar = () => (
-  <header className="relative z-10 w-full bg-white dark:bg-background">
+  <header className="relative z-20 w-full bg-white dark:bg-background">
     <NavbarDesktop portfolioItems={portfolioItems} moreItems={moreItems} />
     <NavbarMobile portfolioItems={portfolioItems} moreItems={moreItems} />
   </header>
