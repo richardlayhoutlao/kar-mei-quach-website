@@ -204,8 +204,8 @@ export default function Page() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, ease, delay: 0.4 }}
               >
-                Little<br />Ones,<br />
-                <span className="font-light italic text-muted-foreground">Big<br />Moments.</span>
+                Little Ones,<br />
+                <span className="font-light italic text-muted-foreground">Big Moments.</span>
               </motion.h1>
 
               <div>
