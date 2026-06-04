@@ -6,16 +6,7 @@ import { useEffect, useState } from "react"
 import Logo from "@/public/Logo_2.png"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
-
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/NavigationMenu"
+import { motion } from "framer-motion"
 
 type NavItem = { title: string; href: string }
 
@@ -24,97 +15,131 @@ type NavbarDesktopProps = {
   moreItems: NavItem[]
 }
 
+const linkClass =
+  "text-[11px] tracking-[0.3em] uppercase text-foreground/60 hover:text-foreground transition-colors duration-200"
+
 const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
   const { resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [portfolioOpen, setPortfolioOpen] = useState(false)
+  const [moreOpen, setMoreOpen] = useState(false)
+
   useEffect(() => setMounted(true), [])
 
   return (
-  <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center h-60 lg:gap-8 xl:gap-12 2xl:gap-16">
-    <NavigationMenu viewport={false} className="justify-end ml-auto">
-      <NavigationMenuList className="lg:gap-8 xl:gap-12 2xl:gap-16">
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link className="uppercase" href="/">Home</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link className="uppercase" href="/about">About</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link className="uppercase" href="/pricing">Pricing</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center h-60 px-8 lg:px-16 xl:px-24">
 
-    <Link href="/">
-      <Image src={Logo} alt="Logo" width={150} height={150} />
-    </Link>
+      {/* Left */}
+      <div className="flex items-center justify-end gap-10 xl:gap-14">
+        <Link href="/" className={linkClass}>Home</Link>
+        <Link href="/about" className={linkClass}>About</Link>
+        <Link href="/pricing" className={linkClass}>Pricing</Link>
+      </div>
 
-    <NavigationMenu viewport={false} className="justify-start mr-auto">
-      <NavigationMenuList className="lg:gap-8 xl:gap-12 2xl:gap-16">
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="uppercase">Portfolio</NavigationMenuTrigger>
-          <NavigationMenuContent className="left-1/2 -translate-x-1/2">
-            <ul className="grid w-30">
-              {portfolioItems.map((item) => (
-                <li key={item.title}>
-                  <NavigationMenuLink asChild>
-                    <Link className="uppercase justify-center" href={item.href}>{item.title}</Link>
-                  </NavigationMenuLink>
-                </li>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link className="uppercase" href="/contact">Contact</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="uppercase">More</NavigationMenuTrigger>
-          <NavigationMenuContent className="left-1/2 -translate-x-1/2">
-            <ul className="grid w-30">
-              {moreItems.map((item) => (
-                <li key={item.title}>
-                  <NavigationMenuLink asChild>
-                    <Link className="uppercase justify-center" href={item.href}>{item.title}</Link>
-                  </NavigationMenuLink>
-                </li>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem className="hidden xl:flex">
-          <button
-            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-            className="cursor-pointer p-2 rounded-md hover:bg-accent transition-colors"
-            aria-label="Toggle theme"
-          >
-            <div className="relative size-6">
-              <Sun
-                size={24}
-                className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-                  mounted && resolvedTheme === "dark" ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-0 opacity-0"
-                }`}
+      {/* Logo */}
+      <Link href="/" className="flex justify-center mx-10 xl:mx-14">
+        <Image src={Logo} alt="Logo" width={150} height={150} priority />
+      </Link>
+
+      {/* Right */}
+      <div className="flex items-center gap-10 xl:gap-14">
+
+        {/* Portfolio dropdown */}
+        <div
+          className="relative"
+          onMouseEnter={() => setPortfolioOpen(true)}
+          onMouseLeave={() => setPortfolioOpen(false)}
+        >
+          <button className={`${linkClass} inline-flex items-center gap-2`}>
+            Portfolio
+            <motion.svg
+              width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" strokeWidth="2"
+              strokeLinecap="round" strokeLinejoin="round"
+            >
+              <motion.path
+                d="M6 9 L12 15 L18 9"
+                animate={{ d: portfolioOpen ? "M6 15 L12 9 L18 15" : "M6 9 L12 15 L18 9" }}
+                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
               />
-              <Moon
-                size={24}
-                className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-                  mounted && resolvedTheme === "dark" ? "-rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
-                }`}
-              />
-            </div>
+            </motion.svg>
           </button>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
-  </div>
+          <div
+            className={`absolute top-full left-1/2 -translate-x-1/2 pt-5 transition-all duration-200 ${
+              portfolioOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-1"
+            }`}
+          >
+            <div className="flex flex-col bg-white/95 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden min-w-[140px]">
+              {portfolioItems.map((item) => (
+                <Link key={item.href} href={item.href} onClick={() => setPortfolioOpen(false)} className={`${linkClass} w-full text-center px-6 py-3 hover:bg-neutral-200 transition-colors duration-200`}>
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <Link href="/contact" className={linkClass}>Contact</Link>
+
+        {/* More dropdown */}
+        <div
+          className="relative"
+          onMouseEnter={() => setMoreOpen(true)}
+          onMouseLeave={() => setMoreOpen(false)}
+        >
+          <button className={`${linkClass} inline-flex items-center gap-2`}>
+            More
+            <motion.svg
+              width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" strokeWidth="2"
+              strokeLinecap="round" strokeLinejoin="round"
+            >
+              <motion.path
+                d="M6 9 L12 15 L18 9"
+                animate={{ d: moreOpen ? "M6 15 L12 9 L18 15" : "M6 9 L12 15 L18 9" }}
+                transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+              />
+            </motion.svg>
+          </button>
+          <div
+            className={`absolute top-full left-1/2 -translate-x-1/2 pt-5 transition-all duration-200 ${
+              moreOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-1"
+            }`}
+          >
+            <div className="flex flex-col bg-white/95 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden min-w-[160px]">
+              {moreItems.map((item) => (
+                <Link key={item.href} href={item.href} onClick={() => setMoreOpen(false)} className={`${linkClass} w-full text-center px-6 py-3 hover:bg-neutral-200 transition-colors duration-200`}>
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Theme toggle */}
+        <button
+          onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+          className="hidden min-[1400px]:block cursor-pointer text-foreground/40 hover:text-foreground transition-colors duration-200"
+          aria-label="Toggle theme"
+        >
+          <div className="relative size-6">
+            <Sun
+              size={24}
+              className={`absolute inset-0 transition-all duration-500 ${
+                mounted && resolvedTheme === "dark" ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-0 opacity-0"
+              }`}
+            />
+            <Moon
+              size={24}
+              className={`absolute inset-0 transition-all duration-500 ${
+                mounted && resolvedTheme === "dark" ? "-rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
+              }`}
+            />
+          </div>
+        </button>
+
+      </div>
+    </div>
   )
 }
 
