@@ -76,10 +76,10 @@ export function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
-          className="mb-8 md:mb-16"
+          className="mb-16 md:mb-24"
         >
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight max-w-lg">
-            Investment in moments<br />that last forever.
+            Investment In Moments<br />That Last Forever.
           </h1>
         </motion.div>
 
