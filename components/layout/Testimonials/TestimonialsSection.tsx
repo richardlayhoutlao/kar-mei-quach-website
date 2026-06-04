@@ -61,7 +61,7 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
         >
-          Real moments.<br />Real words.
+          Real Moments.<br />Real Words.
         </motion.h1>
 
         <motion.div

@@ -53,7 +53,7 @@ export function AboutSection() {
               className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-10 xl:whitespace-nowrap"
               {...fadeUp(0.2)}
             >
-              Who is<br />Kar-Mei Quach?
+              Who Is<br />Kar-Mei Quach?
             </motion.h1>
 
             <motion.div className="space-y-6" {...fadeUp(0.35)}>
