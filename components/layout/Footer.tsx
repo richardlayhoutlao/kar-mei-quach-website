@@ -2,6 +2,19 @@
 
 import Link from "next/link"
 import { useRouter } from "next/navigation"
+import { motion } from "framer-motion"
+
+const ease = [0.25, 0.1, 0.25, 1] as const
+
+const navContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
+}
+
+const navItem = {
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease } },
+}
 
 const navLinks = [
   { label: "About", href: "/about" },
@@ -37,28 +50,49 @@ const Footer = () => {
       />
 
       <div className="relative max-w-5xl xl:max-w-screen-2xl mx-auto">
-        <p className="text-[9px] tracking-[0.5em] uppercase text-white/30 font-medium mb-10 md:mb-14">
-          Ready to begin?
-        </p>
+        <motion.p
+          className="text-[9px] tracking-[0.5em] uppercase text-white/30 font-medium mb-10 md:mb-14"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease }}
+        >
+          It starts here.
+        </motion.p>
 
-        <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-[1.0] text-white mb-12 md:mb-16">
-          Let&apos;s Create<br />
-          <span className="font-light italic text-white/50">Something</span><br />
-          <span className="font-light italic text-white/50">Beautiful.</span>
-        </h2>
+        <motion.h2
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-[1.0] text-white mb-12 md:mb-16"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.0, ease, delay: 0.15 }}
+        >
+          Let&apos;s make<br />
+          <span className="font-light italic text-white/50">New Memories.</span>
+        </motion.h2>
 
-        <button
+        <motion.button
           onClick={handleBookSession}
           className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-white/60 hover:text-white transition-colors duration-300 cursor-pointer"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease, delay: 0.35 }}
         >
           Book a session
           <span className="block h-px w-8 bg-white/30 transition-all duration-500 group-hover:w-20 group-hover:bg-white/70" />
-        </button>
+        </motion.button>
       </div>
     </div>
 
     {/* ── Cream info band ── */}
-    <div className="bg-[#faf7f4] px-8 md:px-16 lg:px-24 xl:px-48 py-10 md:py-12">
+    <motion.div
+      className="bg-[#faf7f4] px-8 md:px-16 lg:px-24 xl:px-48 py-10 md:py-12"
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7, ease }}
+    >
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
         {/* Single row: brand left, nav right */}
@@ -70,17 +104,24 @@ const Footer = () => {
             Kar-Mei Quach
           </Link>
 
-          <nav className="flex flex-wrap gap-x-8 gap-y-3">
+          <motion.nav
+            className="flex flex-wrap gap-x-8 gap-y-3"
+            variants={navContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             {navLinks.map(({ label, href }) => (
-              <Link
-                key={href}
-                href={href}
-                className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                {label}
-              </Link>
+              <motion.div key={href} variants={navItem}>
+                <Link
+                  href={href}
+                  className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {label}
+                </Link>
+              </motion.div>
             ))}
-          </nav>
+          </motion.nav>
         </div>
 
         {/* Copyright */}
@@ -91,7 +132,7 @@ const Footer = () => {
         </div>
 
       </div>
-    </div>
+    </motion.div>
 
   </footer>
   )
