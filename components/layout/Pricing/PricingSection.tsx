@@ -78,7 +78,7 @@ export function PricingSection() {
           transition={{ duration: 0.8, ease, delay: 0.1 }}
           className="mb-16 md:mb-24"
         >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight max-w-lg">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
             Investment In Moments<br />That Last Forever.
           </h1>
         </motion.div>
