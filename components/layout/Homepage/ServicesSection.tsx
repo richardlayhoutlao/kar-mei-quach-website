@@ -8,6 +8,7 @@ type Service = {
   icon: LucideIcon;
   title: string;
   description: string;
+  href: string;
 };
 
 const services: Service[] = [
@@ -16,24 +17,28 @@ const services: Service[] = [
     title: "Couples",
     description:
       "Focused on real connection and emotion, these sessions are designed to feel natural. I capture moments that reflect warmth, intimacy, and timelessness.",
+    href: "/portfolio/couple",
   },
   {
     icon: Baby,
     title: "Maternity",
     description:
       "Maternity sessions are calm, natural, and deeply personal. The goal is to create soft and heartfelt images showcasing excitement and anticipation.",
+    href: "/portfolio/maternity",
   },
   {
     icon: Home,
     title: "Family",
     description:
       "Family sessions are relaxed and guided by real interaction rather than poses. I capture natural moments of laughter, movement, and interaction. The result is timeless images that reflect your family as they truly are.",
+    href: "/portfolio/family",
   },
   {
     icon: Smile,
     title: "Kids",
     description:
       "Kids sessions are candid, playful, and guided by their energy. By allowing space for curiosity and their personality to shine, I capture authentic expressions and moments that feel true to who they are.",
+    href: "/portfolio/kids",
   },
 ];
 
@@ -59,8 +64,8 @@ const cardVariant = {
 
 export function ServicesSection() {
   return (
-    <section className="px-8 md:px-16 lg:px-24 py-20 md:py-32">
-      <div className="max-w-5xl mx-auto">
+    <section className="px-8 md:px-16 lg:px-24 xl:px-48 py-20 md:py-32">
+      <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
         <motion.div
           className="mb-10 md:mb-14"
           initial={{ opacity: 0, y: 16 }}
@@ -80,13 +85,14 @@ export function ServicesSection() {
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
         >
-          {services.map(({ icon: Icon, title, description }, i) => (
+          {services.map(({ icon: Icon, title, description, href }, i) => (
             <motion.div key={title} variants={cardVariant}>
               <FeatureCard
                 title={title}
                 description={description}
                 Icon={Icon}
                 index={i}
+                href={href}
               />
             </motion.div>
           ))}

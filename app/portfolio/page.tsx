@@ -1,27 +1,113 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
+const categories = [
+  {
+    href: "/portfolio/couple",
+    label: "Couples",
+    sub: "Just the two of you.",
+    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0743-Enhanced-NR-Edit-615309f7-1500.jpg",
+    alt: "Couple portrait",
+    position: "object-top",
+  },
+  {
+    href: "/portfolio/maternity",
+    label: "Maternity",
+    sub: "Before they arrive.",
+    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1069-65f0e999-1500.jpg",
+    alt: "Maternity portrait",
+    position: "object-center",
+  },
+  {
+    href: "/portfolio/family",
+    label: "Family",
+    sub: "Together, in frame.",
+    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/GuirguisFamily-a833801f-1000.jpg",
+    alt: "Family portrait outdoors",
+    position: "object-top",
+  },
+  {
+    href: "/portfolio/kids",
+    label: "Kids",
+    sub: "Childhood, caught.",
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
+    alt: "Portrait of Chloe",
+    position: "object-top",
+  },
+];
+
+const containerVariants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 28 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease } },
+};
+
 export default function Page() {
-  return <div><section>
-  <div>
-    <a href="/portfolio/couple">
-      <h2>Couples</h2>
-    </a>
-  </div>
+  return (
+    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-24 md:pt-36 pb-24 md:pb-36">
+      <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
-  <div>
-    <a href="/portfolio/maternity">
-      <h2>Maternity</h2>
-    </a>
-  </div>
+        {/* Header */}
+        <motion.div
+          className="mb-16 md:mb-20"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease }}
+        >
+          <p className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-5">
+            Portfolio
+          </p>
+          <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.05]">
+            The work.
+          </h1>
+        </motion.div>
 
-  <div>
-    <a href="/portfolio/family">
-      <h2>Family</h2>
-    </a>
-  </div>
+        {/* Grid */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4"
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
+          {categories.map((cat) => (
+            <motion.div key={cat.href} variants={cardVariants}>
+              <Link href={cat.href} className="group block relative overflow-hidden aspect-[3/4]">
+                <Image
+                  src={cat.src}
+                  alt={cat.alt}
+                  fill
+                  className={`object-cover ${cat.position} transition-transform duration-700 ease-out group-hover:scale-[1.04]`}
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+                {/* base dark gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                {/* hover scrim */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-  <div>
-    <a href="/portfolio/kids">
-      <h2>Kids</h2>
-    </a>
-  </div>
-</section></div>
+                {/* text */}
+                <div className="absolute bottom-0 left-0 right-0 px-7 pb-8">
+                  <p className="text-[9px] tracking-[0.45em] uppercase text-white/60 font-medium mb-1.5 translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
+                    {cat.sub}
+                  </p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                    {cat.label}
+                  </h2>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
+
+      </div>
+    </main>
+  );
 }

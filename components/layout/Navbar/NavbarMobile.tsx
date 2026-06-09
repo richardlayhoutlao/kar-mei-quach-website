@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "@/public/Logo_2.png"
-import { Menu, X } from "lucide-react"
+import { X, Menu } from "lucide-react"
 import { motion } from "framer-motion"
 
 type NavItem = { title: string; href: string }
@@ -20,6 +20,8 @@ type MobileNavDropdownProps = {
   onClose: () => void
   isMenuOpen: boolean
 }
+
+const linkClass = "text-[13px] tracking-[0.3em] uppercase text-foreground/60 hover:text-foreground transition-colors duration-200"
 
 const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropdownProps) => {
   const [open, setOpen] = useState(false)
@@ -39,10 +41,7 @@ const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropd
 
   return (
     <div className="flex flex-col items-center">
-      <button
-        className="uppercase tracking-widest text-sm relative"
-        onClick={handleToggle}
-      >
+      <button className={`${linkClass} relative cursor-pointer`} onClick={handleToggle}>
         {label}
         <motion.svg
           className="absolute top-1/2 -translate-y-1/2 -right-5"
@@ -59,15 +58,15 @@ const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropd
       </button>
       <div
         className={`flex flex-col items-center gap-4 overflow-hidden ${shouldAnimate ? "transition-all duration-300 ease-in-out" : ""} ${
-          open ? "max-h-40 opacity-100 mt-4" : "max-h-0 opacity-0 pointer-events-none mt-0"
+          open ? "max-h-60 opacity-100 mt-4" : "max-h-0 opacity-0 pointer-events-none mt-0"
         }`}
       >
         {items.map((item) => (
           <Link
             key={item.title}
-            className="uppercase tracking-widest text-xs text-muted-foreground"
             href={item.href}
             onClick={onClose}
+            className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-200"
           >
             {item.title}
           </Link>
@@ -85,58 +84,54 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
     return () => { document.body.style.overflow = "" }
   }, [mobileOpen])
 
+  const close = () => setMobileOpen(false)
+
   return (
     <div className="lg:hidden">
-      <div className="flex items-center justify-between px-5 py-3">
-        <Link href="/" onClick={() => setMobileOpen(false)}>
-          <Image src={Logo} alt="Logo" width={90} height={90} />
+
+      {/* Top bar */}
+      <div className="flex items-center justify-between px-6 py-3">
+        <Link href="/" onClick={close}>
+          <Image src={Logo} alt="Logo" width={90} height={90} priority />
         </Link>
         <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-          className="p-2 relative w-10 h-10 flex items-center justify-center"
+          onClick={() => setMobileOpen(true)}
+          aria-label="Open menu"
+          className="text-foreground/60 hover:text-foreground transition-colors duration-200 p-1 cursor-pointer"
         >
-          <Menu
-            size={28}
-            className={`absolute transition-all duration-300 ${
-              mobileOpen ? "opacity-0 rotate-90 scale-50" : "opacity-100 rotate-0 scale-100"
-            }`}
-          />
-          <X
-            size={28}
-            className={`absolute transition-all duration-300 ${
-              mobileOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-50"
-            }`}
-          />
+          <Menu size={22} />
         </button>
       </div>
 
+      {/* Fullscreen overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-background flex flex-col transition-opacity duration-300 ${
+        className={`fixed inset-0 z-50 bg-[#faf7f4] flex flex-col transition-opacity duration-300 ${
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex items-center justify-between px-5 py-3">
-          <Link href="/" onClick={() => setMobileOpen(false)}>
-            <Image src={Logo} alt="Logo" width={90} height={90} />
+        <div className="flex items-center justify-between px-6 py-3">
+          <Link href="/" onClick={close}>
+            <Image src={Logo} alt="Logo" width={90} height={90} priority />
           </Link>
           <button
-            onClick={() => setMobileOpen(false)}
+            onClick={close}
             aria-label="Close menu"
-            className="p-2 w-10 h-10 flex items-center justify-center"
+            className="text-foreground/60 hover:text-foreground transition-colors duration-200 p-1"
           >
-            <X size={28} />
+            <X size={22} />
           </button>
         </div>
-        <nav className="flex flex-col items-center justify-center flex-1 gap-8">
-          <Link className="uppercase tracking-widest text-sm" href="/" onClick={() => setMobileOpen(false)}>Home</Link>
-          <Link className="uppercase tracking-widest text-sm" href="/about" onClick={() => setMobileOpen(false)}>About</Link>
-          <Link className="uppercase tracking-widest text-sm" href="/pricing" onClick={() => setMobileOpen(false)}>Pricing</Link>
-          <MobileNavDropdown label="Portfolio" items={portfolioItems} onClose={() => setMobileOpen(false)} isMenuOpen={mobileOpen} />
-          <Link className="uppercase tracking-widest text-sm" href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
-          <MobileNavDropdown label="More" items={moreItems} onClose={() => setMobileOpen(false)} isMenuOpen={mobileOpen} />
+
+        <nav className="flex flex-col items-center justify-center flex-1 gap-7">
+          <Link href="/" onClick={close} className={linkClass}>Home</Link>
+          <Link href="/about" onClick={close} className={linkClass}>About</Link>
+          <Link href="/pricing" onClick={close} className={linkClass}>Pricing</Link>
+          <MobileNavDropdown label="Portfolio" items={portfolioItems} onClose={close} isMenuOpen={mobileOpen} />
+          <Link href="/contact" onClick={close} className={linkClass}>Contact</Link>
+          <MobileNavDropdown label="More" items={moreItems} onClose={close} isMenuOpen={mobileOpen} />
         </nav>
       </div>
+
     </div>
   )
 }
