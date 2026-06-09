@@ -38,16 +38,7 @@ const Footer = () => {
   <footer>
 
     {/* ── Dark CTA band ── */}
-    <div className="relative overflow-hidden bg-[#1c1917] px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
-
-      {/* grain overlay */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.035]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-          backgroundSize: "180px",
-        }}
-      />
+    <div className="relative overflow-hidden bg-[#1c1917] dark:bg-background px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
 
       <div className="relative max-w-5xl xl:max-w-screen-2xl mx-auto">
         <motion.p
@@ -87,7 +78,7 @@ const Footer = () => {
 
     {/* ── Cream info band ── */}
     <motion.div
-      className="bg-[#faf7f4] px-8 md:px-16 lg:px-24 xl:px-48 py-10 md:py-12"
+      className="bg-[#faf7f4] dark:bg-background px-8 md:px-16 lg:px-24 xl:px-48 py-10 md:py-12"
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

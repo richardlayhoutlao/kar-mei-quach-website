@@ -86,7 +86,7 @@ export default function Page() {
       <section className="relative flex h-[80vh] min-h-[520px] md:h-[80vh] w-full overflow-hidden">
 
         {/* ── White gradient top to bottom ── */}
-        <div className="absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent pointer-events-none z-10" />
+        <div className="absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
 
         {/* ── Mobile: full-bleed image + overlay text ── */}
         <div className="absolute inset-0 md:hidden">
@@ -127,7 +127,7 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: cream background for left text panel ── */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-[#faf7f4]" />
+        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-[#faf7f4] dark:bg-background" />
 
         {/* ── Desktop: images on right half ── */}
         <div className="hidden md:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">

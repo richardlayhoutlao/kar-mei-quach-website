@@ -71,7 +71,7 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
           >
             <div className="flex flex-col bg-white/95 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden min-w-[140px]">
               {portfolioItems.map((item) => (
-                <Link key={item.href} href={item.href} onClick={() => setPortfolioOpen(false)} className={`${linkClass} w-full text-center px-6 py-3 hover:bg-neutral-200 transition-colors duration-200`}>
+                <Link key={item.href} href={item.href} onClick={() => setPortfolioOpen(false)} className="text-[11px] tracking-[0.3em] uppercase text-neutral-800/60 hover:text-neutral-900 w-full text-center px-6 py-3 hover:bg-neutral-200 transition-colors duration-200">
                   {item.title}
                 </Link>
               ))}
@@ -108,7 +108,7 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
           >
             <div className="flex flex-col bg-white/95 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden min-w-[160px]">
               {moreItems.map((item) => (
-                <Link key={item.href} href={item.href} onClick={() => setMoreOpen(false)} className={`${linkClass} w-full text-center px-6 py-3 hover:bg-neutral-200 transition-colors duration-200`}>
+                <Link key={item.href} href={item.href} onClick={() => setMoreOpen(false)} className="text-[11px] tracking-[0.3em] uppercase text-neutral-800/60 hover:text-neutral-900 w-full text-center px-6 py-3 hover:bg-neutral-200 transition-colors duration-200">
                   {item.title}
                 </Link>
               ))}
