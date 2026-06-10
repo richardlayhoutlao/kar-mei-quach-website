@@ -22,6 +22,7 @@ const navLinks = [
   { label: "Maternity", href: "/portfolio/maternity" },
   { label: "Family", href: "/portfolio/family" },
   { label: "Kids", href: "/portfolio/kids" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "FAQ", href: "/faq" },
 ]
@@ -38,11 +39,11 @@ const Footer = () => {
   <footer>
 
     {/* ── Dark CTA band ── */}
-    <div className="relative overflow-hidden bg-[#1c1917] dark:bg-background px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
+    <div className="relative overflow-hidden bg-[#B5AACF] dark:bg-[#B5AACF] px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
 
       <div className="relative max-w-5xl xl:max-w-screen-2xl mx-auto">
         <motion.p
-          className="text-[9px] tracking-[0.5em] uppercase text-white/30 font-medium mb-10 md:mb-14"
+          className="text-[9px] tracking-[0.5em] uppercase text-white/70 font-medium mb-10 md:mb-14"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -52,33 +53,34 @@ const Footer = () => {
         </motion.p>
 
         <motion.h2
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-[1.0] text-white mb-12 md:mb-16"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0] text-white mb-12 md:mb-16"
+         
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.0, ease, delay: 0.15 }}
         >
           Let&apos;s make<br />
-          <span className="font-light italic text-white/50">New Memories.</span>
+          <span className="font-light italic text-white/70 font-hey-eloise-watercolor">New Memories.</span>
         </motion.h2>
 
         <motion.button
           onClick={handleBookSession}
-          className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-white/60 hover:text-white transition-colors duration-300 cursor-pointer"
+          className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-white/80 hover:text-white transition-colors duration-300 cursor-pointer"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease, delay: 0.35 }}
         >
           Book a session
-          <span className="block h-px w-8 bg-white/30 transition-all duration-500 group-hover:w-20 group-hover:bg-white/70" />
+          <span className="block h-px w-8 bg-white/60 transition-all duration-500 group-hover:w-20 group-hover:bg-white" />
         </motion.button>
       </div>
     </div>
 
     {/* ── Cream info band ── */}
     <motion.div
-      className="bg-[#faf7f4] dark:bg-background px-8 md:px-16 lg:px-24 xl:px-48 py-10 md:py-12"
+      className="bg-transparent px-8 md:px-16 lg:px-24 xl:px-48 py-10 md:py-12"
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

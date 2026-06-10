@@ -64,11 +64,12 @@ export function HeroSection() {
           </motion.h2>
 
           <motion.h3
-            className="mb-8 max-w-2xl text-3xl leading-[1.1] font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+            className="mb-8 max-w-2xl text-3xl leading-[1.1] font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl font-hey-eloise"
             {...fadeUp(0.85)}
           >
-            When Vision Meets Memories
+            When Vision Meets<br />Memories
           </motion.h3>
+
 
           <motion.div
             {...fadeUp(1.1)}

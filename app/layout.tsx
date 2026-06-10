@@ -18,7 +18,9 @@ const RootLayout = ({
     suppressHydrationWarning
     className={cn("antialiased font-sans", montserrat.variable)}
   >
-
+    <head>
+      <link rel="stylesheet" href="https://use.typekit.net/cop1nlv.css" />
+    </head>
     <body>
       <ThemeProvider>
         <Navbar />

@@ -66,7 +66,7 @@ export default function Page() {
           <p className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-5">
             Portfolio
           </p>
-          <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.05]">
+          <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight font-hey-eloise leading-[1.05]">
             The work.
           </h1>
         </motion.div>
