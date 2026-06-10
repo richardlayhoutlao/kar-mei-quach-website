@@ -85,6 +85,8 @@ export default function Page() {
                   src={cat.src}
                   alt={cat.alt}
                   fill
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
                   className={`object-cover ${cat.position} transition-transform duration-700 ease-out group-hover:scale-[1.04]`}
                   sizes="(max-width: 640px) 100vw, 50vw"
                 />

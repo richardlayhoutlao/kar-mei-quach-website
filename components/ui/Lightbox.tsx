@@ -79,6 +79,8 @@ function LightboxInner({ images, index, onClose, onPrev, onNext }: Omit<Lightbox
             alt={images[index].alt}
             width={1500}
             height={2000}
+            onContextMenu={(e) => e.preventDefault()}
+            onDragStart={(e) => e.preventDefault()}
             className="max-h-[85vh] w-auto h-auto object-contain"
             sizes="90vw"
             priority
