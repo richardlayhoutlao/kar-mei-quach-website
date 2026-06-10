@@ -120,7 +120,7 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: cream background for left text panel ── */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-[#faf7f4] dark:bg-background" />
+        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-[#e8e4f4] dark:bg-background" />
 
         {/* ── Desktop: images on right half ── */}
         <div className="hidden md:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
