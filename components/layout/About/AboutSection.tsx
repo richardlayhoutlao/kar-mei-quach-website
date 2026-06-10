@@ -43,6 +43,8 @@ export function AboutSection() {
               src="https://images-pw.pixieset.com/elementfield/PExza3G/Websiteself-portrait1-18abe0f5-1500.jpg"
               alt="Kar-Mei Quach"
               fill
+              onContextMenu={(e) => e.preventDefault()}
+              onDragStart={(e) => e.preventDefault()}
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
             />

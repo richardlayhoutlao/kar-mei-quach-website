@@ -16,7 +16,7 @@ function fadeUp(delay: number) {
 
 export function HeroSection() {
   return (
-    <section className="relative h-[calc(100vh-7rem)] min-h-[600px] sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px] 2xl:min-h-[10vh] w-full overflow-hidden lg:h-[calc(100vh-15rem)]">
+    <section className="relative h-[calc(100vh-7rem)] min-h-[600px] sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px] 2xl:min-h-[10vh] w-full overflow-hidden lg:h-[calc(100vh-15rem)] bg-transparent">
       <motion.div
         className="absolute inset-0 flex items-center justify-center"
         initial={{ opacity: 0, scale: 1.04 }}
@@ -28,6 +28,8 @@ export function HeroSection() {
           alt="Hero"
           width={2400}
           height={1792}
+          onContextMenu={(e) => e.preventDefault()}
+          onDragStart={(e) => e.preventDefault()}
           className="absolute
           inset-0
           m-auto
@@ -47,15 +49,15 @@ export function HeroSection() {
         />
       </motion.div>
 
-      <motion.div
-        className="pointer-events-none absolute inset-x-0 top-16 bottom-0 bg-linear-to-t from-neutral-800/90 via-neutral-600/30 to-transparent"
+      {/* <motion.div
+        className="pointer-events-none absolute inset-x-0 top-16 bottom-0 bg-linear-to-t from-[#e8e4f4] via-[#e8e4f4]/30 to-transparent"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.4, delay: 0.3, ease: "easeOut" }}
-      />
+      /> */}
 
       <div className="absolute inset-0 flex flex-col justify-end">
-        <div className="flex flex-col items-center px-6 text-center text-white md:px-16 lg:px-24 pb-[13vh] md:pb-[9vh] lg:pb-[12vh] 2xl:pb-[3vh]">
+        <div className="flex flex-col items-center px-6 text-center text-foreground md:px-16 lg:px-24 pb-[13vh] md:pb-[9vh] lg:pb-[12vh] 2xl:pb-[3vh]">
           <motion.h2
             className="mb-5 text-[8px] font-medium tracking-[0.45em] uppercase sm:text-[10px]"
             {...fadeUp(0.6)}

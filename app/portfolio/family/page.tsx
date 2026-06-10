@@ -92,6 +92,8 @@ export default function Page() {
               src={heroImages[0].src}
               alt={heroImages[0].alt}
               fill
+              onContextMenu={(e) => e.preventDefault()}
+              onDragStart={(e) => e.preventDefault()}
               className="object-cover object-top"
               priority
               sizes="100vw"
@@ -136,6 +138,8 @@ export default function Page() {
                 src={heroImages[0].src}
                 alt={heroImages[0].alt}
                 fill
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
                 className="object-cover object-top"
                 priority
                 sizes="22vw"
@@ -156,6 +160,8 @@ export default function Page() {
                   src={heroImages[1].src}
                   alt={heroImages[1].alt}
                   fill
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
                   className="object-cover object-top"
                   sizes="22vw"
                 />
@@ -172,6 +178,8 @@ export default function Page() {
                   src={heroImages[2].src}
                   alt={heroImages[2].alt}
                   fill
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
                   className="object-cover object-top"
                   sizes="22vw"
                 />
@@ -254,6 +262,8 @@ export default function Page() {
                   alt={img.alt}
                   width={750}
                   height={1000}
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
                   className="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
