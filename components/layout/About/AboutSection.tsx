@@ -50,10 +50,11 @@ export function AboutSection() {
 
           <div className="flex flex-col justify-center">
             <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-10 xl:whitespace-nowrap"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise mb-10 leading-[1.0]"
+             
               {...fadeUp(0.2)}
             >
-              Who Is<br />Kar-Mei Quach?
+              Who Is<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Kar-Mei Quach?</span>
             </motion.h1>
 
             <motion.div className="space-y-6" {...fadeUp(0.35)}>

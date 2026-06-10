@@ -74,13 +74,14 @@ export function FaqSection() {
         </motion.p>
 
         <motion.h1
-          className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-16 md:mb-24 max-w-xl"
+          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise leading-[1.0] mb-16 md:mb-24 max-w-xl"
+         
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
         >
-          Good Questions.
+          Good<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Questions.</span>
         </motion.h1>
 
         <motion.div
