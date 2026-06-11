@@ -152,7 +152,7 @@ export function ContactSection() {
               </p>
               <Link
                 href="mailto:info@karmeiquach.com"
-                className="group inline-flex items-center gap-3 text-sm font-light hover:opacity-70 transition-opacity duration-300 py-5 pr-8"
+                className="group inline-flex items-center gap-3 text-sm font-light text-muted-foreground hover:text-foreground transition-colors duration-300 py-5 pr-8"
               >
                 info@karmeiquach.com
                 <span className="block h-px w-8 bg-current opacity-40 transition-all duration-300 group-hover:w-14 group-hover:opacity-70" />

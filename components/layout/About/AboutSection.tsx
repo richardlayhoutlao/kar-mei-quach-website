@@ -82,10 +82,10 @@ export function AboutSection() {
             <motion.div className="mt-12 pt-10 border-t border-border" {...fadeUp(0.5)}>
               <Link
                 href="/portfolio"
-                className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
+                className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 py-5 pr-8"
               >
                 View My Portfolio
-                <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
+                <span className="block h-px w-8 bg-muted-foreground/60 transition-all duration-500 group-hover:w-20 group-hover:bg-foreground" />
               </Link>
             </motion.div>
           </div>
