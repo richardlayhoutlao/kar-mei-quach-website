@@ -29,10 +29,6 @@ const images = [
     alt: "Portrait of Kitty",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KenjiColour_Quach_CleanBG-b560c226-1500.jpg",
-    alt: "Portrait of Kenji",
-  },
-  {
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_JayceColour_Quach_CleanBG-055ccdf5-1500.jpg",
     alt: "Portrait of Jayce",
   },
@@ -40,9 +36,18 @@ const images = [
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_LiliaColour_Expand_Quach_CleanBG-25ea78a0-1500.jpg",
     alt: "Portrait of Lilia",
   },
+  
+  {
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KenjiColour_Quach_CleanBG-b560c226-1500.jpg",
+    alt: "Portrait of Kenji",
+  },
   {
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ThomasColor_Quach_CleanedBG-842f3eb0-1500.jpg",
     alt: "Portrait of Thomas",
+  },
+  {
+    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
+    alt: "Portrait of Chloe",
   },
   {
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/Lucas2915-7698bc43-1500.jpg",
@@ -51,10 +56,6 @@ const images = [
   {
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_MilanaColour2_Quach_CleanBG-d75dfa53-1500.jpg",
     alt: "Portrait of Milana",
-  },
-  {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
-    alt: "Portrait of Chloe",
   },
   {
     src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_AylaColour_Quach_CleanBG-f7eb4f06-1500.jpg",
@@ -251,7 +252,7 @@ export default function Page() {
           </motion.div>
 
           <motion.div
-            className="columns-2 md:columns-3 gap-3 md:gap-4"
+            className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -261,17 +262,16 @@ export default function Page() {
               <motion.div
                 key={img.src}
                 variants={itemVariants}
-                className="break-inside-avoid mb-3 md:mb-4 group overflow-hidden cursor-pointer"
+                className="relative aspect-3/4 group overflow-hidden cursor-pointer"
                 onClick={() => open(i)}
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  width={750}
-                  height={1000}
+                  fill
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
-                  className="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
               </motion.div>
