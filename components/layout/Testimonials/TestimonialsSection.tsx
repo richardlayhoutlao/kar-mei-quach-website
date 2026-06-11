@@ -80,7 +80,7 @@ export function TestimonialsSection() {
                 key={name}
                 variants={cardVariant}
                 className={cn(
-                  "pt-10 pb-12 md:py-16 border-border",
+                  "group pt-10 pb-12 md:py-16 border-border",
                   isBottom && "border-t",
                   hasMobileTopBorder && "border-t md:border-t-0",
                   isLeft
@@ -88,15 +88,15 @@ export function TestimonialsSection() {
                     : "md:pl-12 xl:pl-24",
                 )}
               >
-                <span className="block font-serif text-7xl leading-none text-foreground/10 mb-2 select-none">
+                <span className="block font-serif text-7xl leading-none text-foreground/10 mb-2 select-none transition-colors duration-300 group-hover:text-foreground/20">
                   &ldquo;
                 </span>
-                <p className="text-sm text-muted-foreground leading-loose font-light mb-10">
+                <p className="text-sm text-muted-foreground leading-loose font-light mb-10 transition-colors duration-300 group-hover:text-foreground/70">
                   {quote}
                 </p>
                 <div className="flex items-center gap-4">
-                  <span className="block h-px w-6 bg-foreground/25 shrink-0" />
-                  <span className="text-[10px] tracking-[0.35em] uppercase font-medium">
+                  <span className="block h-px w-6 bg-foreground/25 shrink-0 transition-colors duration-300 group-hover:bg-foreground/50" />
+                  <span className="text-[10px] tracking-[0.35em] uppercase font-medium transition-colors duration-300 group-hover:text-foreground">
                     {name}
                   </span>
                 </div>
