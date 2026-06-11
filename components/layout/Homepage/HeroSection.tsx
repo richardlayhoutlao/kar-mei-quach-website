@@ -24,7 +24,7 @@ export function HeroSection() {
         transition={{ duration: 1.8, ease }}
       >
         <Image
-          src="/Homepage.png"
+          src="/Homepage-image.png"
           alt="Hero"
           width={2400}
           height={1792}
@@ -37,7 +37,7 @@ export function HeroSection() {
           pb-20
           sm:pb-0
           xl:pb-48
-          2xl:pb-8
+          2xl:pb-68
           max-w-sm
           sm:max-w-sm
           md:max-w-2xl
