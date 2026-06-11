@@ -238,7 +238,7 @@ export default function Page() {
           </motion.div>
 
           <motion.div
-            className="columns-2 md:columns-3 gap-3 md:gap-4"
+            className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -248,17 +248,16 @@ export default function Page() {
               <motion.div
                 key={img.src}
                 variants={itemVariants}
-                className="break-inside-avoid mb-3 md:mb-4 group overflow-hidden cursor-pointer"
+                className="relative aspect-3/4 group overflow-hidden cursor-pointer"
                 onClick={() => open(i)}
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  width={750}
-                  height={1000}
+                  fill
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
-                  className="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
               </motion.div>
