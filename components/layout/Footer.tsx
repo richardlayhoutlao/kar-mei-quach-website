@@ -39,11 +39,11 @@ const Footer = () => {
   <footer>
 
     {/* ── Dark CTA band ── */}
-    <div className="relative overflow-hidden bg-[#B5AACF] dark:bg-[#B5AACF] px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
+    <div className="relative overflow-hidden [background:radial-gradient(ellipse_70%_80%_at_50%_50%,#e8e4f4_0%,transparent_100%)] dark:[background:none] px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
 
       <div className="relative max-w-5xl xl:max-w-screen-2xl mx-auto">
         <motion.p
-          className="text-[9px] tracking-[0.5em] uppercase text-white/70 font-medium mb-10 md:mb-14"
+          className="text-[9px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-10 md:mb-14"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -53,7 +53,7 @@ const Footer = () => {
         </motion.p>
 
         <motion.h2
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0] text-white mb-12 md:mb-16"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0] text-foreground mb-12 md:mb-16"
          
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,19 +61,19 @@ const Footer = () => {
           transition={{ duration: 1.0, ease, delay: 0.15 }}
         >
           Let&apos;s make<br />
-          <span className="font-light italic text-white/70 font-hey-eloise-watercolor">New Memories.</span>
+          <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">New Memories.</span>
         </motion.h2>
 
         <motion.button
           onClick={handleBookSession}
-          className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-white/80 hover:text-white transition-colors duration-300 cursor-pointer"
+          className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-pointer"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease, delay: 0.35 }}
         >
           Book a session
-          <span className="block h-px w-8 bg-white/60 transition-all duration-500 group-hover:w-20 group-hover:bg-white" />
+          <span className="block h-px w-8 bg-muted-foreground/60 transition-all duration-500 group-hover:w-20 group-hover:bg-foreground" />
         </motion.button>
       </div>
     </div>
@@ -92,7 +92,7 @@ const Footer = () => {
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between pb-8 border-b border-black/10">
           <Link
             href="/"
-            className="text-[11px] font-semibold tracking-[0.25em] uppercase text-foreground hover:text-foreground/60 transition-colors duration-200 shrink-0"
+            className="text-[11px] font-semibold tracking-[0.25em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-200 shrink-0"
           >
             Kar-Mei Quach
           </Link>
