@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
@@ -84,57 +83,41 @@ export function PricingSection() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4"
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.05 }}
         >
-          {packages.map(({ title, price, image, alt, href }, i) => {
-            const isLeft = i % 2 === 0;
-            const isBottom = i >= 2;
-            const hasMobileTopBorder = i === 1;
-            return (
-              <motion.div
-                key={title}
-                variants={cardVariant}
-                className={cn(
-                  "group pt-8 pb-12 md:py-12 border-border",
-                  isBottom && "border-t",
-                  hasMobileTopBorder && "border-t md:border-t-0",
-                  isLeft ? "md:pr-12 xl:pr-32 md:border-r" : "md:pl-12 xl:pl-32",
-                )}
-              >
-                <Link href={href} className="block">
-                <div className="relative aspect-square overflow-hidden mb-6">
-                  <Image
-                    src={image}
-                    alt={alt}
-                    fill
-                    onContextMenu={(e) => e.preventDefault()}
-                    onDragStart={(e) => e.preventDefault()}
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+          {packages.map(({ title, price, image, alt, href }) => (
+            <motion.div key={title} variants={cardVariant}>
+              <Link href={href} className="group block relative overflow-hidden aspect-3/4">
+                <Image
+                  src={image}
+                  alt={alt}
+                  fill
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
+                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+                {/* base dark gradient */}
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
+                {/* hover scrim */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="flex items-baseline justify-between gap-4">
-                  <div className="flex items-baseline gap-4">
-                    <span className="text-[10px] tracking-[0.3em] text-muted-foreground/50 font-medium tabular-nums">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <h2 className="text-lg md:text-xl xl:text-2xl font-semibold tracking-tight">
-                      {title}
-                    </h2>
-                  </div>
-                  <span className="shrink-0 text-xs font-medium tracking-widest uppercase text-muted-foreground">
+                {/* text */}
+                <div className="absolute bottom-0 left-0 right-0 px-7 pb-8">
+                  <p className="text-[9px] tracking-[0.45em] uppercase text-white/60 font-medium mb-1.5 translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
                     {price}
-                  </span>
+                  </p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                    {title}
+                  </h2>
                 </div>
-                </Link>
-              </motion.div>
-            );
-          })}
+              </Link>
+            </motion.div>
+          ))}
         </motion.div>
 
         <motion.div
@@ -148,15 +131,6 @@ export function PricingSection() {
             All sessions are tailored to your family and vision.
             Reach out to discuss packages, add-ons, and what to expect.
           </p>
-          <div className="mt-8">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
-            >
-              Get in touch
-              <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
-            </Link>
-          </div>
         </motion.div>
 
       </div>
