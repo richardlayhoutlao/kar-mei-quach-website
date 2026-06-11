@@ -65,6 +65,7 @@ const Footer = () => {
           <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">New Memories.</span>
         </motion.h2>
 
+        <div className="mt-12 pt-10 border-t border-foreground/10">
         <motion.button
           onClick={handleBookSession}
           className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-muted-foreground dark:text-foreground hover:text-foreground transition-colors duration-300 cursor-pointer py-5 pr-8"
@@ -76,6 +77,7 @@ const Footer = () => {
           {"Book a session"}
           <span className="block h-px w-8 bg-muted-foreground/60 transition-all duration-500 group-hover:w-20 group-hover:bg-foreground" />
         </motion.button>
+        </div>
       </div>
     </div>
 
