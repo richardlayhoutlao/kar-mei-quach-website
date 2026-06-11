@@ -152,7 +152,7 @@ export function ContactSection() {
               </p>
               <Link
                 href="mailto:info@karmeiquach.com"
-                className="group inline-flex items-center gap-3 text-sm font-light hover:opacity-70 transition-opacity duration-300"
+                className="group inline-flex items-center gap-3 text-sm font-light hover:opacity-70 transition-opacity duration-300 py-5 pr-8"
               >
                 info@karmeiquach.com
                 <span className="block h-px w-8 bg-current opacity-40 transition-all duration-300 group-hover:w-14 group-hover:opacity-70" />
@@ -219,7 +219,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full bg-[#1c1917] text-white text-[10px] tracking-[0.35em] uppercase py-5 px-8 transition-opacity duration-300 hover:opacity-80 disabled:opacity-40"
+                    className="w-full text-foreground/60 hover:text-foreground text-[10px] tracking-[0.35em] uppercase font-light py-5 px-8 transition-all duration-300 disabled:opacity-40 cursor-pointer bg-[#e8e4f4] dark:bg-transparent dark:border dark:border-foreground/30 dark:hover:bg-foreground/10"
                   >
                     {status === "loading" ? "Sending..." : "Send Message"}
                   </button>

@@ -119,7 +119,7 @@ export function TestimonialsSection() {
           <div className="mt-8">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
+              className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase py-5 pr-8"
             >
               Book a session
               <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
