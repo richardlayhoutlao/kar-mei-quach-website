@@ -67,13 +67,13 @@ const Footer = () => {
 
         <motion.button
           onClick={handleBookSession}
-          className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-pointer"
+          className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-muted-foreground dark:text-foreground hover:text-foreground transition-colors duration-300 cursor-pointer py-5 pr-8"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease, delay: 0.35 }}
         >
-          Book a session
+          {"Book a session"}
           <span className="block h-px w-8 bg-muted-foreground/60 transition-all duration-500 group-hover:w-20 group-hover:bg-foreground" />
         </motion.button>
       </div>
