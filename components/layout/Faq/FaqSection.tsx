@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Accordion,
@@ -120,15 +119,6 @@ export function FaqSection() {
           <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
             Still have questions? I&apos;d be happy to chat before you book.
           </p>
-          <div className="mt-8">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
-            >
-              Get in touch
-              <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
-            </Link>
-          </div>
         </motion.div>
 
       </div>

@@ -40,7 +40,7 @@ const Footer = () => {
 
     {/* ── Dark CTA band ── */}
     <div className="relative overflow-hidden px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
-      <div className="pointer-events-none absolute inset-0 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
+      <div className="pointer-events-none absolute inset-0 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 47%, #e8e4f4 53%, transparent 100%)" }} />
 
       <div className="relative max-w-5xl xl:max-w-screen-2xl mx-auto">
         <motion.p

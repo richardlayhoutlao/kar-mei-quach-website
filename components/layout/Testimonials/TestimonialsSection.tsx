@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -116,15 +115,6 @@ export function TestimonialsSection() {
           <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
             Ready to create memories of your own? I&apos;d love to hear your story.
           </p>
-          <div className="mt-8">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase py-5 pr-8"
-            >
-              Book a session
-              <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
-            </Link>
-          </div>
         </motion.div>
 
       </div>
