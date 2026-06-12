@@ -38,8 +38,12 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
       </div>
 
       {/* Logo */}
-      <Link href="/" className="flex justify-center mx-10 xl:mx-14">
+      <Link href="/" className="flex flex-col items-center mx-10 xl:mx-14 gap-2">
         <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={150} height={150} priority />
+        <div className="flex flex-col items-center leading-tight font-hey-eloise">
+          <span className="text-[22px] tracking-[0.03em] uppercase text-foreground/70">Kar-Mei Quach</span>
+          <span className="text-[22px] tracking-[0.03em] uppercase text-foreground/70">Photography</span>
+        </div>
       </Link>
 
       {/* Right */}

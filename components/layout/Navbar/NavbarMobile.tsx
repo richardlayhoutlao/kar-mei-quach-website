@@ -97,8 +97,12 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
 
       {/* Top bar */}
       <div className="flex items-center justify-between px-6 py-3">
-        <Link href="/" onClick={close}>
+        <Link href="/" onClick={close} className="flex flex-col items-center gap-1">
           <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={90} height={90} priority />
+          <div className="flex flex-col items-center leading-tight">
+            <span className="text-[8px] tracking-[0.2em] uppercase text-foreground/70">Kar-Mei Quach</span>
+            <span className="text-[8px] tracking-[0.2em] uppercase text-foreground/70">Photography</span>
+          </div>
         </Link>
         <button
           onClick={() => setMobileOpen(true)}
@@ -116,8 +120,12 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
         }`}
       >
         <div className="flex items-center justify-between px-6 py-3">
-          <Link href="/" onClick={close}>
+          <Link href="/" onClick={close} className="flex flex-col items-center gap-1">
             <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={90} height={90} priority />
+            <div className="flex flex-col items-center leading-tight font-hey-eloise">
+              <span className="text-[18px] tracking-[0.03em] uppercase text-foreground/70">Kar-Mei Quach</span>
+              <span className="text-[18px] tracking-[0.03em] uppercase text-foreground/70">Photography</span>
+            </div>
           </Link>
           <button
             onClick={close}
