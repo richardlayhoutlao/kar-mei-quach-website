@@ -45,16 +45,12 @@ export function PageCTA({ line1, line2 }: PageCTAProps) {
         </motion.h2>
 
         <div className="mt-12 pt-10 border-t border-foreground/10">
-          <motion.button
+          <button
             onClick={handleBookSession}
             className="inline-flex items-center text-[10px] tracking-[0.4em] uppercase border border-foreground/30 hover:border-foreground/60 text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-all duration-300 cursor-pointer px-8 py-4"
-            initial={{ opacity: 0, y: 3 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease, delay: 0.35 }}
           >
             Book a session
-          </motion.button>
+          </button>
         </div>
       </div>
     </div>
