@@ -125,7 +125,7 @@ export function FaqSection() {
 
       </div>
     </main>
-    <PageCTA line1="Good" line2="Questions." />
+    <PageCTA eyebrow="Have questions?" line1="Still curious?" line2="Let's talk." buttonLabel="Get in touch" />
     </>
   );
 }

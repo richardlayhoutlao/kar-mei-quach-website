@@ -137,7 +137,7 @@ export function PricingSection() {
 
       </div>
     </main>
-    <PageCTA line1="Investment In Moments" line2="That Last Forever." />
+    <PageCTA eyebrow="The investment." line1="Worth every" line2="Frame." />
     </>
   );
 }

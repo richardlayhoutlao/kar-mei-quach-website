@@ -69,12 +69,13 @@ export default function Page() {
         </motion.p>
 
         <motion.h1
-          className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight font-hey-eloise leading-[1.05] mb-16 md:mb-20"
+          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise leading-[1.0] mb-16 md:mb-20"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
         >
-          The work.
+          Shot with<br />
+          <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Purpose.</span>
         </motion.h1>
 
         {/* Grid */}
@@ -117,7 +118,7 @@ export default function Page() {
 
       </div>
     </main>
-    <PageCTA line1="Let's make" line2="New Memories." />
+    <PageCTA eyebrow="The portfolio." line1="Every shot" line2="Tells a story." />
     </>
   );
 }

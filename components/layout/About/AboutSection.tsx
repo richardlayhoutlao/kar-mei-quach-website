@@ -95,7 +95,7 @@ export function AboutSection() {
         </div>
       </div>
     </main>
-    <PageCTA line1="Who Is" line2="Kar-Mei Quach?" />
+    <PageCTA eyebrow="About Kar-Mei." line1="The person" line2="Behind the lens." />
     </>
   );
 }

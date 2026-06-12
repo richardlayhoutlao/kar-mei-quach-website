@@ -121,7 +121,7 @@ export function TestimonialsSection() {
 
       </div>
     </main>
-    <PageCTA line1="Real Moments." line2="Real Words." />
+    <PageCTA eyebrow="Kind words." line1="Don't take" line2="Our word." />
     </>
   );
 }

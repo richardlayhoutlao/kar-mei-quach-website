@@ -294,7 +294,7 @@ export default function Page() {
         onPrev={prev}
         onNext={next}
       />
-      <PageCTA line1="Together," line2="Forever." />
+      <PageCTA eyebrow="Family sessions." line1="Everyone together." line2="Finally." />
     </>
   );
 }
