@@ -221,7 +221,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full text-foreground/60 hover:text-foreground text-[10px] tracking-[0.35em] uppercase font-light py-5 px-8 transition-all duration-300 disabled:opacity-40 cursor-pointer bg-[#e8e4f4] dark:bg-transparent dark:border dark:border-foreground/30 dark:hover:bg-foreground/10"
+                    className="w-full text-foreground/70 hover:text-foreground text-[10px] tracking-[0.35em] uppercase font-light py-5 px-8 transition-all duration-300 disabled:opacity-40 cursor-pointer border border-foreground/40 hover:border-foreground/70 hover:bg-foreground/5"
                   >
                     {status === "loading" ? "Sending..." : "Send Message"}
                   </button>
