@@ -78,10 +78,10 @@ export function HeroSection() {
           >
             <Link
               href="/about"
-              className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
+              className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 py-5 pr-8"
             >
               More About Me
-              <span className="block h-px w-8 bg-white/50 transition-all duration-300 group-hover:w-14 group-hover:bg-white/80" />
+              <span className="block h-px w-8 bg-muted-foreground/60 transition-all duration-500 group-hover:w-20 group-hover:bg-foreground" />
             </Link>
           </motion.div>
         </div>
