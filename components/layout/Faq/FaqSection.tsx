@@ -95,13 +95,13 @@ export function FaqSection() {
             {faqs.map(({ question, answer }) => (
               <motion.div key={question} variants={itemVariant}>
                 <AccordionItem value={question} className="border-b border-border">
-                  <AccordionTrigger className="py-7 md:py-8 text-sm md:text-base font-medium tracking-tight text-left no-underline hover:no-underline [&:hover]:no-underline group/trigger cursor-pointer">
+                  <AccordionTrigger className="py-7 md:py-8 text-sm md:text-base font-medium tracking-tight text-left text-muted-foreground no-underline hover:no-underline [&:hover]:no-underline group/trigger cursor-pointer">
                     {question}
                   </AccordionTrigger>
                   <AccordionContent className="pb-7 md:pb-8">
-                    <div className="text-sm text-muted-foreground font-light space-y-1.5">
+                    <div className="space-y-3">
                       {answer.map((sentence, i) => (
-                        <p key={i} className="leading-relaxed">{sentence}</p>
+                        <p key={i} className="text-sm text-muted-foreground font-light leading-loose">{sentence}</p>
                       ))}
                     </div>
                   </AccordionContent>
