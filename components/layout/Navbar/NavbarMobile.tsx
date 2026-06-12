@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import Logo from "@/public/Logo_2.png"
+import LogoLight from "@/public/KM_logo.png"
+import LogoDark from "@/public/KM_logo_dark_mode.png"
 import { X, Menu } from "lucide-react"
 import { motion } from "framer-motion"
+import { useTheme } from "next-themes"
 
 type NavItem = { title: string; href: string }
 
@@ -78,6 +80,10 @@ const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropd
 
 const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme } = useTheme()
+
+  useEffect(() => setMounted(true), [])
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : ""
@@ -92,7 +98,7 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
       {/* Top bar */}
       <div className="flex items-center justify-between px-6 py-3">
         <Link href="/" onClick={close}>
-          <Image src={Logo} alt="Logo" width={90} height={90} priority />
+          <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={90} height={90} priority />
         </Link>
         <button
           onClick={() => setMobileOpen(true)}
@@ -111,7 +117,7 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
       >
         <div className="flex items-center justify-between px-6 py-3">
           <Link href="/" onClick={close}>
-            <Image src={Logo} alt="Logo" width={90} height={90} priority />
+            <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={90} height={90} priority />
           </Link>
           <button
             onClick={close}

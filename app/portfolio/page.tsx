@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { PageCTA } from "@/components/layout/PageCTA";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
@@ -53,6 +54,7 @@ const cardVariants = {
 
 export default function Page() {
   return (
+    <>
     <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-24 md:pb-36">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
@@ -115,5 +117,7 @@ export default function Page() {
 
       </div>
     </main>
+    <PageCTA line1="Let's make" line2="New Memories." />
+    </>
   );
 }
