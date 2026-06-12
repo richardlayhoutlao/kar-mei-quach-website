@@ -280,7 +280,7 @@ export default function Page() {
         onPrev={prev}
         onNext={next}
       />
-      <PageCTA line1="Just the Two of You." line2="Let's Make It Last." />
+      <PageCTA eyebrow="Couple sessions." line1="You & them." line2="Always." />
     </>
   );
 }

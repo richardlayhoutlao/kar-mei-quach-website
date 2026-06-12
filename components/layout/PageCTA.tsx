@@ -6,11 +6,13 @@ import { motion } from "framer-motion"
 const ease = [0.25, 0.1, 0.25, 1] as const
 
 interface PageCTAProps {
-  line1: string
-  line2: string
+  readonly line1: string
+  readonly line2: string
+  readonly eyebrow?: string
+  readonly buttonLabel?: string
 }
 
-export function PageCTA({ line1, line2 }: PageCTAProps) {
+export function PageCTA({ line1, line2, eyebrow = "It starts here.", buttonLabel = "Book a session" }: PageCTAProps) {
   const router = useRouter()
 
   const handleBookSession = () => {
@@ -30,7 +32,7 @@ export function PageCTA({ line1, line2 }: PageCTAProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease }}
         >
-          It starts here.
+          {eyebrow}
         </motion.p>
 
         <motion.h2
@@ -49,7 +51,7 @@ export function PageCTA({ line1, line2 }: PageCTAProps) {
             onClick={handleBookSession}
             className="inline-flex items-center text-[10px] tracking-[0.4em] uppercase border border-foreground/30 hover:border-foreground/60 text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-all duration-300 cursor-pointer px-8 py-4"
           >
-            Book a session
+            {buttonLabel}
           </button>
         </div>
       </div>

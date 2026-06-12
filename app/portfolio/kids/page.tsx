@@ -302,7 +302,7 @@ export default function Page() {
         onPrev={prev}
         onNext={next}
       />
-      <PageCTA line1="Little Ones," line2="Big Memories." />
+      <PageCTA eyebrow="Kids sessions." line1="Growing up" line2="One frame at a time." />
     </>
   );
 }

@@ -8,7 +8,7 @@ const Page = () => (
       <HeroSection />
       <ServicesSection />
     </main>
-    <PageCTA line1="Let's make" line2="New Memories." />
+    <PageCTA line1="Make them" line2="Real." />
   </>
 )
 

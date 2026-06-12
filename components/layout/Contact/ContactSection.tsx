@@ -233,7 +233,7 @@ export function ContactSection() {
         </div>
       </div>
     </main>
-    <PageCTA line1="Let's Work" line2="Together." />
+    <PageCTA eyebrow="Get in touch." line1="Your story" line2="Starts here." />
     </>
   );
 }
