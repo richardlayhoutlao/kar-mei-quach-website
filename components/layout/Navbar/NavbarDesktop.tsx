@@ -3,7 +3,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import Logo from "@/public/Logo_2.png"
+import LogoLight from "@/public/KM_logo.png"
+import LogoDark from "@/public/KM_logo_dark_mode.png"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
@@ -38,7 +39,7 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
 
       {/* Logo */}
       <Link href="/" className="flex justify-center mx-10 xl:mx-14">
-        <Image src={Logo} alt="Logo" width={150} height={150} priority />
+        <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={150} height={150} priority />
       </Link>
 
       {/* Right */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { PageCTA } from "@/components/layout/PageCTA";
 import { cn } from "@/lib/utils";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
@@ -40,6 +41,7 @@ const cardVariant = {
 
 export function TestimonialsSection() {
   return (
+    <>
     <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
@@ -119,5 +121,7 @@ export function TestimonialsSection() {
 
       </div>
     </main>
+    <PageCTA line1="Real Moments." line2="Real Words." />
+    </>
   );
 }

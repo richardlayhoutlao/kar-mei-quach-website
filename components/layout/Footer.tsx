@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 
 const ease = [0.25, 0.1, 0.25, 1] as const
@@ -28,58 +27,8 @@ const navLinks = [
 ]
 
 const Footer = () => {
-  const router = useRouter()
-
-  const handleBookSession = () => {
-    router.push("/contact")
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
-
   return (
   <footer>
-
-    {/* ── Dark CTA band ── */}
-    <div className="relative overflow-hidden px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
-      <div className="pointer-events-none absolute inset-0 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(232, 228, 244, 0.45) 35%, rgba(232, 228, 244, 0.45) 65%, transparent 100%)" }} />
-
-      <div className="relative max-w-5xl xl:max-w-screen-2xl mx-auto">
-        <motion.p
-          className="text-[9px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-10 md:mb-14"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease }}
-        >
-          It starts here.
-        </motion.p>
-
-        <motion.h2
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0] text-foreground mb-12 md:mb-16"
-         
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.0, ease, delay: 0.15 }}
-        >
-          Let&apos;s make<br />
-          <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">New Memories.</span>
-        </motion.h2>
-
-        <div className="mt-12 pt-10 border-t border-foreground/10">
-        <motion.button
-          onClick={handleBookSession}
-          className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-muted-foreground dark:text-foreground hover:text-foreground transition-colors duration-300 cursor-pointer py-5 pr-8"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease, delay: 0.35 }}
-        >
-          {"Book a session"}
-          <span className="block h-px w-8 bg-muted-foreground/60 transition-all duration-500 group-hover:w-20 group-hover:bg-foreground" />
-        </motion.button>
-        </div>
-      </div>
-    </div>
 
     {/* ── Cream info band ── */}
     <motion.div

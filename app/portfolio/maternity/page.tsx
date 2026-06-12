@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Lightbox } from "@/components/ui/Lightbox";
+import { PageCTA } from "@/components/layout/PageCTA";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
@@ -287,6 +288,7 @@ export default function Page() {
         onPrev={prev}
         onNext={next}
       />
+      <PageCTA line1="Before Hello," line2="Let's Begin." />
     </>
   );
 }
