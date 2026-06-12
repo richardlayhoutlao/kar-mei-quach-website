@@ -23,7 +23,7 @@ type MobileNavDropdownProps = {
   isMenuOpen: boolean
 }
 
-const linkClass = "text-[13px] tracking-[0.3em] uppercase text-foreground/60 hover:text-foreground transition-colors duration-200"
+const linkClass = "text-[13px] tracking-[0.3em] uppercase text-foreground/75 hover:text-foreground transition-colors duration-200"
 
 const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropdownProps) => {
   const [open, setOpen] = useState(false)
@@ -100,14 +100,14 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
         <Link href="/" onClick={close} className="flex flex-col items-center gap-1">
           <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={90} height={90} priority />
           <div className="flex flex-col items-center leading-tight">
-            <span className="text-[8px] tracking-[0.2em] uppercase text-foreground/70">Kar-Mei Quach</span>
-            <span className="text-[8px] tracking-[0.2em] uppercase text-foreground/70">Photography</span>
+            <span className="text-[8px] tracking-[0.2em] uppercase text-foreground/80">Kar-Mei Quach</span>
+            <span className="text-[8px] tracking-[0.2em] uppercase text-foreground/80">Photography</span>
           </div>
         </Link>
         <button
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
-          className="text-foreground/60 hover:text-foreground transition-colors duration-200 p-1 cursor-pointer"
+          className="text-foreground/75 hover:text-foreground transition-colors duration-200 p-1 cursor-pointer"
         >
           <Menu size={22} />
         </button>
@@ -123,14 +123,14 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
           <Link href="/" onClick={close} className="flex flex-col items-center gap-1">
             <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={90} height={90} priority />
             <div className="flex flex-col items-center leading-tight font-hey-eloise">
-              <span className="text-[18px] tracking-[0.03em] uppercase text-foreground/70">Kar-Mei Quach</span>
-              <span className="text-[18px] tracking-[0.03em] uppercase text-foreground/70">Photography</span>
+              <span className="text-[18px] tracking-[0.03em] uppercase text-foreground/80">Kar-Mei Quach</span>
+              <span className="text-[18px] tracking-[0.03em] uppercase text-foreground/80">Photography</span>
             </div>
           </Link>
           <button
             onClick={close}
             aria-label="Close menu"
-            className="text-foreground/60 hover:text-foreground transition-colors duration-200 p-1"
+            className="text-foreground/75 hover:text-foreground transition-colors duration-200 p-1"
           >
             <X size={22} />
           </button>

@@ -42,7 +42,7 @@ const Footer = () => {
 
         {/* Single row: brand left, nav right */}
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between pb-8 border-b border-black/10">
-          <Link href="/" className="font-hey-eloise text-[22px] tracking-[0.03em] uppercase text-foreground/70 shrink-0 hover:opacity-80 transition-opacity duration-200">
+          <Link href="/" className="font-hey-eloise text-[22px] tracking-[0.03em] uppercase text-foreground/80 shrink-0 hover:opacity-80 transition-opacity duration-200">
             Kar-Mei Quach - Photography
           </Link>
 

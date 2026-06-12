@@ -42,7 +42,7 @@ function FloatingField({
       <label
         className={cn(
           "absolute left-0 text-[10px] tracking-[0.2em] uppercase transition-all duration-300 pointer-events-none select-none",
-          lifted ? "top-0 opacity-50" : "top-[1.4rem] opacity-40"
+          lifted ? "top-0 opacity-70" : "top-[1.4rem] opacity-55"
         )}
       >
         {label}
@@ -149,7 +149,7 @@ export function ContactSection() {
               className="mt-12 pt-10 border-t border-border"
               {...fadeUp(0.5)}
             >
-              <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground/60 mb-5">
+              <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground/80 mb-5">
                 Email directly
               </p>
               <Link
@@ -170,7 +170,7 @@ export function ContactSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease }}
               >
-                <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground/60 mb-5">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground/80 mb-5">
                   Message sent
                 </p>
                 <p className="text-sm text-muted-foreground leading-loose font-light max-w-xs">
