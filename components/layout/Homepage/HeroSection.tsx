@@ -16,40 +16,26 @@ function fadeUp(delay: number) {
 
 export function HeroSection() {
   return (
-    <section className="relative h-[calc(100vh-7rem)] min-h-[600px] sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-[1000px] 2xl:min-h-[10vh] w-full overflow-hidden lg:h-[calc(100vh-15rem)] bg-transparent">
+    <section className="flex flex-col items-center w-full min-h-[calc(100vh-7rem)] bg-transparent pt-6 pb-16">
       <motion.div
-        className="absolute inset-0 flex items-center justify-center"
+        className="flex items-center justify-center w-full"
         initial={{ opacity: 0, scale: 1.04 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.8, ease }}
       >
         <Image
-          src="/Homepage-image.png"
+          src="/Homepage-original.png"
           alt="Hero"
           width={2400}
           height={1792}
           onContextMenu={(e) => e.preventDefault()}
           onDragStart={(e) => e.preventDefault()}
-          className="absolute
-          inset-0
-          m-auto
-          w-full
-          pb-20
-          sm:pb-0
-          xl:pb-48
-          2xl:pb-68
-          max-w-sm
-          sm:max-w-sm
-          md:max-w-2xl
-          lg:max-w-3xl
-          xl:max-w-4xl
-          2xl:max-w-7xl
-          h-auto"
+          className="w-full max-w-sm sm:max-w-sm md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-7xl h-auto"
           priority
         />
       </motion.div>
-      <div className="absolute inset-0 flex flex-col justify-end">
-        <div className="flex flex-col items-center px-6 text-center text-foreground md:px-16 lg:px-24 pb-[13vh] md:pb-[9vh] lg:pb-[12vh] 2xl:pb-[3vh]">
+      <div className="flex flex-col items-center mt-8">
+        <div className="flex flex-col items-center px-6 text-center text-foreground md:px-16 lg:px-24">
           <motion.h2
             className="mb-5 text-[8px] font-medium tracking-[0.45em] uppercase sm:text-[10px]"
             {...fadeUp(0.6)}
