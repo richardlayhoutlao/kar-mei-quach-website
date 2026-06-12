@@ -38,11 +38,11 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
       </div>
 
       {/* Logo */}
-      <Link href="/" className="flex flex-col items-center mx-10 xl:mx-14 gap-2">
-        <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={150} height={150} priority />
+      <Link href="/" className="flex flex-col items-center mx-6 xl:mx-14 gap-2">
+        <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={150} height={150} priority className="w-[110px] xl:w-[150px]" />
         <div className="flex flex-col items-center leading-tight font-hey-eloise">
-          <span className="text-[22px] tracking-[0.03em] uppercase text-foreground/80">Kar-Mei Quach</span>
-          <span className="text-[22px] tracking-[0.03em] uppercase text-foreground/80">Photography</span>
+          <span className="text-[18px] xl:text-[22px] tracking-[0.03em] uppercase text-foreground/80">Kar-Mei Quach</span>
+          <span className="text-[18px] xl:text-[22px] tracking-[0.03em] uppercase text-foreground/80">Photography</span>
         </div>
       </Link>
 
@@ -124,7 +124,7 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
         {/* Theme toggle */}
         <button
           onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-          className="hidden min-[1400px]:block cursor-pointer text-foreground/40 hover:text-foreground transition-colors duration-200"
+          className="cursor-pointer text-foreground/40 hover:text-foreground transition-colors duration-200"
           aria-label="Toggle theme"
         >
           <div className="relative size-6">
