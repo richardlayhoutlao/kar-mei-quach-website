@@ -48,14 +48,6 @@ export function HeroSection() {
           priority
         />
       </motion.div>
-
-      {/* <motion.div
-        className="pointer-events-none absolute inset-x-0 top-16 bottom-0 bg-linear-to-t from-[#e8e4f4] via-[#e8e4f4]/30 to-transparent"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.4, delay: 0.3, ease: "easeOut" }}
-      /> */}
-
       <div className="absolute inset-0 flex flex-col justify-end">
         <div className="flex flex-col items-center px-6 text-center text-foreground md:px-16 lg:px-24 pb-[13vh] md:pb-[9vh] lg:pb-[12vh] 2xl:pb-[3vh]">
           <motion.h2
