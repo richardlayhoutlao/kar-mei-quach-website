@@ -11,56 +11,55 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
-    alt: "Portrait of Chloe",
+    src: "/Kid/km-kid-1.jpg",
+    alt: "Kids portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ThomasColor_Quach_CleanedBG-842f3eb0-1500.jpg",
-    alt: "Portrait of Thomas",
+    src: "/Kid/km-kid-2.jpg",
+    alt: "Kids session",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KenjiColour_Quach_CleanBG-b560c226-1500.jpg",
-    alt: "Portrait of Kenji",
+    src: "/Kid/km-kid-3.jpg",
+    alt: "Kids portrait",
   },
 ];
 
 const images = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KittyColour_Quach_CleanBG-a1fc63e1-1500.jpg",
-    alt: "Portrait of Kitty",
+    src: "/Kid/km-kid-1.jpg",
+    alt: "Kids portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_JayceColour_Quach_CleanBG-055ccdf5-1500.jpg",
-    alt: "Portrait of Jayce",
+    src: "/Kid/km-kid-2.jpg",
+    alt: "Kids session",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_LiliaColour_Expand_Quach_CleanBG-25ea78a0-1500.jpg",
-    alt: "Portrait of Lilia",
-  },
-  
-  {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KenjiColour_Quach_CleanBG-b560c226-1500.jpg",
-    alt: "Portrait of Kenji",
+    src: "/Kid/km-kid-3.jpg",
+    alt: "Kids portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ThomasColor_Quach_CleanedBG-842f3eb0-1500.jpg",
-    alt: "Portrait of Thomas",
+    src: "/Kid/km-kid-4.jpg",
+    alt: "Kids portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
-    alt: "Portrait of Chloe",
+    src: "/Kid/km-kid-5.jpg",
+    alt: "Kids session",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/Lucas2915-7698bc43-1500.jpg",
-    alt: "Portrait of Lucas",
+    src: "/Kid/km-kid-6.jpg",
+    alt: "Kids portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_MilanaColour2_Quach_CleanBG-d75dfa53-1500.jpg",
-    alt: "Portrait of Milana",
+    src: "/Kid/km-kid-7.jpg",
+    alt: "Kids portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_AylaColour_Quach_CleanBG-f7eb4f06-1500.jpg",
-    alt: "Portrait of Ayla",
+    src: "/Kid/km-kid-8.jpg",
+    alt: "Kids session",
+  },
+  {
+    src: "/Kid/km-kid-9.jpg",
+    alt: "Kids portrait",
   },
 ];
 

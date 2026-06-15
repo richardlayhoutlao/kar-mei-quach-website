@@ -11,34 +11,34 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0743-Enhanced-NR-Edit-615309f7-1500.jpg",
+    src: "/Couple/Portrait/JPEG/km-couple-portrait-1.jpg",
     alt: "Couple portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0537-Enhanced-NR-Edit-23d884d7-1500.jpg",
+    src: "/Couple/Portrait/JPEG/km-couple-portrait-2.jpg",
     alt: "Couple session",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0794-Enhanced-NR-Edit-63a7e271-1500.jpg",
+    src: "/Couple/Landscape/JPEG/km-couple-landscape-1.jpg",
     alt: "Couple outdoors",
   },
 ];
 
 const images = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0743-Enhanced-NR-Edit-615309f7-1500.jpg",
+    src: "/Couple/Portrait/JPEG/km-couple-portrait-1.jpg",
     alt: "Couple portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0537-Enhanced-NR-Edit-23d884d7-1500.jpg",
+    src: "/Couple/Portrait/JPEG/km-couple-portrait-2.jpg",
     alt: "Couple session",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0794-Enhanced-NR-Edit-63a7e271-1500.jpg",
+    src: "/Couple/Landscape/JPEG/km-couple-landscape-1.jpg",
     alt: "Couple outdoors",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0643-Enhanced-NR-Edit-91106082-1500.jpg",
+    src: "/Couple/Landscape/JPEG/km-couple-landscape-2.jpg",
     alt: "Couple close-up",
   },
 ];

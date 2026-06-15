@@ -2,10 +2,6 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images-pw.pixieset.com",
-      },
     ],
   },
 }

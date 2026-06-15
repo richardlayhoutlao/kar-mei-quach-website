@@ -11,43 +11,43 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1069-65f0e999-1500.jpg",
+    src: "/Maternity/Portrait/km-maternity-portrait-1.jpg",
     alt: "Maternity portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2370-b619cda2-1500.jpg",
-    alt: "Victoria maternity session",
+    src: "/Maternity/Portrait/km-maternity-portrait-2.jpg",
+    alt: "Maternity session",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1140-d5cce64a-1500.jpg",
+    src: "/Maternity/Portrait/km-maternity-portrait-3.jpg",
     alt: "Maternity portrait outdoors",
   },
 ];
 
 const images = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1069-65f0e999-1500.jpg",
+    src: "/Maternity/Portrait/km-maternity-portrait-1.jpg",
     alt: "Maternity portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1257-d7ec256d-1500.jpg",
+    src: "/Maternity/Portrait/km-maternity-portrait-2.jpg",
     alt: "Maternity session",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1140-d5cce64a-1500.jpg",
+    src: "/Maternity/Portrait/km-maternity-portrait-3.jpg",
     alt: "Maternity portrait outdoors",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2370-b619cda2-1500.jpg",
-    alt: "Victoria maternity session",
+    src: "/Maternity/Portrait/km-maternity-portrait-4.jpg",
+    alt: "Maternity session",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2419-Edit-44ae4f51-1500.jpg",
-    alt: "Victoria pregnancy portrait",
+    src: "/Maternity/Portrait/km-maternity-portrait-5.jpg",
+    alt: "Maternity portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2481-Edit-9ff98595-1500.jpg",
-    alt: "Victoria maternity close-up",
+    src: "/Maternity/Portrait/km-maternity-portrait-6.jpg",
+    alt: "Maternity close-up",
   },
 ];
 

@@ -42,7 +42,7 @@ export function AboutSection() {
             transition={{ duration: 1.0, ease, delay: 0.1 }}
           >
             <Image
-              src="https://images-pw.pixieset.com/elementfield/PExza3G/Websiteself-portrait1-18abe0f5-1500.jpg"
+              src="/Websiteself-portrait1-18abe0f5-1500.jpg"
               alt="Kar-Mei Quach"
               fill
               onContextMenu={(e) => e.preventDefault()}
