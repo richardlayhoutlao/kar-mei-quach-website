@@ -76,7 +76,7 @@ export default function Page() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex h-[80vh] min-h-[520px] md:h-[80vh] w-full overflow-hidden">
+      <section className="relative flex h-[calc(100dvh-var(--navbar-height,0px))] min-h-0 md:h-[80vh] md:min-h-[520px] w-full overflow-hidden">
 
         {/* ── White gradient top to bottom ── */}
         <div className="hidden lg:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
