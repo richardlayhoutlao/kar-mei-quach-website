@@ -43,7 +43,7 @@ const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropd
 
   return (
     <div className="flex flex-col items-center">
-      <button className={`${linkClass} relative cursor-pointer`} onClick={handleToggle}>
+      <button className={`${linkClass} relative cursor-pointer py-2 px-6`} onClick={handleToggle}>
         {label}
         <motion.svg
           className="absolute top-1/2 -translate-y-1/2 -right-5"
