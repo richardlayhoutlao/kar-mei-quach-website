@@ -79,7 +79,7 @@ export default function Page() {
       <section className="relative flex h-[80vh] min-h-[520px] md:h-[80vh] w-full overflow-hidden">
 
         {/* ── White gradient top to bottom ── */}
-        <div className="absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
+        <div className="hidden md:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
 
         {/* ── Mobile: full-bleed image + overlay text ── */}
         <div className="absolute inset-0 md:hidden">
@@ -103,7 +103,7 @@ export default function Page() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 px-8 pb-14 z-10">
             <motion.p
-              className="text-[9px] tracking-[0.5em] uppercase text-white/60 font-medium mb-3"
+              className="text-[9px] tracking-[0.5em] uppercase text-white/90 font-medium mb-3"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease, delay: 0.8 }}
