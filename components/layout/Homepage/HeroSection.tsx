@@ -16,7 +16,7 @@ function fadeUp(delay: number) {
 
 export function HeroSection() {
   return (
-    <section className="flex flex-col items-center justify-center lg:justify-start w-full min-h-[calc(100vh-7rem)] bg-transparent pt-4 pb-8">
+    <section className="flex flex-col items-center justify-center w-full min-h-[calc(100vh-7rem)] bg-transparent pt-4 pb-8">
       <motion.div
         className="flex items-center justify-center w-full"
         initial={{ opacity: 0, scale: 1.04 }}

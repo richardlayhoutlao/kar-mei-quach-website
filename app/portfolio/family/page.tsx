@@ -79,7 +79,7 @@ export default function Page() {
       <section className="relative flex h-[80vh] min-h-[520px] md:h-[80vh] w-full overflow-hidden">
 
         {/* ── White gradient top to bottom ── */}
-        <div className="hidden md:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
+        <div className="hidden lg:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
 
         {/* ── Mobile: full-bleed image + overlay text ── */}
         <div className="absolute inset-0 md:hidden">
@@ -125,8 +125,31 @@ export default function Page() {
         {/* ── Desktop: cream background for left text panel ── */}
         <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
 
+        {/* ── Tablet: single image on right half ── */}
+        <div className="hidden md:flex lg:hidden absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden">
+          <div className="relative flex-1 overflow-hidden">
+            <motion.div
+              className="absolute inset-0"
+              initial={{ opacity: 0, scale: 1.06 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.6, ease, delay: 0.1 }}
+            >
+              <Image
+                src={heroImages[0].src}
+                alt={heroImages[0].alt}
+                fill
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
+                className="object-cover object-top"
+                priority
+                sizes="50vw"
+              />
+            </motion.div>
+          </div>
+        </div>
+
         {/* ── Desktop: images on right half ── */}
-        <div className="hidden md:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
+        <div className="hidden lg:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
           {/* single full-height portrait */}
           <div className="relative flex-1 overflow-hidden">
             <motion.div
