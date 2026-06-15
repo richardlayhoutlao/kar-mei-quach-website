@@ -67,7 +67,7 @@ export default function Page() {
       <section className="relative flex h-[calc(100dvh-var(--navbar-height,0px))] min-h-0 md:h-[80vh] md:min-h-[520px] w-full overflow-hidden">
 
         {/* ── White gradient top to bottom ── */}
-        <div className="hidden lg:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
+        <div className="hidden xl:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
 
         {/* ── Mobile: full-bleed image + overlay text ── */}
         <div className="absolute inset-0 md:hidden">
@@ -114,7 +114,7 @@ export default function Page() {
         <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
 
         {/* ── Tablet: single image on right half ── */}
-        <div className="hidden md:flex lg:hidden absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden">
+        <div className="hidden md:flex xl:hidden absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden">
           <div className="relative flex-1 overflow-hidden">
             <motion.div
               className="absolute inset-0"
@@ -137,7 +137,7 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: images on right half ── */}
-        <div className="hidden lg:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
+        <div className="hidden xl:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
           <div className="relative flex-1 overflow-hidden">
             <motion.div
               className="absolute inset-0"
@@ -215,7 +215,7 @@ export default function Page() {
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
             <div className="w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
               <motion.h1
-                className="text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] font-bold tracking-tight font-hey-eloise leading-[1.0]"
+                className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0]"
 
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
