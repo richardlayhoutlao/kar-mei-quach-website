@@ -98,7 +98,7 @@ export default function Page() {
             transition={{ duration: 1.8, ease }}
           >
             <Image
-              src={heroImages[0].src}
+              src="/Kid/km-kid-11.jpg"
               alt={heroImages[0].alt}
               fill
               onContextMenu={(e) => e.preventDefault()}
@@ -143,8 +143,8 @@ export default function Page() {
               transition={{ duration: 1.6, ease, delay: 0.1 }}
             >
               <Image
-                src={heroImages[0].src}
-                alt={heroImages[0].alt}
+                src="/Kid/km-kid-11.jpg"
+                alt="Kids portrait"
                 fill
                 onContextMenu={(e) => e.preventDefault()}
                 onDragStart={(e) => e.preventDefault()}
