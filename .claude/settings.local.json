@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(mv \"c:/Users/ricec/OneDrive/Documents/GitHub/kar-mei-quach-website/.claude/commands/format.md\" \"c:/Users/ricec/OneDrive/Documents/GitHub/kar-mei-quach-website/.claude/commands/code-format.md\")",
-      "Bash(git mv *)"
+      "Bash(git mv *)",
+      "Bash(git lfs *)",
+      "Bash(xxd)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\ricec\\OneDrive\\Documents\\GitHub\\kar-mei-quach-website\\.claude\\commands"
