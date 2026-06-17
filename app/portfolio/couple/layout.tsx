@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 
 export const metadata: Metadata = {
-  title: "Couples Photography Montreal",
+  title: "Couple",
   description:
     "Couples photography by Kar-Mei Quach — romantic, relaxed, and entirely authentic sessions in Montreal.",
   alternates: { canonical: "/portfolio/couple" },

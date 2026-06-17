@@ -10,7 +10,7 @@ import Footer from "@/components/layout/Footer"
 export const metadata: Metadata = {
   metadataBase: new URL("https://karmeiquach.com"),
   title: {
-    default: "Kar-Mei Quach Photography — Montreal Photographer",
+    default: "Kar-Mei Quach Photography",
     template: "%s | Kar-Mei Quach Photography",
   },
   description:

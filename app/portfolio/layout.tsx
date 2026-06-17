@@ -3,7 +3,7 @@ import type { ReactNode } from "react"
 
 export const metadata: Metadata = {
   title: {
-    default: "Portfolio — Kar-Mei Quach Photography",
+    default: "Portfolio | Kar-Mei Quach Photography",
     template: "%s | Kar-Mei Quach Photography",
   },
   description:
