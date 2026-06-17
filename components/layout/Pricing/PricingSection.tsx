@@ -11,7 +11,7 @@ const packages = [
   {
     title: "Couple",
     price: "From $500",
-    image: "/Couple/Portrait/JPEG/km-couple-portrait-1.jpg",
+    image: "/Couple/Portrait/km-couple-portrait-1.jpg",
     alt: "Couple session",
     href: "/portfolio/couple",
   },
@@ -32,7 +32,7 @@ const packages = [
   {
     title: "Kids",
     price: "From $500",
-    image: "/Kid/km-kid-11.jpg",
+    image: "/Kid/km-kid-10.jpg",
     alt: "Kids session",
     href: "/portfolio/kids",
   },

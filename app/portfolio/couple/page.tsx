@@ -11,36 +11,25 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "/Couple/Portrait/JPEG/km-couple-portrait-1.jpg",
+    src: "/Couple/Portrait/km-couple-portrait-1.jpg",
     alt: "Couple portrait",
   },
   {
-    src: "/Couple/Portrait/JPEG/km-couple-portrait-2.jpg",
+    src: "/Couple/Landscape/km-couple-landscape-1.jpg",
     alt: "Couple session",
   },
   {
-    src: "/Couple/Landscape/JPEG/km-couple-landscape-1.jpg",
+    src: "/Couple/Landscape/km-couple-landscape-2.jpg",
     alt: "Couple outdoors",
   },
 ];
 
 const images = [
-  {
-    src: "/Couple/Portrait/JPEG/km-couple-portrait-1.jpg",
-    alt: "Couple portrait",
-  },
-  {
-    src: "/Couple/Portrait/JPEG/km-couple-portrait-2.jpg",
-    alt: "Couple session",
-  },
-  {
-    src: "/Couple/Landscape/JPEG/km-couple-landscape-1.jpg",
-    alt: "Couple outdoors",
-  },
-  {
-    src: "/Couple/Landscape/JPEG/km-couple-landscape-2.jpg",
-    alt: "Couple close-up",
-  },
+  { src: "/Couple/Portrait/km-couple-portrait-1.jpg", alt: "Couple portrait" },
+  { src: "/Couple/Portrait/km-couple-portrait-2.jpg", alt: "Couple session" },
+  { src: "/Couple/Landscape/km-couple-landscape-1.jpg", alt: "Couple outdoors" },
+  { src: "/Couple/Landscape/km-couple-landscape-2.jpg", alt: "Couple close-up" },
+  { src: "/Couple/Landscape/km-couple-landscape-3.jpg", alt: "Couple landscape" },
 ];
 
 const containerVariants = {
@@ -111,10 +100,10 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: cream background for left text panel ── */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
+        <div className="hidden md:block absolute inset-y-0 left-0 w-2/5 xl:w-1/2 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
 
         {/* ── Tablet: single image on right half ── */}
-        <div className="hidden md:flex xl:hidden absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden">
+        <div className="hidden md:flex xl:hidden absolute top-0 right-0 bottom-0 w-3/5 overflow-hidden">
           <div className="relative flex-1 overflow-hidden">
             <motion.div
               className="absolute inset-0"
@@ -130,7 +119,7 @@ export default function Page() {
                 onDragStart={(e) => e.preventDefault()}
                 className="object-cover object-top"
                 priority
-                sizes="50vw"
+                sizes="60vw"
               />
             </motion.div>
           </div>
@@ -201,7 +190,7 @@ export default function Page() {
         {/* ── Desktop: text — identical container to gallery ── */}
         <div className="hidden md:flex absolute inset-0 flex-col justify-between pt-4 md:pt-8 xl:pt-10 pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
-            <div className="w-1/2 pr-8 md:pr-12 lg:pr-16">
+            <div className="w-2/5 xl:w-1/2 pr-8 md:pr-12 lg:pr-16">
               <motion.p
                 className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium"
                 initial={{ opacity: 0, y: 12 }}
@@ -213,7 +202,7 @@ export default function Page() {
             </div>
           </div>
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
-            <div className="w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
+            <div className="w-2/5 xl:w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
               <motion.h1
                 className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0]"
 

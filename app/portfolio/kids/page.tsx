@@ -26,31 +26,7 @@ const heroImages = [
 
 const images = [
   {
-    src: "/Kid/km-kid-1.jpg",
-    alt: "Kids portrait",
-  },
-  {
-    src: "/Kid/km-kid-2.jpg",
-    alt: "Kids session",
-  },
-  {
-    src: "/Kid/km-kid-3.jpg",
-    alt: "Kids portrait",
-  },
-  {
     src: "/Kid/km-kid-4.jpg",
-    alt: "Kids portrait",
-  },
-  {
-    src: "/Kid/km-kid-5.jpg",
-    alt: "Kids session",
-  },
-  {
-    src: "/Kid/km-kid-6.jpg",
-    alt: "Kids portrait",
-  },
-  {
-    src: "/Kid/km-kid-7.jpg",
     alt: "Kids portrait",
   },
   {
@@ -59,6 +35,30 @@ const images = [
   },
   {
     src: "/Kid/km-kid-9.jpg",
+    alt: "Kids portrait",
+  },
+  {
+    src: "/Kid/km-kid-2.jpg",
+    alt: "Kids portrait",
+  },
+  {
+    src: "/Kid/km-kid-3.jpg",
+    alt: "Kids session",
+  },
+  {
+    src: "/Kid/km-kid-1.jpg",
+    alt: "Kids portrait",
+  },
+  {
+    src: "/Kid/km-kid-6.jpg",
+    alt: "Kids portrait",
+  },
+  {
+    src: "/Kid/km-kid-5.jpg",
+    alt: "Kids session",
+  },
+  {
+    src: "/Kid/km-kid-7.jpg",
     alt: "Kids portrait",
   },
 ];
@@ -98,8 +98,8 @@ export default function Page() {
             transition={{ duration: 1.8, ease }}
           >
             <Image
-              src="/Kid/km-kid-11.jpg"
-              alt={heroImages[0].alt}
+              src="/Kid/km-kid-13.jpg"
+              alt="Kids portrait"
               fill
               onContextMenu={(e) => e.preventDefault()}
               onDragStart={(e) => e.preventDefault()}
@@ -131,10 +131,10 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: cream background for left text panel ── */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
+        <div className="hidden md:block absolute inset-y-0 left-0 w-2/5 xl:w-1/2 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
 
         {/* ── Tablet: single image on right half ── */}
-        <div className="hidden md:flex xl:hidden absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden">
+        <div className="hidden md:flex xl:hidden absolute top-0 right-0 bottom-0 w-3/5 overflow-hidden">
           <div className="relative flex-1 overflow-hidden">
             <motion.div
               className="absolute inset-0"
@@ -143,14 +143,14 @@ export default function Page() {
               transition={{ duration: 1.6, ease, delay: 0.1 }}
             >
               <Image
-                src="/Kid/km-kid-11.jpg"
+                src="/Kid/km-kid-13.jpg"
                 alt="Kids portrait"
                 fill
                 onContextMenu={(e) => e.preventDefault()}
                 onDragStart={(e) => e.preventDefault()}
                 className="object-cover object-top"
                 priority
-                sizes="50vw"
+                sizes="60vw"
               />
             </motion.div>
           </div>
@@ -221,7 +221,7 @@ export default function Page() {
         {/* ── Desktop: text — identical container to gallery ── */}
         <div className="hidden md:flex absolute inset-0 flex-col justify-between pt-4 md:pt-8 xl:pt-10 pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
-            <div className="w-1/2 pr-8 md:pr-12 lg:pr-16">
+            <div className="w-2/5 xl:w-1/2 pr-8 md:pr-12 lg:pr-16">
               <motion.p
                 className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium"
                 initial={{ opacity: 0, y: 12 }}
@@ -233,7 +233,7 @@ export default function Page() {
             </div>
           </div>
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
-            <div className="w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
+            <div className="w-2/5 xl:w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
               <motion.h1
                 className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0]"
 

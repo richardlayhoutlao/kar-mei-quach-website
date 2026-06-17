@@ -15,40 +15,78 @@ const heroImages = [
     alt: "Maternity portrait",
   },
   {
-    src: "/Maternity/Portrait/km-maternity-portrait-2.jpg",
-    alt: "Maternity session",
+    src: "/Maternity/Landscape/km-maternity-landscape-5.jpg",
+    alt: "Maternity session"
   },
   {
-    src: "/Maternity/Portrait/km-maternity-portrait-3.jpg",
+    src: "/Maternity/Landscape/km-maternity-landscape-2.jpg",
     alt: "Maternity portrait outdoors",
   },
 ];
 
 const images = [
-  {
-    src: "/Maternity/Portrait/km-maternity-portrait-1.jpg",
-    alt: "Maternity portrait",
-  },
-  {
-    src: "/Maternity/Portrait/km-maternity-portrait-2.jpg",
-    alt: "Maternity session",
-  },
-  {
-    src: "/Maternity/Portrait/km-maternity-portrait-3.jpg",
-    alt: "Maternity portrait outdoors",
-  },
-  {
-    src: "/Maternity/Portrait/km-maternity-portrait-4.jpg",
-    alt: "Maternity session",
-  },
-  {
-    src: "/Maternity/Portrait/km-maternity-portrait-5.jpg",
-    alt: "Maternity portrait",
-  },
-  {
-    src: "/Maternity/Portrait/km-maternity-portrait-6.jpg",
-    alt: "Maternity close-up",
-  },
+  { src: "/Maternity/Portrait/km-maternity-portrait-1.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-2.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-3.jpg", alt: "Maternity portrait outdoors" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-4.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-5.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-6.jpg", alt: "Maternity close-up" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-7.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-8.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-9.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-10.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-11.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-12.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-13.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-14.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-15.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-16.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-17.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-18.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-19.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-20.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-21.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-22.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-23.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-24.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-25.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-26.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-27.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-28.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-29.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-30.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-31.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-32.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-33.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-34.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-35.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-36.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-37.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-38.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-39.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-40.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-41.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-42.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-43.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-44.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-45.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-46.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-47.jpg", alt: "Maternity portrait" },
+  { src: "/Maternity/Portrait/km-maternity-portrait-48.jpg", alt: "Maternity session" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-1.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-2.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-3.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-4.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-5.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-6.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-7.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-8.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-9.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-10.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-11.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-12.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-13.jpg", alt: "Maternity landscape" },
+  { src: "/Maternity/Landscape/km-maternity-landscape-14.jpg", alt: "Maternity landscape" },
 ];
 
 const containerVariants = {
@@ -119,10 +157,10 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: cream background for left text panel ── */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
+        <div className="hidden md:block absolute inset-y-0 left-0 w-2/5 xl:w-1/2 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
 
         {/* ── Tablet: single image on right half ── */}
-        <div className="hidden md:flex xl:hidden absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden">
+        <div className="hidden md:flex xl:hidden absolute top-0 right-0 bottom-0 w-3/5 overflow-hidden">
           <div className="relative flex-1 overflow-hidden">
             <motion.div
               className="absolute inset-0"
@@ -138,7 +176,7 @@ export default function Page() {
                 onDragStart={(e) => e.preventDefault()}
                 className="object-cover object-top"
                 priority
-                sizes="50vw"
+                sizes="60vw"
               />
             </motion.div>
           </div>
@@ -209,7 +247,7 @@ export default function Page() {
         {/* ── Desktop: text — identical container to gallery ── */}
         <div className="hidden md:flex absolute inset-0 flex-col justify-between pt-4 md:pt-8 xl:pt-10 pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
-            <div className="w-1/2 pr-8 md:pr-12 lg:pr-16">
+            <div className="w-2/5 xl:w-1/2 pr-8 md:pr-12 lg:pr-16">
               <motion.p
                 className="text-[10px] tracking-[0.5em] uppercase  text-muted-foreground font-medium"
                 initial={{ opacity: 0, y: 12 }}
@@ -221,7 +259,7 @@ export default function Page() {
             </div>
           </div>
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
-            <div className="w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
+            <div className="w-2/5 xl:w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
               <motion.h1
                 className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0]"
 
