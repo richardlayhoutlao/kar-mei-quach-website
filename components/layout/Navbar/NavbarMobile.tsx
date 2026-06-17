@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import LogoLight from "@/public/KM_logo.png"
-import LogoDark from "@/public/KM_logo_dark_mode.png"
+import LogoLight from "@/public/assets/km_logo.png"
+import LogoDark from "@/public/assets/km_logo_dark_mode.png"
 import { X, Menu } from "lucide-react"
 import { motion } from "framer-motion"
 import { useTheme } from "next-themes"
@@ -109,7 +109,7 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
       {/* Top bar */}
       <div ref={topBarRef} className="flex items-center justify-between px-6 py-3">
         <Link href="/" onClick={close} className="flex flex-col items-center gap-1">
-          <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Logo" width={90} height={90} priority />
+          <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Kar-Mei Quach Photography logo" width={90} height={90} priority />
           <div className="flex flex-col items-center leading-tight font-hey-eloise">
             <span className="text-[14px] sm:text-[16px] tracking-[0.03em] uppercase text-foreground/80">Kar-Mei Quach</span>
             <span className="text-[14px] sm:text-[16px] tracking-[0.03em] uppercase text-foreground/80">Photography</span>

@@ -11,35 +11,35 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0743-Enhanced-NR-Edit-615309f7-1500.jpg",
-    alt: "Couple portrait",
+    src: "/assets/km-portfolio-couple-top-right.jpg",
+    alt: "Montreal couples photography by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0537-Enhanced-NR-Edit-23d884d7-1500.jpg",
-    alt: "Couple session",
+    src: "/assets/km-portfolio-couple-gallery-1.jpg",
+    alt: "Romantic couple portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0794-Enhanced-NR-Edit-63a7e271-1500.jpg",
-    alt: "Couple outdoors",
+    src: "/assets/km-portfolio-couple-gallery-2.jpg",
+    alt: "Outdoor couples photography in Montreal by Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0743-Enhanced-NR-Edit-615309f7-1500.jpg",
-    alt: "Couple portrait",
+    src: "/assets/km-portfolio-couple-top-right.jpg",
+    alt: "Montreal couples photography by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0537-Enhanced-NR-Edit-23d884d7-1500.jpg",
-    alt: "Couple session",
+    src: "/assets/km-portfolio-couple-bottom-right.jpg",
+    alt: "Couple portrait session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0794-Enhanced-NR-Edit-63a7e271-1500.jpg",
-    alt: "Couple outdoors",
+    src: "/assets/km-portfolio-couple-gallery-1.jpg",
+    alt: "Romantic couple session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0643-Enhanced-NR-Edit-91106082-1500.jpg",
-    alt: "Couple close-up",
+    src: "/assets/km-portfolio-couple-gallery-2.jpg",
+    alt: "Intimate couple photography Montreal — Kar-Mei Quach",
   },
 ];
 

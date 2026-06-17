@@ -11,43 +11,43 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1069-65f0e999-1500.jpg",
-    alt: "Maternity portrait",
+    src: "/assets/km-portfolio-maternity-left.jpg",
+    alt: "Montreal maternity photographer Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2370-b619cda2-1500.jpg",
-    alt: "Victoria maternity session",
+    src: "/assets/km-portfolio-maternity-top-right.jpg",
+    alt: "Maternity portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1140-d5cce64a-1500.jpg",
-    alt: "Maternity portrait outdoors",
+    src: "/assets/km-portfolio-maternity-bottom-right.jpg",
+    alt: "Outdoor maternity photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1069-65f0e999-1500.jpg",
-    alt: "Maternity portrait",
+    src: "/assets/km-portfolio-maternity-gallery-1.jpg",
+    alt: "Montreal maternity photographer Kar-Mei Quach — elegant portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1257-d7ec256d-1500.jpg",
-    alt: "Maternity session",
+    src: "/assets/km-portfolio-maternity-gallery-2.jpg",
+    alt: "Maternity photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1140-d5cce64a-1500.jpg",
-    alt: "Maternity portrait outdoors",
+    src: "/assets/km-portfolio-maternity-gallery-3.jpg",
+    alt: "Outdoor maternity session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2370-b619cda2-1500.jpg",
-    alt: "Victoria maternity session",
+    src: "/assets/km-portfolio-maternity-gallery-4.jpg",
+    alt: "Montreal pregnancy photographer Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2419-Edit-44ae4f51-1500.jpg",
-    alt: "Victoria pregnancy portrait",
+    src: "/assets/km-portfolio-maternity-gallery-5.jpg",
+    alt: "Maternity portrait Montreal by Kar-Mei Quach Photography",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/VictoriaPregnancy2481-Edit-9ff98595-1500.jpg",
-    alt: "Victoria maternity close-up",
+    src: "/assets/km-portfolio-maternity-gallery-6.jpg",
+    alt: "Intimate maternity photography Montreal — Kar-Mei Quach",
   },
 ];
 

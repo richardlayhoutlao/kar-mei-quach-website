@@ -24,8 +24,8 @@ export function HeroSection() {
         transition={{ duration: 1.8, ease }}
       >
         <Image
-          src="/Homepage-idmg.png"
-          alt="Hero"
+          src="/assets/km-homepage.png"
+          alt="Montreal family and children photographer Kar-Mei Quach"
           width={2400}
           height={1792}
           onContextMenu={(e) => e.preventDefault()}

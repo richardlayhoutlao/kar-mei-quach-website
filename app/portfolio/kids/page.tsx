@@ -11,56 +11,43 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
-    alt: "Portrait of Chloe",
+    src: "/assets/km-portfolio-kids-mobile.jpg",
+    alt: "Montreal children photographer Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ThomasColor_Quach_CleanedBG-842f3eb0-1500.jpg",
-    alt: "Portrait of Thomas",
+    src: "/assets/km-portfolio-kids-top-right.jpg",
+    alt: "Child portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KenjiColour_Quach_CleanBG-b560c226-1500.jpg",
-    alt: "Portrait of Kenji",
+    src: "/assets/km-portfolio-kids-bottom-right.jpg",
+    alt: "Kids photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KittyColour_Quach_CleanBG-a1fc63e1-1500.jpg",
-    alt: "Portrait of Kitty",
+    src: "/assets/km-portfolio-kids-gallery-1.jpg",
+    alt: "Montreal children photographer Kar-Mei Quach — natural child portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_JayceColour_Quach_CleanBG-055ccdf5-1500.jpg",
-    alt: "Portrait of Jayce",
+    src: "/assets/km-portfolio-kids-gallery-2.jpg",
+    alt: "Kids portrait photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_LiliaColour_Expand_Quach_CleanBG-25ea78a0-1500.jpg",
-    alt: "Portrait of Lilia",
-  },
-  
-  {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_KenjiColour_Quach_CleanBG-b560c226-1500.jpg",
-    alt: "Portrait of Kenji",
+    src: "/assets/km-portfolio-kids-gallery-3.jpg",
+    alt: "Child photography session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ThomasColor_Quach_CleanedBG-842f3eb0-1500.jpg",
-    alt: "Portrait of Thomas",
+    src: "/assets/km-portfolio-kids-gallery-4.jpg",
+    alt: "Montreal kids photographer Kar-Mei Quach — candid child portrait",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
-    alt: "Portrait of Chloe",
+    src: "/assets/km-portfolio-kids-gallery-5.jpg",
+    alt: "Children photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/Lucas2915-7698bc43-1500.jpg",
-    alt: "Portrait of Lucas",
-  },
-  {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_MilanaColour2_Quach_CleanBG-d75dfa53-1500.jpg",
-    alt: "Portrait of Milana",
-  },
-  {
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_AylaColour_Quach_CleanBG-f7eb4f06-1500.jpg",
-    alt: "Portrait of Ayla",
+    src: "/assets/km-portfolio-kids-gallery-6.jpg",
+    alt: "Kids portrait session in Montreal — Kar-Mei Quach Photography",
   },
 ];
 
