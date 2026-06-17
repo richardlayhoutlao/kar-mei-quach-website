@@ -42,7 +42,7 @@ export function AboutSection() {
             transition={{ duration: 1.0, ease, delay: 0.1 }}
           >
             <Image
-              src="/Other/KM.jpg"
+              src="/Other/km.jpg"
               alt="Kar-Mei Quach"
               fill
               onContextMenu={(e) => e.preventDefault()}
