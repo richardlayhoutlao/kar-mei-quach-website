@@ -4,3 +4,5 @@
 *.jpeg filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.JPG filter=lfs diff=lfs merge=lfs -text
+public/Other/km_logo.png !filter !diff !merge -text
+public/Other/km_logo_dark_mode.png !filter !diff !merge -text
