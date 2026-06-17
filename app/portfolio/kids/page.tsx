@@ -155,7 +155,7 @@ export default function Page() {
               transition={{ duration: 1.6, ease, delay: 0.1 }}
             >
               <Image
-                src={heroImages[0].src}
+                src="/assets/km-portfolio-kids-left.jpg"
                 alt={heroImages[0].alt}
                 fill
                 onContextMenu={(e) => e.preventDefault()}
