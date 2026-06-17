@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mv \"c:/Users/ricec/OneDrive/Documents/GitHub/kar-mei-quach-website/.claude/commands/format.md\" \"c:/Users/ricec/OneDrive/Documents/GitHub/kar-mei-quach-website/.claude/commands/code-format.md\")"
+      "Bash(mv \"c:/Users/ricec/OneDrive/Documents/GitHub/kar-mei-quach-website/.claude/commands/format.md\" \"c:/Users/ricec/OneDrive/Documents/GitHub/kar-mei-quach-website/.claude/commands/code-format.md\")",
+      "Bash(git mv *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\ricec\\OneDrive\\Documents\\GitHub\\kar-mei-quach-website\\.claude\\commands"
