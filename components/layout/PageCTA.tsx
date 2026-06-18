@@ -46,14 +46,20 @@ export function PageCTA({ line1, line2, eyebrow = "It starts here.", buttonLabel
           <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">{line2}</span>
         </motion.h2>
 
-        <div className="mt-12 pt-10 border-t border-foreground/10">
+        <motion.div
+          className="mt-12 pt-10 border-t border-foreground/10"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease, delay: 0.35 }}
+        >
           <button
             onClick={handleBookSession}
             className="inline-flex items-center text-[10px] tracking-[0.4em] uppercase border border-foreground/30 hover:border-foreground/60 text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-all duration-300 cursor-pointer px-8 py-4"
           >
             {buttonLabel}
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   )
