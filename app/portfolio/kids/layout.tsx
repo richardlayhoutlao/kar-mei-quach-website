@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     description:
       "Children's photography by Kar-Mei Quach — spirited, natural sessions that celebrate kids exactly as they are, in Montreal.",
     url: "https://karmeiquach.com/portfolio/kids",
+    type: "website",
+    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
   },
 }
 

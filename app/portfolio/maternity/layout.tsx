@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     description:
       "Maternity photography by Kar-Mei Quach — tender, intimate sessions honouring the beauty of expectation in Montreal.",
     url: "https://karmeiquach.com/portfolio/maternity",
+    type: "website",
+    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
   },
 }
 

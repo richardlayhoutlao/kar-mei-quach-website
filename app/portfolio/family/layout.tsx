@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     description:
       "Family photography by Kar-Mei Quach — candid, warm sessions that capture how your family feels right now, in Montreal.",
     url: "https://karmeiquach.com/portfolio/family",
+    type: "website",
+    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
   },
 }
 

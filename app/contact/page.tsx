@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     description:
       "Book a session or get in touch with Kar-Mei Quach — Montreal photographer.",
     url: "https://karmeiquach.com/contact",
-    images: [{ url: "/assets/km-og-image.jpg", width: 1200, height: 630 }],
+    type: "website",
+    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
   },
 }
 

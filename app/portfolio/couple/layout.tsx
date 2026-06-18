@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     description:
       "Couples photography by Kar-Mei Quach — romantic, relaxed, and entirely authentic sessions in Montreal.",
     url: "https://karmeiquach.com/portfolio/couple",
+    type: "website",
+    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
   },
 }
 

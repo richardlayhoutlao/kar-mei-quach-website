@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     description:
       "Transparent pricing for couples, maternity, family, and children photography sessions in Montreal.",
     url: "https://karmeiquach.com/pricing",
-    images: [{ url: "/assets/km-og-image.jpg", width: 1200, height: 630 }],
+    type: "website",
+    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
   },
 }
 

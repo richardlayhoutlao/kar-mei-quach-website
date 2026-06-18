@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     description:
       "Get to know Kar-Mei Quach — a Montreal-based photographer with a passion for candid, intimate storytelling.",
     url: "https://karmeiquach.com/about",
-    images: [{ url: "/assets/km-og-image.jpg", width: 1200, height: 630 }],
+    type: "website",
+    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
   },
 }
 

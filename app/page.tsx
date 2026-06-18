@@ -5,7 +5,11 @@ import { PageCTA } from "@/components/layout/PageCTA"
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://karmeiquach.com" },
-  openGraph: { url: "https://karmeiquach.com" },
+  openGraph: {
+    url: "https://karmeiquach.com",
+    type: "website",
+    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
+  },
 }
 
 const Page = () => (

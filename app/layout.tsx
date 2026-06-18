@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     title: "Kar-Mei Quach - Montreal Photographer",
     description:
       "Capturing candid moments filled with genuine emotion, feeling, and connection for couples, maternity, family, and kids photography.",
-    images: [{ url: "/assets/km-og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kar-Mei Quach - Montreal Photographer",
     description:
       "Capturing candid moments filled with genuine emotion, feeling, and connection for couples, maternity, family, and kids photography.",
-    images: ["/assets/km-og-image.jpg"],
+    images: ["/assets/km.jpg"],
   },
   robots: { index: true, follow: true },
 }
