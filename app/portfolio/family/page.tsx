@@ -5,52 +5,45 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Lightbox } from "@/components/ui/Lightbox";
+import { PageCTA } from "@/components/layout/PageCTA";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/GuirguisFamily-a833801f-1000.jpg",
-    alt: "Family portrait outdoors",
+    src: "/assets/km-portfolio-family-mobile.jpg",
+    alt: "Montreal family photography by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/8E9A6613-51fdbcba-1000.jpg",
-    alt: "Family together",
+    src: "/assets/km-portfolio-family-top-right.jpg",
+    alt: "Family portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/HoFamilycopy-e8d33325-1000.jpg",
-    alt: "Ho family portrait",
+    src: "/assets/km-portfolio-family-bottom-right.jpg",
+    alt: "Outdoor family photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/8E9A5546-b4683a32-1000.jpg",
-    alt: "Family session",
+    src: "/assets/km-portfolio-family-gallery-1.jpg",
+    alt: "Montreal family photographer Kar-Mei Quach — candid family session",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/8E9A5565-46dfb8c1-1000.jpg",
-    alt: "Family moment",
+    src: "/assets/km-portfolio-family-gallery-2.jpg",
+    alt: "Family photography Montreal — natural moments by Kar-Mei Quach",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/8E9A6613-51fdbcba-1000.jpg",
-    alt: "Family together",
+    src: "/assets/km-portfolio-family-gallery-3.jpg",
+    alt: "Montreal family portrait by Kar-Mei Quach Photography",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/8E9A6705-a34a3e49-1000.jpg",
-    alt: "Family portrait",
+    src: "/assets/km-portfolio-family-gallery-4.jpg",
+    alt: "Family session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/Ayla4021-Edit-7cffe61e-1000.jpg",
-    alt: "Ayla family session",
-  },
-  {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/GuirguisFamily-a833801f-1000.jpg",
-    alt: "Guirguis family portrait",
-  },
-  {
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/HoFamilycopy-e8d33325-1000.jpg",
-    alt: "Ho family portrait",
+    src: "/assets/km-portfolio-family-gallery-5.jpg",
+    alt: "Outdoor family photography in Montreal by Kar-Mei Quach",
   },
 ];
 
@@ -75,10 +68,10 @@ export default function Page() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex h-[80vh] min-h-[520px] md:h-[80vh] w-full overflow-hidden">
+      <section className="relative flex h-[calc(100dvh-var(--navbar-height,0px))] min-h-0 md:h-[80vh] md:min-h-[520px] w-full overflow-hidden">
 
         {/* ── White gradient top to bottom ── */}
-        <div className="absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
+        <div className="hidden xl:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
 
         {/* ── Mobile: full-bleed image + overlay text ── */}
         <div className="absolute inset-0 md:hidden">
@@ -91,8 +84,11 @@ export default function Page() {
             <Image
               src={heroImages[0].src}
               alt={heroImages[0].alt}
-              fill
-              className="object-cover object-top"
+              width={1200}
+              height={1600}
+              onContextMenu={(e) => e.preventDefault()}
+              onDragStart={(e) => e.preventDefault()}
+              className="absolute inset-0 w-full h-full object-cover object-top"
               priority
               sizes="100vw"
             />
@@ -100,29 +96,54 @@ export default function Page() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 px-8 pb-14 z-10">
             <motion.p
-              className="text-[9px] tracking-[0.5em] uppercase text-white/60 font-medium mb-3"
+              className="text-[9px] tracking-[0.5em] uppercase text-white/90 font-medium mb-3"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease, delay: 0.8 }}
             >
               Portfolio — Family
             </motion.p>
-            <motion.h1
-              className="text-[2.5rem] font-bold tracking-tight leading-[1.05] text-white"
+            <motion.h2
+              className="text-[5rem] font-bold tracking-tight font-hey-eloise leading-[1.05] text-white"
+
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease, delay: 1.0 }}
             >
-              Together,<br />in Frame.
-            </motion.h1>
+              All Together,<br />in Frame.
+            </motion.h2>
           </div>
         </div>
 
         {/* ── Desktop: cream background for left text panel ── */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-[#faf7f4] dark:bg-background" />
+        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, #e8e4f4 25%, #e8e4f4 75%, transparent 100%)" }} />
+
+        {/* ── Tablet: single image on right half ── */}
+        <div className="hidden md:flex xl:hidden absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden">
+          <div className="relative flex-1 overflow-hidden">
+            <motion.div
+              className="absolute inset-0"
+              initial={{ opacity: 0, scale: 1.06 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.6, ease, delay: 0.1 }}
+            >
+              <Image
+                src={heroImages[0].src}
+                alt={heroImages[0].alt}
+                width={1200}
+                height={1600}
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
+                className="absolute inset-0 w-full h-full object-cover object-top"
+                priority
+                sizes="50vw"
+              />
+            </motion.div>
+          </div>
+        </div>
 
         {/* ── Desktop: images on right half ── */}
-        <div className="hidden md:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
+        <div className="hidden xl:flex absolute top-0 right-0 bottom-0 w-1/2 gap-2 overflow-hidden">
           {/* single full-height portrait */}
           <div className="relative flex-1 overflow-hidden">
             <motion.div
@@ -134,8 +155,11 @@ export default function Page() {
               <Image
                 src={heroImages[0].src}
                 alt={heroImages[0].alt}
-                fill
-                className="object-cover object-top"
+                width={1200}
+                height={1600}
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
+                className="absolute inset-0 w-full h-full object-cover object-top"
                 priority
                 sizes="22vw"
               />
@@ -154,8 +178,11 @@ export default function Page() {
                 <Image
                   src={heroImages[1].src}
                   alt={heroImages[1].alt}
-                  fill
-                  className="object-cover object-top"
+                  width={1200}
+                  height={1600}
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                   sizes="22vw"
                 />
               </motion.div>
@@ -170,8 +197,11 @@ export default function Page() {
                 <Image
                   src={heroImages[2].src}
                   alt={heroImages[2].alt}
-                  fill
-                  className="object-cover object-top"
+                  width={1200}
+                  height={1600}
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                   sizes="22vw"
                 />
               </motion.div>
@@ -196,13 +226,14 @@ export default function Page() {
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
             <div className="w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
               <motion.h1
-                className="text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight leading-[1.0]"
+                className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0]"
+
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, ease, delay: 0.4 }}
               >
-                Together,<br />
-                <span className="font-light italic text-muted-foreground">in Frame.</span>
+                All Together,<br />
+                <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">in Frame.</span>
               </motion.h1>
               <div>
                 <motion.p
@@ -234,7 +265,7 @@ export default function Page() {
           </motion.div>
 
           <motion.div
-            className="columns-2 md:columns-3 gap-3 md:gap-4"
+            className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
@@ -244,15 +275,17 @@ export default function Page() {
               <motion.div
                 key={img.src}
                 variants={itemVariants}
-                className="break-inside-avoid mb-3 md:mb-4 group overflow-hidden cursor-pointer"
+                className="relative aspect-3/4 group overflow-hidden cursor-pointer"
                 onClick={() => open(i)}
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  width={750}
-                  height={1000}
-                  className="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  width={900}
+                  height={1200}
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
               </motion.div>
@@ -282,6 +315,7 @@ export default function Page() {
         onPrev={prev}
         onNext={next}
       />
+      <PageCTA eyebrow="Family sessions." line1="Everyone together." line2="Finally." />
     </>
   );
 }

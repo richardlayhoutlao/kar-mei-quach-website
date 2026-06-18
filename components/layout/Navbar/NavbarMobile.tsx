@@ -1,11 +1,13 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import Logo from "@/public/Logo_2.png"
+import LogoLight from "@/public/assets/km_logo.png"
+import LogoDark from "@/public/assets/km_logo_dark_mode.png"
 import { X, Menu } from "lucide-react"
 import { motion } from "framer-motion"
+import { useTheme } from "next-themes"
 
 type NavItem = { title: string; href: string }
 
@@ -21,7 +23,7 @@ type MobileNavDropdownProps = {
   isMenuOpen: boolean
 }
 
-const linkClass = "text-[13px] tracking-[0.3em] uppercase text-foreground/60 hover:text-foreground transition-colors duration-200"
+const linkClass = "text-[13px] tracking-[0.3em] uppercase text-foreground/75 hover:text-foreground transition-colors duration-200"
 
 const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropdownProps) => {
   const [open, setOpen] = useState(false)
@@ -41,7 +43,7 @@ const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropd
 
   return (
     <div className="flex flex-col items-center">
-      <button className={`${linkClass} relative cursor-pointer`} onClick={handleToggle}>
+      <button className={`${linkClass} relative cursor-pointer py-2 px-6`} onClick={handleToggle}>
         {label}
         <motion.svg
           className="absolute top-1/2 -translate-y-1/2 -right-5"
@@ -78,6 +80,21 @@ const MobileNavDropdown = ({ label, items, onClose, isMenuOpen }: MobileNavDropd
 
 const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme } = useTheme()
+  const topBarRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => setMounted(true), [])
+
+  useEffect(() => {
+    const el = topBarRef.current
+    if (!el) return
+    const update = () => document.documentElement.style.setProperty("--navbar-height", `${el.offsetHeight}px`)
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : ""
@@ -87,41 +104,44 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
   const close = () => setMobileOpen(false)
 
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden relative">
 
       {/* Top bar */}
-      <div className="flex items-center justify-between px-6 py-3">
-        <Link href="/" onClick={close}>
-          <Image src={Logo} alt="Logo" width={90} height={90} priority />
+      <div ref={topBarRef} className="flex items-center justify-between px-6 py-3">
+        <Link href="/" onClick={close} className="flex flex-col items-center gap-1">
+          <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Kar-Mei Quach Photography logo" width={90} height={90} priority />
+          <div className="flex flex-col items-center leading-tight font-hey-eloise">
+            <span className="text-[14px] sm:text-[16px] tracking-[0.03em] uppercase text-foreground/80">Kar-Mei Quach</span>
+            <span className="text-[14px] sm:text-[16px] tracking-[0.03em] uppercase text-foreground/80">Photography</span>
+          </div>
         </Link>
         <button
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
-          className="text-foreground/60 hover:text-foreground transition-colors duration-200 p-1 cursor-pointer"
+          className="text-foreground/75 hover:text-foreground transition-colors duration-200 p-1 cursor-pointer"
         >
           <Menu size={22} />
         </button>
       </div>
 
+      {/* X button — floats exactly over the hamburger */}
+      <button
+        onClick={close}
+        aria-label="Close menu"
+        className={`fixed right-6 z-[51] text-foreground/75 hover:text-foreground transition-colors duration-200 p-1 cursor-pointer ${
+          mobileOpen ? "pointer-events-auto" : "pointer-events-none opacity-0"
+        }`}
+        style={{ top: "calc(var(--navbar-height, 0px) / 2)", transform: "translateY(-50%)" }}
+      >
+        <X size={22} />
+      </button>
+
       {/* Fullscreen overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-[#faf7f4] flex flex-col transition-opacity duration-300 ${
+        className={`fixed inset-0 z-50 bg-background flex flex-col transition-opacity duration-300 ${
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex items-center justify-between px-6 py-3">
-          <Link href="/" onClick={close}>
-            <Image src={Logo} alt="Logo" width={90} height={90} priority />
-          </Link>
-          <button
-            onClick={close}
-            aria-label="Close menu"
-            className="text-foreground/60 hover:text-foreground transition-colors duration-200 p-1"
-          >
-            <X size={22} />
-          </button>
-        </div>
-
         <nav className="flex flex-col items-center justify-center flex-1 gap-7">
           <Link href="/" onClick={close} className={linkClass}>Home</Link>
           <Link href="/about" onClick={close} className={linkClass}>About</Link>

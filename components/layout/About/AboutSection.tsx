@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { PageCTA } from "@/components/layout/PageCTA";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
@@ -17,6 +18,7 @@ function fadeUp(delay: number) {
 
 export function AboutSection() {
   return (
+    <>
     <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
@@ -40,20 +42,24 @@ export function AboutSection() {
             transition={{ duration: 1.0, ease, delay: 0.1 }}
           >
             <Image
-              src="https://images-pw.pixieset.com/elementfield/PExza3G/Websiteself-portrait1-18abe0f5-1500.jpg"
-              alt="Kar-Mei Quach"
-              fill
-              className="object-cover"
+              src="/assets/km.jpg"
+              alt="Kar-Mei Quach, Montreal family and children photographer"
+              width={900}
+              height={1200}
+              onContextMenu={(e) => e.preventDefault()}
+              onDragStart={(e) => e.preventDefault()}
+              className="object-cover w-full h-full"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </motion.div>
 
           <div className="flex flex-col justify-center">
             <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-10 xl:whitespace-nowrap"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise mb-10 leading-[1.0]"
+             
               {...fadeUp(0.2)}
             >
-              Who Is<br />Kar-Mei Quach?
+              Who Is<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Kar-Mei Quach?</span>
             </motion.h1>
 
             <motion.div className="space-y-6" {...fadeUp(0.35)}>
@@ -79,10 +85,10 @@ export function AboutSection() {
             <motion.div className="mt-12 pt-10 border-t border-border" {...fadeUp(0.5)}>
               <Link
                 href="/portfolio"
-                className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
+                className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 py-5 pr-8"
               >
                 View My Portfolio
-                <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
+                <span className="block h-px w-8 bg-muted-foreground/60 transition-all duration-500 group-hover:w-20 group-hover:bg-foreground" />
               </Link>
             </motion.div>
           </div>
@@ -90,5 +96,7 @@ export function AboutSection() {
         </div>
       </div>
     </main>
+    <PageCTA eyebrow="About Kar-Mei." line1="The person" line2="Behind the lens." />
+    </>
   );
 }

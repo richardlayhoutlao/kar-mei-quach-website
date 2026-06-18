@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
+import { PageCTA } from "@/components/layout/PageCTA";
 import { cn } from "@/lib/utils";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
@@ -41,6 +41,7 @@ const cardVariant = {
 
 export function TestimonialsSection() {
   return (
+    <>
     <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
@@ -55,13 +56,14 @@ export function TestimonialsSection() {
         </motion.p>
 
         <motion.h1
-          className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-16 md:mb-24 max-w-xl"
+          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise leading-[1.0] mb-16 md:mb-24 max-w-xl"
+         
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
         >
-          Real Moments.<br />Real Words.
+          Real Moments.<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Real Words.</span>
         </motion.h1>
 
         <motion.div
@@ -80,7 +82,7 @@ export function TestimonialsSection() {
                 key={name}
                 variants={cardVariant}
                 className={cn(
-                  "pt-10 pb-12 md:py-16 border-border",
+                  "group pt-10 pb-12 md:py-16 border-border",
                   isBottom && "border-t",
                   hasMobileTopBorder && "border-t md:border-t-0",
                   isLeft
@@ -88,15 +90,15 @@ export function TestimonialsSection() {
                     : "md:pl-12 xl:pl-24",
                 )}
               >
-                <span className="block font-serif text-7xl leading-none text-foreground/10 mb-2 select-none">
+                <span className="block font-serif text-7xl leading-none text-foreground/10 mb-2 select-none transition-colors duration-300 group-hover:text-foreground/20">
                   &ldquo;
                 </span>
-                <p className="text-sm text-muted-foreground leading-loose font-light mb-10">
+                <p className="text-sm text-muted-foreground leading-loose font-light mb-10 transition-colors duration-300 group-hover:text-foreground/70">
                   {quote}
                 </p>
                 <div className="flex items-center gap-4">
-                  <span className="block h-px w-6 bg-foreground/25 shrink-0" />
-                  <span className="text-[10px] tracking-[0.35em] uppercase font-medium">
+                  <span className="block h-px w-6 bg-foreground/25 shrink-0 transition-colors duration-300 group-hover:bg-foreground/50" />
+                  <span className="text-[10px] tracking-[0.35em] uppercase font-medium transition-colors duration-300 group-hover:text-foreground">
                     {name}
                   </span>
                 </div>
@@ -115,18 +117,11 @@ export function TestimonialsSection() {
           <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
             Ready to create memories of your own? I&apos;d love to hear your story.
           </p>
-          <div className="mt-8">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase"
-            >
-              Book a session
-              <span className="block h-px w-8 bg-current opacity-50 transition-all duration-300 group-hover:w-14 group-hover:opacity-80" />
-            </Link>
-          </div>
         </motion.div>
 
       </div>
     </main>
+    <PageCTA eyebrow="Kind words." line1="Don't take" line2="Our word." />
+    </>
   );
 }

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { PageCTA } from "@/components/layout/PageCTA";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
@@ -11,32 +12,32 @@ const categories = [
     href: "/portfolio/couple",
     label: "Couples",
     sub: "Just the two of you.",
-    src: "https://images-pw.pixieset.com/elementfield/6GW5JyO/8E9A0743-Enhanced-NR-Edit-615309f7-1500.jpg",
-    alt: "Couple portrait",
+    src: "/assets/km-price-couple.jpg",
+    alt: "Montreal couples photographer Kar-Mei Quach",
     position: "object-top",
   },
   {
     href: "/portfolio/maternity",
     label: "Maternity",
     sub: "Before they arrive.",
-    src: "https://images-pw.pixieset.com/elementfield/qyJM74p/8E9A1069-65f0e999-1500.jpg",
-    alt: "Maternity portrait",
+    src: "/assets/km-price-maternity.jpg",
+    alt: "Montreal maternity photographer Kar-Mei Quach",
     position: "object-center",
   },
   {
     href: "/portfolio/family",
     label: "Family",
     sub: "Together, in frame.",
-    src: "https://images-pw.pixieset.com/elementfield/3x6wa6v/GuirguisFamily-a833801f-1000.jpg",
-    alt: "Family portrait outdoors",
+    src: "/assets/km-price-family.jpg",
+    alt: "Montreal family photographer Kar-Mei Quach",
     position: "object-top",
   },
   {
     href: "/portfolio/kids",
     label: "Kids",
     sub: "Childhood, caught.",
-    src: "https://images-pw.pixieset.com/elementfield/pyKnnRX/W26_PC_Portfolio_ChloeColour_Expand_Quach_CleanBG-95d67773-1500.jpg",
-    alt: "Portrait of Chloe",
+    src: "/assets/km-price-kids.jpg",
+    alt: "Montreal children photographer Kar-Mei Quach",
     position: "object-top",
   },
 ];
@@ -53,23 +54,29 @@ const cardVariants = {
 
 export default function Page() {
   return (
-    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-24 md:pt-36 pb-24 md:pb-36">
+    <>
+    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-24 md:pb-36">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
         {/* Header */}
-        <motion.div
-          className="mb-16 md:mb-20"
+        <motion.p
+          className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-10 md:mb-14"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease }}
+          transition={{ duration: 0.7, ease }}
         >
-          <p className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-5">
-            Portfolio
-          </p>
-          <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.05]">
-            The work.
-          </h1>
-        </motion.div>
+          Portfolio
+        </motion.p>
+
+        <motion.h1
+          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise leading-[1.0] mb-16 md:mb-20"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease, delay: 0.1 }}
+        >
+          Shot with<br />
+          <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Intention.</span>
+        </motion.h1>
 
         {/* Grid */}
         <motion.div
@@ -84,8 +91,11 @@ export default function Page() {
                 <Image
                   src={cat.src}
                   alt={cat.alt}
-                  fill
-                  className={`object-cover ${cat.position} transition-transform duration-700 ease-out group-hover:scale-[1.04]`}
+                  width={900}
+                  height={1200}
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
+                  className={`absolute inset-0 w-full h-full object-cover ${cat.position} transition-transform duration-700 ease-out group-hover:scale-[1.04]`}
                   sizes="(max-width: 640px) 100vw, 50vw"
                 />
                 {/* base dark gradient */}
@@ -109,5 +119,7 @@ export default function Page() {
 
       </div>
     </main>
+    <PageCTA eyebrow="The portfolio." line1="Every shot" line2="Tells a story." />
+    </>
   );
 }

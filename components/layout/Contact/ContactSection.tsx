@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { PageCTA } from "@/components/layout/PageCTA";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -41,7 +42,7 @@ function FloatingField({
       <label
         className={cn(
           "absolute left-0 text-[10px] tracking-[0.2em] uppercase transition-all duration-300 pointer-events-none select-none",
-          lifted ? "top-0 opacity-50" : "top-[1.4rem] opacity-40"
+          lifted ? "top-0 opacity-70" : "top-[1.4rem] opacity-55"
         )}
       >
         {label}
@@ -107,6 +108,7 @@ export function ContactSection() {
   };
 
   return (
+    <>
     <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
@@ -124,10 +126,11 @@ export function ContactSection() {
 
           <div>
             <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-10"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise mb-10 leading-[1.0]"
+             
               {...fadeUp(0.2)}
             >
-              Let&apos;s Work<br />Together.
+              Let&apos;s Work<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Together.</span>
             </motion.h1>
 
             <motion.div className="space-y-6" {...fadeUp(0.35)}>
@@ -146,12 +149,12 @@ export function ContactSection() {
               className="mt-12 pt-10 border-t border-border"
               {...fadeUp(0.5)}
             >
-              <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground/60 mb-5">
+              <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground/80 mb-5">
                 Email directly
               </p>
               <Link
                 href="mailto:info@karmeiquach.com"
-                className="group inline-flex items-center gap-3 text-sm font-light hover:opacity-70 transition-opacity duration-300"
+                className="group inline-flex items-center gap-3 text-sm font-light text-muted-foreground hover:text-foreground transition-colors duration-300 py-5 pr-8"
               >
                 info@karmeiquach.com
                 <span className="block h-px w-8 bg-current opacity-40 transition-all duration-300 group-hover:w-14 group-hover:opacity-70" />
@@ -167,7 +170,7 @@ export function ContactSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease }}
               >
-                <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground/60 mb-5">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground/80 mb-5">
                   Message sent
                 </p>
                 <p className="text-sm text-muted-foreground leading-loose font-light max-w-xs">
@@ -218,7 +221,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full bg-[#1c1917] text-white text-[10px] tracking-[0.35em] uppercase py-5 px-8 transition-opacity duration-300 hover:opacity-80 disabled:opacity-40"
+                    className="w-full text-foreground/70 hover:text-foreground text-[10px] tracking-[0.35em] uppercase font-light py-5 px-8 transition-all duration-300 disabled:opacity-40 cursor-pointer border border-foreground/40 hover:border-foreground/70 hover:bg-foreground/5"
                   >
                     {status === "loading" ? "Sending..." : "Send Message"}
                   </button>
@@ -230,5 +233,7 @@ export function ContactSection() {
         </div>
       </div>
     </main>
+    <PageCTA eyebrow="Get in touch." line1="Your story" line2="Starts here." />
+    </>
   );
 }
