@@ -84,10 +84,11 @@ export default function Page() {
             <Image
               src={heroImages[0].src}
               alt={heroImages[0].alt}
-              fill
+              width={1200}
+              height={1600}
               onContextMenu={(e) => e.preventDefault()}
               onDragStart={(e) => e.preventDefault()}
-              className="object-cover object-top"
+              className="absolute inset-0 w-full h-full object-cover object-top"
               priority
               sizes="100vw"
             />
@@ -102,15 +103,15 @@ export default function Page() {
             >
               Portfolio — Family
             </motion.p>
-            <motion.h1
+            <motion.h2
               className="text-[5rem] font-bold tracking-tight font-hey-eloise leading-[1.05] text-white"
-             
+
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease, delay: 1.0 }}
             >
-              Together,<br />in Frame.
-            </motion.h1>
+              All Together,<br />in Frame.
+            </motion.h2>
           </div>
         </div>
 
@@ -129,10 +130,11 @@ export default function Page() {
               <Image
                 src={heroImages[0].src}
                 alt={heroImages[0].alt}
-                fill
+                width={1200}
+                height={1600}
                 onContextMenu={(e) => e.preventDefault()}
                 onDragStart={(e) => e.preventDefault()}
-                className="object-cover object-top"
+                className="absolute inset-0 w-full h-full object-cover object-top"
                 priority
                 sizes="50vw"
               />
@@ -153,10 +155,11 @@ export default function Page() {
               <Image
                 src={heroImages[0].src}
                 alt={heroImages[0].alt}
-                fill
+                width={1200}
+                height={1600}
                 onContextMenu={(e) => e.preventDefault()}
                 onDragStart={(e) => e.preventDefault()}
-                className="object-cover object-top"
+                className="absolute inset-0 w-full h-full object-cover object-top"
                 priority
                 sizes="22vw"
               />
@@ -175,10 +178,11 @@ export default function Page() {
                 <Image
                   src={heroImages[1].src}
                   alt={heroImages[1].alt}
-                  fill
+                  width={1200}
+                  height={1600}
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
-                  className="object-cover object-top"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                   sizes="22vw"
                 />
               </motion.div>
@@ -193,10 +197,11 @@ export default function Page() {
                 <Image
                   src={heroImages[2].src}
                   alt={heroImages[2].alt}
-                  fill
+                  width={1200}
+                  height={1600}
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
-                  className="object-cover object-top"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                   sizes="22vw"
                 />
               </motion.div>
@@ -227,7 +232,7 @@ export default function Page() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, ease, delay: 0.4 }}
               >
-                Together,<br />
+                All Together,<br />
                 <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">in Frame.</span>
               </motion.h1>
               <div>
@@ -276,10 +281,11 @@ export default function Page() {
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  fill
+                  width={900}
+                  height={1200}
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
-                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
               </motion.div>

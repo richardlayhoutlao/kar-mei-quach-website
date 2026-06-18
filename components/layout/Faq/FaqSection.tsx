@@ -82,7 +82,7 @@ export function FaqSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
         >
-          Good<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Questions.</span>
+          Good Questions.<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Clear Answers.</span>
         </motion.h1>
 
         <motion.div

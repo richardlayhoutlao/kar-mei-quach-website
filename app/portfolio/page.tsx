@@ -75,7 +75,7 @@ export default function Page() {
           transition={{ duration: 0.8, ease, delay: 0.1 }}
         >
           Shot with<br />
-          <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Purpose.</span>
+          <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Intention.</span>
         </motion.h1>
 
         {/* Grid */}
@@ -91,10 +91,11 @@ export default function Page() {
                 <Image
                   src={cat.src}
                   alt={cat.alt}
-                  fill
+                  width={900}
+                  height={1200}
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
-                  className={`object-cover ${cat.position} transition-transform duration-700 ease-out group-hover:scale-[1.04]`}
+                  className={`absolute inset-0 w-full h-full object-cover ${cat.position} transition-transform duration-700 ease-out group-hover:scale-[1.04]`}
                   sizes="(max-width: 640px) 100vw, 50vw"
                 />
                 {/* base dark gradient */}

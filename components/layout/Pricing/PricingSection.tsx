@@ -97,10 +97,11 @@ export function PricingSection() {
                 <Image
                   src={image}
                   alt={alt}
-                  fill
+                  width={900}
+                  height={1200}
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
-                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   sizes="(max-width: 640px) 100vw, 50vw"
                 />
                 {/* base dark gradient */}
