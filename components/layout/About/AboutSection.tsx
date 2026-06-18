@@ -44,10 +44,11 @@ export function AboutSection() {
             <Image
               src="/assets/km.jpg"
               alt="Kar-Mei Quach, Montreal family and children photographer"
-              fill
+              width={900}
+              height={1200}
               onContextMenu={(e) => e.preventDefault()}
               onDragStart={(e) => e.preventDefault()}
-              className="object-cover"
+              className="object-cover w-full h-full"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </motion.div>

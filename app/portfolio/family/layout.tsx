@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "Family",
   description:
     "Family photography by Kar-Mei Quach — candid, warm sessions that capture how your family feels right now, in Montreal.",
-  alternates: { canonical: "/portfolio/family" },
+  alternates: { canonical: "https://karmeiquach.com/portfolio/family" },
   openGraph: {
     title: "Family Photography — Kar-Mei Quach",
     description:
       "Family photography by Kar-Mei Quach — candid, warm sessions that capture how your family feels right now, in Montreal.",
-    url: "/portfolio/family",
+    url: "https://karmeiquach.com/portfolio/family",
   },
 }
 

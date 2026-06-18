@@ -73,9 +73,9 @@ export function ServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease }}
         >
-          <h1 className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-4">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-4">
             What I Do
-          </h1>
+          </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise leading-none">
             Photography for life's<br /> <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">real moments.</span>
           </h2>

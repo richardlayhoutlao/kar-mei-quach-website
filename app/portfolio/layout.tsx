@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   },
   description:
     "Browse Kar-Mei Quach's photography portfolio — couples, maternity, family, and kids sessions captured in Montreal.",
-  alternates: { canonical: "/portfolio" },
+  alternates: { canonical: "https://karmeiquach.com/portfolio" },
   openGraph: {
     title: "Portfolio — Kar-Mei Quach Photography",
     description:
       "Browse Kar-Mei Quach's photography portfolio — couples, maternity, family, and kids sessions captured in Montreal.",
-    url: "/portfolio",
+    url: "https://karmeiquach.com/portfolio",
     images: [{ url: "/assets/km-og-image.jpg", width: 1200, height: 630 }],
   },
 }

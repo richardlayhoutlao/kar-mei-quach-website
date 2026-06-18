@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "FAQ",
   description:
     "Answers to common questions about booking, sessions, and what to expect when working with Kar-Mei Quach Photography in Montreal.",
-  alternates: { canonical: "/faq" },
+  alternates: { canonical: "https://karmeiquach.com/faq" },
   openGraph: {
     title: "FAQ — Kar-Mei Quach Photography",
     description:
       "Answers to common questions about booking, sessions, and what to expect when working with Kar-Mei Quach Photography in Montreal.",
-    url: "/faq",
+    url: "https://karmeiquach.com/faq",
     images: [{ url: "/assets/km-og-image.jpg", width: 1200, height: 630 }],
   },
 }

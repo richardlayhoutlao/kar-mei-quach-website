@@ -36,19 +36,19 @@ export function HeroSection() {
       </motion.div>
       <div className="flex flex-col items-center mt-6">
         <div className="flex flex-col items-center px-6 text-center text-foreground md:px-16 lg:px-24">
-          <motion.h2
+          <motion.p
             className="mb-4 text-[10px] font-medium tracking-[0.25em] uppercase sm:text-[11px] sm:tracking-[0.35em] whitespace-nowrap"
             {...fadeUp(0.6)}
           >
             Couples · Maternity · Family · Kids
-          </motion.h2>
+          </motion.p>
 
-          <motion.h3
+          <motion.h1
             className="mb-6 max-w-2xl text-4xl leading-[1.1] font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-hey-eloise"
             {...fadeUp(0.85)}
           >
             When Vision Meets<br />Memories
-          </motion.h3>
+          </motion.h1>
 
 
           <motion.div

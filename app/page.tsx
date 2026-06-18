@@ -1,6 +1,12 @@
+import type { Metadata } from "next"
 import { HeroSection } from "@/components/layout/Homepage/HeroSection"
 import { ServicesSection } from "@/components/layout/Homepage/ServicesSection"
 import { PageCTA } from "@/components/layout/PageCTA"
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://karmeiquach.com" },
+  openGraph: { url: "https://karmeiquach.com" },
+}
 
 const Page = () => (
   <>

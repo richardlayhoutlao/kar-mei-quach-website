@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "Pricing",
   description:
     "Transparent pricing for couples, maternity, family, and children photography sessions in Montreal.",
-  alternates: { canonical: "/pricing" },
+  alternates: { canonical: "https://karmeiquach.com/pricing" },
   openGraph: {
     title: "Photography Pricing — Kar-Mei Quach",
     description:
       "Transparent pricing for couples, maternity, family, and children photography sessions in Montreal.",
-    url: "/pricing",
+    url: "https://karmeiquach.com/pricing",
     images: [{ url: "/assets/km-og-image.jpg", width: 1200, height: 630 }],
   },
 }

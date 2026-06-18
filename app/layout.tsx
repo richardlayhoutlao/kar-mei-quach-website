@@ -41,7 +41,6 @@ export const metadata: Metadata = {
     images: ["/assets/km-og-image.jpg"],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "/" },
 }
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-sans" })
@@ -57,6 +56,8 @@ const RootLayout = ({
     className={cn("antialiased font-sans", montserrat.variable)}
   >
     <head>
+      <link rel="preconnect" href="https://use.typekit.net" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />
       <link rel="stylesheet" href="https://use.typekit.net/cop1nlv.css" />
     </head>
     <body>

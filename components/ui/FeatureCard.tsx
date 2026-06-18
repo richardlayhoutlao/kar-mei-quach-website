@@ -27,7 +27,7 @@ export function FeatureCard({ title, description, Icon, index, href }: FeatureCa
     <>
       <div className="flex items-center gap-2.5 mb-4">
         <Icon size={18} className="text-muted-foreground/40 transition-colors duration-300 group-hover:text-foreground" />
-        <h2 className="text-xl md:text-2xl font-semibold tracking-tight transition-colors duration-300 group-hover:text-foreground">{title}</h2>
+        <h3 className="text-xl md:text-2xl font-semibold tracking-tight transition-colors duration-300 group-hover:text-foreground">{title}</h3>
       </div>
       <p className="text-sm text-muted-foreground leading-loose font-light transition-colors duration-300 group-hover:text-foreground/70">
         {description}
