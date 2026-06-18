@@ -30,7 +30,7 @@ export function HeroSection() {
           height={1792}
           onContextMenu={(e) => e.preventDefault()}
           onDragStart={(e) => e.preventDefault()}
-          className="w-full max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl h-auto 2xl:pt-20"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl h-auto"
           priority
         />
       </motion.div>

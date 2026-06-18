@@ -10,11 +10,11 @@ import Footer from "@/components/layout/Footer"
 export const metadata: Metadata = {
   metadataBase: new URL("https://karmeiquach.com"),
   title: {
-    default: "Kar-Mei Quach Photography",
-    template: "%s | Kar-Mei Quach Photography",
+    default: "Kar-Mei Quach - Montreal Photographer",
+    template: "%s | Kar-Mei Quach",
   },
   description:
-    "Montreal photographer specialising in couples, maternity, family, and children photography. Candid, intimate, and entirely yours.",
+    "Capturing candid moments filled with genuine emotion, feeling, and connection for couples, maternity, family, and kids photography.",
   keywords: [
     "Montreal photographer",
     "Montreal photography",
@@ -28,16 +28,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
     siteName: "Kar-Mei Quach Photography",
-    title: "Kar-Mei Quach Photography — Montreal Photographer",
+    title: "Kar-Mei Quach - Montreal Photographer",
     description:
-      "Montreal photographer specialising in couples, maternity, family, and children photography. Candid, intimate, and entirely yours.",
+      "Capturing candid moments filled with genuine emotion, feeling, and connection for couples, maternity, family, and kids photography.",
     images: [{ url: "/assets/km-og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kar-Mei Quach Photography — Montreal Photographer",
+    title: "Kar-Mei Quach - Montreal Photographer",
     description:
-      "Montreal photographer specialising in couples, maternity, family, and children photography.",
+      "Capturing candid moments filled with genuine emotion, feeling, and connection for couples, maternity, family, and kids photography.",
     images: ["/assets/km-og-image.jpg"],
   },
   robots: { index: true, follow: true },
