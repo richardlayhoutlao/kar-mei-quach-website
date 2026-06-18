@@ -2,13 +2,14 @@ import type { Metadata } from "next"
 import { HeroSection } from "@/components/layout/Homepage/HeroSection"
 import { ServicesSection } from "@/components/layout/Homepage/ServicesSection"
 import { PageCTA } from "@/components/layout/PageCTA"
+import { SITE_URL } from "@/lib/siteConfig"
 
 export const metadata: Metadata = {
-  alternates: { canonical: "https://karmeiquach.com" },
+  alternates: { canonical: SITE_URL },
   openGraph: {
-    url: "https://karmeiquach.com",
+    url: SITE_URL,
     type: "website",
-    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/km.jpg`, width: 1200, height: 630 }],
   },
 }
 
