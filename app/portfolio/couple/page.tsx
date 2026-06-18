@@ -177,6 +177,7 @@ export default function Page() {
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
                   className="absolute inset-0 w-full h-full object-cover object-top"
+                  priority
                   sizes="22vw"
                 />
               </motion.div>
@@ -196,6 +197,7 @@ export default function Page() {
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
                   className="absolute inset-0 w-full h-full object-cover object-top"
+                  priority
                   sizes="22vw"
                 />
               </motion.div>
@@ -280,6 +282,7 @@ export default function Page() {
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
                   className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  loading="lazy"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
               </motion.div>

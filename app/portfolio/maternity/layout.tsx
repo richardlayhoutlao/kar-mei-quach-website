@@ -1,18 +1,19 @@
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
+import { SITE_URL } from "@/lib/siteConfig"
 
 export const metadata: Metadata = {
   title: "Maternity",
   description:
     "Maternity photography by Kar-Mei Quach — tender, intimate sessions honouring the beauty of expectation in Montreal.",
-  alternates: { canonical: "https://karmeiquach.com/portfolio/maternity" },
+  alternates: { canonical: `${SITE_URL}/portfolio/maternity` },
   openGraph: {
     title: "Maternity Photography — Kar-Mei Quach",
     description:
       "Maternity photography by Kar-Mei Quach — tender, intimate sessions honouring the beauty of expectation in Montreal.",
-    url: "https://karmeiquach.com/portfolio/maternity",
+    url: `${SITE_URL}/portfolio/maternity`,
     type: "website",
-    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/km.jpg`, width: 1200, height: 630 }],
   },
 }
 

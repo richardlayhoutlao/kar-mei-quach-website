@@ -6,9 +6,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/layout/Navbar/Navbar"
 import Footer from "@/components/layout/Footer"
+import { SITE_URL } from "@/lib/siteConfig"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://karmeiquach.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Kar-Mei Quach - Montreal Photographer",
     template: "%s | Kar-Mei Quach",
@@ -31,14 +32,14 @@ export const metadata: Metadata = {
     title: "Kar-Mei Quach - Montreal Photographer",
     description:
       "Capturing candid moments filled with genuine emotion, feeling, and connection for couples, maternity, family, and kids photography.",
-    images: [{ url: "/assets/km.jpg", width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/km.jpg`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kar-Mei Quach - Montreal Photographer",
     description:
       "Capturing candid moments filled with genuine emotion, feeling, and connection for couples, maternity, family, and kids photography.",
-    images: ["/assets/km.jpg"],
+    images: [`${SITE_URL}/assets/km.jpg`],
   },
   robots: { index: true, follow: true },
 }

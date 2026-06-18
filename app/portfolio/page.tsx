@@ -96,6 +96,7 @@ export default function Page() {
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
                   className={`absolute inset-0 w-full h-full object-cover ${cat.position} transition-transform duration-700 ease-out group-hover:scale-[1.04]`}
+                  priority
                   sizes="(max-width: 640px) 100vw, 50vw"
                 />
                 {/* base dark gradient */}
