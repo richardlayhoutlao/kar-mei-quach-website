@@ -44,8 +44,8 @@ export function HeroSection() {
           </motion.p>
 
           <motion.h1
-            className="mb-6 max-w-2xl text-4xl leading-[1.1] font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-hey-eloise"
-            {...fadeUp(0.85)}
+            className="mb-6 max-w-2xl text-4xl leading-[1.1] tracking-tight font-medium sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl"
+{...fadeUp(0.85)}
           >
             When Vision Meets<br />Memories
           </motion.h1>

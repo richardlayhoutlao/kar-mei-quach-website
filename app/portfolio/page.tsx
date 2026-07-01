@@ -69,13 +69,13 @@ export default function Page() {
         </motion.p>
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise leading-[1.0] mb-16 md:mb-20"
+          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-medium tracking-tight leading-[1.0] mb-16 md:mb-20"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
         >
           Shot with<br />
-          <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Intention.</span>
+          <span className="font-light italic text-muted-foreground">Intention.</span>
         </motion.h1>
 
         {/* Grid */}
@@ -109,7 +109,7 @@ export default function Page() {
                   <p className="text-[9px] tracking-[0.45em] uppercase text-white/60 font-medium mb-1.5 translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
                     {cat.sub}
                   </p>
-                  <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                  <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight">
                     {cat.label}
                   </h2>
                 </div>

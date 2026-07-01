@@ -44,14 +44,14 @@ export function PageCTA({ line1, line2, eyebrow = "It starts here.", buttonLabel
         </motion.p>
 
         <motion.h2
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0] text-foreground mb-12 md:mb-16"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium tracking-tight leading-[1.0] text-foreground mb-12 md:mb-16"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.0, ease, delay: 0.15 }}
         >
           {line1}<br />
-          <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">{line2}</span>
+          <span className="font-light italic text-muted-foreground">{line2}</span>
         </motion.h2>
 
         <motion.div

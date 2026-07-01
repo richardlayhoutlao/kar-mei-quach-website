@@ -79,8 +79,8 @@ export function PricingSection() {
           transition={{ duration: 0.8, ease, delay: 0.1 }}
           className="mb-16 md:mb-24"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise leading-[1.0]">
-            Investment In Moments<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">That Last Forever.</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-medium tracking-tight leading-[1.0]">
+            Investment In Moments<br /><span className="font-light italic text-muted-foreground">That Last Forever.</span>
           </h1>
         </motion.div>
 
@@ -114,7 +114,7 @@ export function PricingSection() {
                   <p className="text-[9px] tracking-[0.45em] uppercase text-white/60 font-medium mb-1.5 translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
                     {price}
                   </p>
-                  <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                  <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight">
                     {title}
                   </h2>
                 </div>
