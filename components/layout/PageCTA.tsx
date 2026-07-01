@@ -21,7 +21,7 @@ export function PageCTA({ line1, line2, eyebrow = "It starts here.", buttonLabel
   }
 
   return (
-    <div className="relative overflow-hidden px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
+    <div className="relative overflow-hidden px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32">
       <div className="pointer-events-none absolute inset-0 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(232, 228, 244, 0.45) 35%, rgba(232, 228, 244, 0.45) 65%, transparent 100%)" }} />
 
       <div className="relative max-w-5xl xl:max-w-screen-2xl mx-auto">

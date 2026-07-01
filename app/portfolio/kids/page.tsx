@@ -255,7 +255,7 @@ export default function Page() {
         </div>
       </section>
 
-      <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-20 md:pt-32 pb-20 md:pb-32">
+      <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32">
         <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
           <motion.div

@@ -109,7 +109,7 @@ export function ContactSection() {
 
   return (
     <>
-    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
+    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
         <motion.p
