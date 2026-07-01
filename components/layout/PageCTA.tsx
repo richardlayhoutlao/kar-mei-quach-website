@@ -25,12 +25,20 @@ export function PageCTA({ line1, line2, eyebrow = "It starts here.", buttonLabel
       <div className="pointer-events-none absolute inset-0 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(232, 228, 244, 0.45) 35%, rgba(232, 228, 244, 0.45) 65%, transparent 100%)" }} />
 
       <div className="relative max-w-5xl xl:max-w-screen-2xl mx-auto">
+        <motion.div
+          className="mb-10 md:mb-14 pt-10 border-t border-foreground/10"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease }}
+        />
+
         <motion.p
           className="text-[9px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-10 md:mb-14"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.7, ease, delay: 0.1 }}
         >
           {eyebrow}
         </motion.p>

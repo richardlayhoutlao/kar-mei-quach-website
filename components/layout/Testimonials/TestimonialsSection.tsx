@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PageCTA } from "@/components/layout/PageCTA";
 import { cn } from "@/lib/utils";
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
@@ -41,7 +40,6 @@ const cardVariant = {
 
 export function TestimonialsSection() {
   return (
-    <>
     <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
@@ -107,21 +105,7 @@ export function TestimonialsSection() {
           })}
         </motion.div>
 
-        <motion.div
-          className="mt-20 md:mt-28 pt-10 border-t border-border"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease, delay: 0.1 }}
-        >
-          <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
-            Ready to create memories of your own? I&apos;d love to hear your story.
-          </p>
-        </motion.div>
-
       </div>
     </main>
-    <PageCTA eyebrow="Kind words." line1="Don't take" line2="Our word." />
-    </>
   );
 }

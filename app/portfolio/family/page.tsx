@@ -295,19 +295,6 @@ export default function Page() {
             ))}
           </motion.div>
 
-          <motion.div
-            className="mt-20 md:mt-28 pt-10 border-t border-border"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease, delay: 0.1 }}
-          >
-            <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
-              Families grow and change faster than you realise. Let&apos;s capture
-              exactly where you are right now — before this chapter becomes the last one.
-            </p>
-          </motion.div>
-
         </div>
       </main>
 

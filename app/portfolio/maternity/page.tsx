@@ -297,19 +297,6 @@ export default function Page() {
             ))}
           </motion.div>
 
-          <motion.div
-            className="mt-20 md:mt-28 pt-10 border-t border-border"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease, delay: 0.1 }}
-          >
-            <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
-              This chapter only happens once. These sessions honour the beauty of
-              expectation — soft, intimate, and entirely unforgettable.
-            </p>
-          </motion.div>
-
         </div>
       </main>
 
