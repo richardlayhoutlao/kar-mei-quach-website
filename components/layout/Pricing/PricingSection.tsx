@@ -114,9 +114,9 @@ export function PricingSection() {
                   <p className="text-[9px] tracking-[0.45em] uppercase text-white/60 font-medium mb-1.5 translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
                     {price}
                   </p>
-                  <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
                     {title}
-                  </h2>
+                  </h3>
                 </div>
               </Link>
             </motion.div>

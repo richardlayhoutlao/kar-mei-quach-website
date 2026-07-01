@@ -37,7 +37,7 @@ export function HeroSection() {
       <div className="flex flex-col items-center mt-6">
         <div className="flex flex-col items-center px-6 text-center text-foreground md:px-16 lg:px-24">
           <motion.p
-            className="mb-4 text-[10px] font-medium tracking-[0.25em] uppercase sm:text-[11px] sm:tracking-[0.35em] whitespace-nowrap"
+            className="mb-4 text-[10px] font-medium tracking-[0.25em] uppercase text-muted-foreground sm:text-[11px] sm:tracking-[0.35em] whitespace-nowrap"
             {...fadeUp(0.6)}
           >
             Couples · Maternity · Family · Kids
