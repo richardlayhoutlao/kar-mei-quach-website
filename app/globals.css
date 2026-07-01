@@ -9,6 +9,7 @@
     --breakpoint-mdd: 800px;
     --font-hey-eloise: "hey-eloise", sans-serif;
     --font-hey-eloise-watercolor: "hey-eloise-watercolor", sans-serif;
+    --font-wreath: "wreath", serif;
 }
 
 @theme inline {
@@ -132,5 +133,8 @@
     }
   html {
     @apply font-sans;
+    }
+  h1, h2 {
+    @apply font-wreath;
     }
 }

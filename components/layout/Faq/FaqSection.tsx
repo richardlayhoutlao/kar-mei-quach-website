@@ -61,7 +61,7 @@ const itemVariant = {
 export function FaqSection() {
   return (
     <>
-    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
+    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
         <motion.p
@@ -75,14 +75,14 @@ export function FaqSection() {
         </motion.p>
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise leading-[1.0] mb-16 md:mb-24 max-w-xl"
-         
+          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-medium tracking-tight leading-[1.0] mb-16 md:mb-24 max-w-xl"
+
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
         >
-          Good Questions.<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Clear Answers.</span>
+          Good Questions.<br /><span className="font-light italic text-muted-foreground">Clear Answers.</span>
         </motion.h1>
 
         <motion.div
@@ -109,18 +109,6 @@ export function FaqSection() {
               </motion.div>
             ))}
           </Accordion>
-        </motion.div>
-
-        <motion.div
-          className="mt-20 md:mt-28 pt-10 border-t border-border"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease, delay: 0.1 }}
-        >
-          <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
-            Still have questions? I&apos;d be happy to chat before you book.
-          </p>
         </motion.div>
 
       </div>

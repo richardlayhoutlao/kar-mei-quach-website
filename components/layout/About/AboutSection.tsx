@@ -19,7 +19,7 @@ function fadeUp(delay: number) {
 export function AboutSection() {
   return (
     <>
-    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32 xl:pb-56">
+    <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32">
       <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
         <motion.p
@@ -55,11 +55,11 @@ export function AboutSection() {
 
           <div className="flex flex-col justify-center">
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight font-hey-eloise mb-10 leading-[1.0]"
-             
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-medium tracking-tight mb-10 leading-[1.0]"
+
               {...fadeUp(0.2)}
             >
-              Who Is<br /><span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Kar-Mei Quach?</span>
+              Who Is<br /><span className="font-light italic text-muted-foreground">Kar-Mei Quach?</span>
             </motion.h1>
 
             <motion.div className="space-y-6" {...fadeUp(0.35)}>

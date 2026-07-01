@@ -24,7 +24,7 @@ export function HeroSection() {
         transition={{ duration: 1.8, ease }}
       >
         <Image
-          src="/assets/km-homepage.png"
+          src="/assets/km-homepage.jpg"
           alt="Montreal family and children photographer Kar-Mei Quach"
           width={2400}
           height={1792}
@@ -37,15 +37,15 @@ export function HeroSection() {
       <div className="flex flex-col items-center mt-6">
         <div className="flex flex-col items-center px-6 text-center text-foreground md:px-16 lg:px-24">
           <motion.p
-            className="mb-4 text-[10px] font-medium tracking-[0.25em] uppercase sm:text-[11px] sm:tracking-[0.35em] whitespace-nowrap"
+            className="mb-4 text-[10px] font-medium tracking-[0.25em] uppercase text-muted-foreground sm:text-[11px] sm:tracking-[0.35em] whitespace-nowrap"
             {...fadeUp(0.6)}
           >
             Couples · Maternity · Family · Kids
           </motion.p>
 
           <motion.h1
-            className="mb-6 max-w-2xl text-4xl leading-[1.1] font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-hey-eloise"
-            {...fadeUp(0.85)}
+            className="mb-6 max-w-2xl text-4xl leading-[1.1] tracking-tight font-medium sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl"
+{...fadeUp(0.85)}
           >
             When Vision Meets<br />Memories
           </motion.h1>
@@ -58,7 +58,8 @@ export function HeroSection() {
               href="/about"
               className="group inline-flex items-center gap-4 text-[10px] tracking-[0.4em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 py-3"
             >
-              More About Me
+              <span className="block h-px w-8 bg-muted-foreground/60 transition-all duration-500 group-hover:w-20 group-hover:bg-foreground" />
+              <span>More About Me</span>
               <span className="block h-px w-8 bg-muted-foreground/60 transition-all duration-500 group-hover:w-20 group-hover:bg-foreground" />
             </Link>
           </motion.div>

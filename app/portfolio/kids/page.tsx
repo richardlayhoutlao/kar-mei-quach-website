@@ -108,7 +108,7 @@ export default function Page() {
               Portfolio — Kids
             </motion.p>
             <motion.h2
-              className="text-[5rem] font-bold tracking-tight font-hey-eloise leading-[1.05] text-white"
+              className="text-[5rem] font-medium tracking-tight leading-[1.05] text-white"
 
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -230,14 +230,14 @@ export default function Page() {
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
             <div className="w-1/2 flex flex-col gap-10 pr-8 md:pr-12 lg:pr-16 border-r border-border/30">
               <motion.h1
-                className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0]"
+                className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-medium tracking-tight leading-[1.0]"
 
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, ease, delay: 0.4 }}
               >
                 Little Ones,<br />
-                <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">Big Moments.</span>
+                <span className="font-light italic text-muted-foreground">Big Moments.</span>
               </motion.h1>
 
               <div>
@@ -255,7 +255,7 @@ export default function Page() {
         </div>
       </section>
 
-      <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-20 md:pt-32 pb-20 md:pb-32">
+      <main className="px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32">
         <div className="max-w-5xl xl:max-w-screen-2xl mx-auto">
 
           <motion.div
@@ -296,19 +296,6 @@ export default function Page() {
                 />
               </motion.div>
             ))}
-          </motion.div>
-
-          <motion.div
-            className="mt-20 md:mt-28 pt-10 border-t border-border"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease, delay: 0.1 }}
-          >
-            <p className="text-sm text-muted-foreground font-light leading-loose max-w-md">
-              Ready to capture this season of their life? Let's create something
-              they'll treasure for years to come.
-            </p>
           </motion.div>
 
         </div>

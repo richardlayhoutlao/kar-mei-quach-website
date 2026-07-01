@@ -21,29 +21,37 @@ export function PageCTA({ line1, line2, eyebrow = "It starts here.", buttonLabel
   }
 
   return (
-    <div className="relative overflow-hidden px-8 md:px-16 lg:px-24 xl:px-48 py-24 md:py-36">
+    <div className="relative overflow-hidden px-8 md:px-16 lg:px-24 xl:px-48 pt-4 md:pt-8 xl:pt-10 pb-20 md:pb-32">
       <div className="pointer-events-none absolute inset-0 dark:hidden" style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(232, 228, 244, 0.45) 35%, rgba(232, 228, 244, 0.45) 65%, transparent 100%)" }} />
 
       <div className="relative max-w-5xl xl:max-w-screen-2xl mx-auto">
+        <motion.div
+          className="mb-10 md:mb-14 pt-10 border-t border-foreground/10"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease }}
+        />
+
         <motion.p
           className="text-[9px] tracking-[0.5em] uppercase text-muted-foreground font-medium mb-10 md:mb-14"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease }}
+          transition={{ duration: 0.7, ease, delay: 0.1 }}
         >
           {eyebrow}
         </motion.p>
 
         <motion.h2
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight font-hey-eloise leading-[1.0] text-foreground mb-12 md:mb-16"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium tracking-tight leading-[1.0] text-foreground mb-12 md:mb-16"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.0, ease, delay: 0.15 }}
         >
           {line1}<br />
-          <span className="font-light italic text-muted-foreground font-hey-eloise-watercolor">{line2}</span>
+          <span className="font-light italic text-muted-foreground">{line2}</span>
         </motion.h2>
 
         <motion.div
