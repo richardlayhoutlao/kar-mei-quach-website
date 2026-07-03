@@ -107,7 +107,7 @@ const NavbarMobile = ({ portfolioItems, moreItems }: NavbarMobileProps) => {
     <div className="lg:hidden relative">
 
       {/* Top bar */}
-      <div ref={topBarRef} className="flex items-center justify-between px-8 md:px-16 py-3">
+      <div ref={topBarRef} className="flex items-center justify-between px-8 md:px-16 py-8 md:py-12">
         <Link href="/" onClick={close} className="flex flex-col items-center gap-1">
           <Image src={mounted && resolvedTheme === "dark" ? LogoDark : LogoLight} alt="Kar-Mei Quach Photography logo" width={90} height={90} priority />
           <div className="flex flex-col items-center leading-tight font-hey-eloise">
