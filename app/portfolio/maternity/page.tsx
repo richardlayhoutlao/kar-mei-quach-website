@@ -96,7 +96,7 @@ export default function Page() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex h-[calc(100dvh-var(--navbar-height,0px))] min-h-0 md:h-[80vh] md:min-h-[520px] w-full overflow-hidden">
+      <section className="relative flex h-[calc(100dvh-var(--navbar-height,0px))] min-h-0 md:h-[80vh] md:min-h-[520px] w-full overflow-hidden pt-4">
 
         {/* ── White gradient top to bottom ── */}
         <div className="hidden xl:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
@@ -238,7 +238,7 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: text — identical container to gallery ── */}
-        <div className="hidden md:flex absolute inset-0 flex-col justify-between pt-4 md:pt-8 xl:pt-10 pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
+        <div className="hidden md:flex absolute inset-0 flex-col justify-between pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
             <div className="w-1/2 pr-8 md:pr-12 lg:pr-16">
               <motion.p
