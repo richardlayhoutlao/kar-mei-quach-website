@@ -11,42 +11,42 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "/assets/km-portfolio-kids-mobile.jpg",
+    src: "/assets/kids/km-portfolio-kids-mobile.jpg",
     alt: "Montreal children photographer Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-kids-top-right.jpg",
+    src: "/assets/kids/km-portfolio-kids-top-right.jpg",
     alt: "Child portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-kids-bottom-right.jpg",
+    src: "/assets/kids/km-portfolio-kids-bottom-right.jpg",
     alt: "Kids photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "/assets/km-portfolio-kids-gallery-1.jpg",
+    src: "/assets/kids/km-portfolio-kids-gallery-1.jpg",
     alt: "Montreal children photographer Kar-Mei Quach — natural child portrait",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-2.jpg",
+    src: "/assets/kids/km-portfolio-kids-gallery-2.jpg",
     alt: "Kids portrait photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-3.jpg",
+    src: "/assets/kids/km-portfolio-kids-gallery-3.jpg",
     alt: "Child photography session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-4.jpg",
+    src: "/assets/kids/km-portfolio-kids-gallery-4.jpg",
     alt: "Montreal kids photographer Kar-Mei Quach — candid child portrait",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-5.jpg",
+    src: "/assets/kids/km-portfolio-kids-gallery-5.jpg",
     alt: "Children photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-6.jpg",
+    src: "/assets/kids/km-portfolio-kids-gallery-6.jpg",
     alt: "Kids portrait session in Montreal — Kar-Mei Quach Photography",
   },
 ];
@@ -157,7 +157,7 @@ export default function Page() {
               transition={{ duration: 1.6, ease, delay: 0.1 }}
             >
               <Image
-                src="/assets/km-portfolio-kids-left.jpg"
+                src="/assets/kids/km-portfolio-kids-left.jpg"
                 alt={heroImages[0].alt}
                 width={1200}
                 height={1600}

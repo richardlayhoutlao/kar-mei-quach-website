@@ -11,38 +11,38 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "/assets/km-portfolio-family-mobile.jpg",
+    src: "/assets/family/km-portfolio-family-mobile.jpg",
     alt: "Montreal family photography by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-family-top-right.jpg",
+    src: "/assets/family/km-portfolio-family-top-right.jpg",
     alt: "Family portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-family-bottom-right.jpg",
+    src: "/assets/family/km-portfolio-family-bottom-right.jpg",
     alt: "Outdoor family photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "/assets/km-portfolio-family-gallery-1.jpg",
+    src: "/assets/family/km-portfolio-family-gallery-1.jpg",
     alt: "Montreal family photographer Kar-Mei Quach — candid family session",
   },
   {
-    src: "/assets/km-portfolio-family-gallery-2.jpg",
+    src: "/assets/family/km-portfolio-family-gallery-2.jpg",
     alt: "Family photography Montreal — natural moments by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-family-gallery-3.jpg",
+    src: "/assets/family/km-portfolio-family-gallery-3.jpg",
     alt: "Montreal family portrait by Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/km-portfolio-family-gallery-4.jpg",
+    src: "/assets/family/km-portfolio-family-gallery-4.jpg",
     alt: "Family session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/km-portfolio-family-gallery-5.jpg",
+    src: "/assets/family/km-portfolio-family-gallery-5.jpg",
     alt: "Outdoor family photography in Montreal by Kar-Mei Quach",
   },
 ];
