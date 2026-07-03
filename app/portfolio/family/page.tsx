@@ -116,7 +116,7 @@ export default function Page() {
               Portfolio — Family
             </motion.p>
             <motion.h2
-              className="text-[5rem] font-medium tracking-tight leading-[1.05] text-white"
+              className="text-5xl font-medium tracking-tight leading-[1.05] text-white"
 
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
