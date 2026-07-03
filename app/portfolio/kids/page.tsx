@@ -11,43 +11,71 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "/assets/kids/km-portfolio-kids-mobile.jpg",
+    src: "/assets/kids/hero/kids-1.jpg",
     alt: "Montreal children photographer Kar-Mei Quach",
   },
   {
-    src: "/assets/kids/km-portfolio-kids-top-right.jpg",
+    src: "/assets/kids/hero/kids-2.jpg",
     alt: "Child portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/kids/km-portfolio-kids-bottom-right.jpg",
+    src: "/assets/kids/hero/kids-3.jpg",
     alt: "Kids photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "/assets/kids/km-portfolio-kids-gallery-1.jpg",
+    src: "/assets/kids/Kids Portfolio 1.jpg",
     alt: "Montreal children photographer Kar-Mei Quach — natural child portrait",
   },
   {
-    src: "/assets/kids/km-portfolio-kids-gallery-2.jpg",
+    src: "/assets/kids/Kids Portfolio 2.jpg",
     alt: "Kids portrait photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/kids/km-portfolio-kids-gallery-3.jpg",
+    src: "/assets/kids/Kids Portfolio 3.jpg",
     alt: "Child photography session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/kids/km-portfolio-kids-gallery-4.jpg",
+    src: "/assets/kids/Kids Portfolio 4.jpg",
     alt: "Montreal kids photographer Kar-Mei Quach — candid child portrait",
   },
   {
-    src: "/assets/kids/km-portfolio-kids-gallery-5.jpg",
+    src: "/assets/kids/Kids Portfolio 5.jpg",
     alt: "Children photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/kids/km-portfolio-kids-gallery-6.jpg",
+    src: "/assets/kids/Kids Portfolio 6.jpg",
     alt: "Kids portrait session in Montreal — Kar-Mei Quach Photography",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 7.jpg",
+    alt: "Montreal children photographer Kar-Mei Quach — candid moment",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 8.jpg",
+    alt: "Kids photography session Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 9.jpg",
+    alt: "Child portrait photography Montreal — Kar-Mei Quach",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 10.jpg",
+    alt: "Montreal kids photographer Kar-Mei Quach — natural light portrait",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 11.jpg",
+    alt: "Children photography Montreal — Kar-Mei Quach Photography",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 12.jpg",
+    alt: "Kids portrait session Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 13.jpg",
+    alt: "Montreal children photographer Kar-Mei Quach — spirited portrait",
   },
 ];
 
@@ -157,7 +185,7 @@ export default function Page() {
               transition={{ duration: 1.6, ease, delay: 0.1 }}
             >
               <Image
-                src="/assets/kids/km-portfolio-kids-left.jpg"
+                src={heroImages[0].src}
                 alt={heroImages[0].alt}
                 width={1200}
                 height={1600}

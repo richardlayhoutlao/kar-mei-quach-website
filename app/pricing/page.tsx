@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Transparent pricing for couples, maternity, family, and children photography sessions in Montreal.",
     url: `${SITE_URL}/pricing`,
     type: "website",
-    images: [{ url: `${SITE_URL}/assets/km.jpg`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/commons/km.jpg`, width: 1200, height: 630 }],
   },
 }
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Children's photography by Kar-Mei Quach — spirited, natural sessions that celebrate kids exactly as they are, in Montreal.",
     url: `${SITE_URL}/portfolio/kids`,
     type: "website",
-    images: [{ url: `${SITE_URL}/assets/km.jpg`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/commons/km.jpg`, width: 1200, height: 630 }],
   },
 }
 

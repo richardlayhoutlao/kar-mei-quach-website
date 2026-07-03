@@ -42,7 +42,7 @@ export function AboutSection() {
             transition={{ duration: 1.0, ease, delay: 0.1 }}
           >
             <Image
-              src="/assets/km.jpg"
+              src="/assets/commons/km.jpg"
               alt="Kar-Mei Quach, Montreal family and children photographer"
               width={900}
               height={1200}

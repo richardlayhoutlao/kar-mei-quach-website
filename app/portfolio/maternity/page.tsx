@@ -11,43 +11,67 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "/assets/maternity/km-portfolio-maternity-left.jpg",
+    src: "/assets/maternity/hero/maternity-1.jpg",
     alt: "Montreal maternity photographer Kar-Mei Quach",
   },
   {
-    src: "/assets/maternity/km-portfolio-maternity-top-right.jpg",
+    src: "/assets/maternity/hero/maternity-2.jpg",
     alt: "Maternity portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/maternity/km-portfolio-maternity-bottom-right.jpg",
+    src: "/assets/maternity/hero/maternity-3.jpg",
     alt: "Outdoor maternity photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "/assets/maternity/km-portfolio-maternity-gallery-1.jpg",
+    src: "/assets/maternity/Maternity portfolio - Abi 1.jpg",
     alt: "Montreal maternity photographer Kar-Mei Quach — elegant portrait",
   },
   {
-    src: "/assets/maternity/km-portfolio-maternity-gallery-2.jpg",
+    src: "/assets/maternity/Maternity portfolio - Abi 2.jpg",
     alt: "Maternity photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/maternity/km-portfolio-maternity-gallery-3.jpg",
+    src: "/assets/maternity/Maternity portfolio - Abi 3.jpg",
     alt: "Outdoor maternity session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/maternity/km-portfolio-maternity-gallery-4.jpg",
+    src: "/assets/maternity/Maternity portfolio - Abi 4.jpg",
     alt: "Montreal pregnancy photographer Kar-Mei Quach",
   },
   {
-    src: "/assets/maternity/km-portfolio-maternity-gallery-5.jpg",
+    src: "/assets/maternity/Maternity portfolio - Katherine 1.jpg",
     alt: "Maternity portrait Montreal by Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/maternity/km-portfolio-maternity-gallery-6.jpg",
+    src: "/assets/maternity/Maternity Portfolio - Katherine 2.jpg",
     alt: "Intimate maternity photography Montreal — Kar-Mei Quach",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Katherine 3.jpg",
+    alt: "Montreal maternity photographer Kar-Mei Quach — natural light portrait",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Katherine 4.jpg",
+    alt: "Maternity photography session Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/maternity/Maternity Portfolio - Victoria 1.jpg",
+    alt: "Montreal pregnancy photography by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Victoria 2.jpg",
+    alt: "Maternity portrait session Montreal — Kar-Mei Quach Photography",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Victoria 3.jpg",
+    alt: "Outdoor maternity photography Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Victoria 4.jpg",
+    alt: "Montreal maternity photographer Kar-Mei Quach — tender portrait",
   },
 ];
 

@@ -11,35 +11,35 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "/assets/couple/km-portfolio-couple-top-right.jpg",
+    src: "/assets/couple/hero/couple-1.jpg",
     alt: "Montreal couples photography by Kar-Mei Quach",
   },
   {
-    src: "/assets/couple/km-portfolio-couple-gallery-1.jpg",
+    src: "/assets/couple/hero/couple-2.jpg",
     alt: "Romantic couple portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/couple/km-portfolio-couple-gallery-2.jpg",
+    src: "/assets/couple/hero/couple-3.jpg",
     alt: "Outdoor couples photography in Montreal by Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "/assets/couple/km-portfolio-couple-top-right.jpg",
-    alt: "Montreal couples photography by Kar-Mei Quach",
-  },
-  {
-    src: "/assets/couple/km-portfolio-couple-bottom-right.jpg",
+    src: "/assets/couple/couple-2.jpg",
     alt: "Couple portrait session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/couple/km-portfolio-couple-gallery-1.jpg",
+    src: "/assets/couple/couple-3.jpg",
     alt: "Romantic couple session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/couple/km-portfolio-couple-gallery-2.jpg",
+    src: "/assets/couple/couple-4.jpg",
     alt: "Intimate couple photography Montreal — Kar-Mei Quach",
+  },
+  {
+    src: "/assets/couple/couple-1.jpg",
+    alt: "Montreal couples photography by Kar-Mei Quach",
   },
 ];
 

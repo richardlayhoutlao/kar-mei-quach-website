@@ -11,39 +11,51 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "/assets/family/km-portfolio-family-mobile.jpg",
+    src: "/assets/family/hero/family-1.jpg",
     alt: "Montreal family photography by Kar-Mei Quach",
   },
   {
-    src: "/assets/family/km-portfolio-family-top-right.jpg",
+    src: "/assets/family/hero/family-2.jpg",
     alt: "Family portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/family/km-portfolio-family-bottom-right.jpg",
+    src: "/assets/family/hero/family-3.jpg",
     alt: "Outdoor family photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "/assets/family/km-portfolio-family-gallery-1.jpg",
+    src: "/assets/family/Family - Katherine 1.jpg",
     alt: "Montreal family photographer Kar-Mei Quach — candid family session",
   },
   {
-    src: "/assets/family/km-portfolio-family-gallery-2.jpg",
+    src: "/assets/family/Family - Katherine 2.jpg",
     alt: "Family photography Montreal — natural moments by Kar-Mei Quach",
   },
   {
-    src: "/assets/family/km-portfolio-family-gallery-3.jpg",
+    src: "/assets/family/Family - Pierre 1.jpg",
+    alt: "Outdoor family photography in Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/family/Family - Pierre 2.jpg",
+    alt: "Montreal family photographer Kar-Mei Quach — natural light portrait",
+  },
+  {
+    src: "/assets/family/Family 3.jpg",
+    alt: "Family photography session Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/family/Family 4.jpg",
+    alt: "Family portrait Montreal — Kar-Mei Quach Photography",
+  },
+  {
+    src: "/assets/family/Family - Martin 1.jpg",
     alt: "Montreal family portrait by Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/family/km-portfolio-family-gallery-4.jpg",
+    src: "/assets/family/Family - Martin 2.jpg",
     alt: "Family session Montreal — Kar-Mei Quach Photography",
-  },
-  {
-    src: "/assets/family/km-portfolio-family-gallery-5.jpg",
-    alt: "Outdoor family photography in Montreal by Kar-Mei Quach",
   },
 ];
 
