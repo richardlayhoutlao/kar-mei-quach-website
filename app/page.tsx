@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: SITE_URL,
     type: "website",
-    images: [{ url: `${SITE_URL}/assets/km.jpg`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/commons/km.jpg`, width: 1200, height: 630 }],
   },
 }
 

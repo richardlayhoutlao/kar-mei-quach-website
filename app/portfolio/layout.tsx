@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Browse Kar-Mei Quach's photography portfolio — couples, maternity, family, and kids sessions captured in Montreal.",
     url: `${SITE_URL}/portfolio`,
     type: "website",
-    images: [{ url: `${SITE_URL}/assets/km.jpg`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/commons/km.jpg`, width: 1200, height: 630 }],
   },
 }
 

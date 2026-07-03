@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "Hear from clients who've worked with Kar-Mei Quach Photography in Montreal.",
     url: `${SITE_URL}/testimonials`,
     type: "website",
-    images: [{ url: `${SITE_URL}/assets/km.jpg`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/commons/km.jpg`, width: 1200, height: 630 }],
   },
 }
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Answers to common questions about booking, sessions, and what to expect when working with Kar-Mei Quach Photography in Montreal.",
     url: `${SITE_URL}/faq`,
     type: "website",
-    images: [{ url: `${SITE_URL}/assets/km.jpg`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/assets/commons/km.jpg`, width: 1200, height: 630 }],
   },
 }
 

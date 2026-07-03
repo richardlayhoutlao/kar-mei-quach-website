@@ -24,7 +24,7 @@ export function HeroSection() {
         transition={{ duration: 1.8, ease }}
       >
         <Image
-          src="/assets/km-homepage.jpg"
+          src="/assets/commons/km-homepage.jpg"
           alt="Montreal family and children photographer Kar-Mei Quach"
           width={2400}
           height={1792}

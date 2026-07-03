@@ -65,7 +65,7 @@ function FloatingField({
         <input
           type={type}
           name={name}
-          required={name !== "subject"}
+          required
           value={value}
           onChange={onChange}
           onFocus={() => setFocused(true)}

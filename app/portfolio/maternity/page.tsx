@@ -11,43 +11,67 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "/assets/km-portfolio-maternity-left.jpg",
+    src: "/assets/maternity/hero/maternity-1.jpg",
     alt: "Montreal maternity photographer Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-maternity-top-right.jpg",
+    src: "/assets/maternity/hero/maternity-2.jpg",
     alt: "Maternity portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-maternity-bottom-right.jpg",
+    src: "/assets/maternity/hero/maternity-3.jpg",
     alt: "Outdoor maternity photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "/assets/km-portfolio-maternity-gallery-1.jpg",
+    src: "/assets/maternity/Maternity portfolio - Abi 1.jpg",
     alt: "Montreal maternity photographer Kar-Mei Quach — elegant portrait",
   },
   {
-    src: "/assets/km-portfolio-maternity-gallery-2.jpg",
+    src: "/assets/maternity/Maternity portfolio - Abi 2.jpg",
     alt: "Maternity photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-maternity-gallery-3.jpg",
+    src: "/assets/maternity/Maternity portfolio - Abi 3.jpg",
     alt: "Outdoor maternity session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/km-portfolio-maternity-gallery-4.jpg",
+    src: "/assets/maternity/Maternity portfolio - Abi 4.jpg",
     alt: "Montreal pregnancy photographer Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-maternity-gallery-5.jpg",
+    src: "/assets/maternity/Maternity portfolio - Katherine 1.jpg",
     alt: "Maternity portrait Montreal by Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/km-portfolio-maternity-gallery-6.jpg",
+    src: "/assets/maternity/Maternity Portfolio - Katherine 2.jpg",
     alt: "Intimate maternity photography Montreal — Kar-Mei Quach",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Katherine 3.jpg",
+    alt: "Montreal maternity photographer Kar-Mei Quach — natural light portrait",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Katherine 4.jpg",
+    alt: "Maternity photography session Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/maternity/Maternity Portfolio - Victoria 1.jpg",
+    alt: "Montreal pregnancy photography by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Victoria 2.jpg",
+    alt: "Maternity portrait session Montreal — Kar-Mei Quach Photography",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Victoria 3.jpg",
+    alt: "Outdoor maternity photography Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/maternity/Maternity portfolio - Victoria 4.jpg",
+    alt: "Montreal maternity photographer Kar-Mei Quach — tender portrait",
   },
 ];
 
@@ -72,7 +96,7 @@ export default function Page() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex h-[calc(100dvh-var(--navbar-height,0px))] min-h-0 md:h-[80vh] md:min-h-[520px] w-full overflow-hidden">
+      <section className="relative flex h-[calc(100dvh-var(--navbar-height,0px))] min-h-0 md:h-[80vh] md:min-h-[520px] w-full overflow-hidden pt-4">
 
         {/* ── White gradient top to bottom ── */}
         <div className="hidden xl:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
@@ -108,7 +132,7 @@ export default function Page() {
               Portfolio — Maternity
             </motion.p>
             <motion.h2
-              className="text-[5rem] font-medium tracking-tight leading-[1.05] text-white"
+              className="text-5xl font-medium tracking-tight leading-[1.05] text-white"
 
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -214,7 +238,7 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: text — identical container to gallery ── */}
-        <div className="hidden md:flex absolute inset-0 flex-col justify-between pt-4 md:pt-8 xl:pt-10 pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
+        <div className="hidden md:flex absolute inset-0 flex-col justify-between pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
             <div className="w-1/2 pr-8 md:pr-12 lg:pr-16">
               <motion.p

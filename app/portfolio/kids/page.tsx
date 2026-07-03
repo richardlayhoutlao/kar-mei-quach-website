@@ -11,43 +11,71 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 
 const heroImages = [
   {
-    src: "/assets/km-portfolio-kids-mobile.jpg",
+    src: "/assets/kids/hero/kids-1.jpg",
     alt: "Montreal children photographer Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-kids-top-right.jpg",
+    src: "/assets/kids/hero/kids-2.jpg",
     alt: "Child portrait session in Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-kids-bottom-right.jpg",
+    src: "/assets/kids/hero/kids-3.jpg",
     alt: "Kids photography Montreal — Kar-Mei Quach",
   },
 ];
 
 const images = [
   {
-    src: "/assets/km-portfolio-kids-gallery-1.jpg",
+    src: "/assets/kids/Kids Portfolio 1.jpg",
     alt: "Montreal children photographer Kar-Mei Quach — natural child portrait",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-2.jpg",
+    src: "/assets/kids/Kids Portfolio 2.jpg",
     alt: "Kids portrait photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-3.jpg",
+    src: "/assets/kids/Kids Portfolio 3.jpg",
     alt: "Child photography session Montreal — Kar-Mei Quach Photography",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-4.jpg",
+    src: "/assets/kids/Kids Portfolio 4.jpg",
     alt: "Montreal kids photographer Kar-Mei Quach — candid child portrait",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-5.jpg",
+    src: "/assets/kids/Kids Portfolio 5.jpg",
     alt: "Children photography Montreal by Kar-Mei Quach",
   },
   {
-    src: "/assets/km-portfolio-kids-gallery-6.jpg",
+    src: "/assets/kids/Kids Portfolio 6.jpg",
     alt: "Kids portrait session in Montreal — Kar-Mei Quach Photography",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 7.jpg",
+    alt: "Montreal children photographer Kar-Mei Quach — candid moment",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 8.jpg",
+    alt: "Kids photography session Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 9.jpg",
+    alt: "Child portrait photography Montreal — Kar-Mei Quach",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 10.jpg",
+    alt: "Montreal kids photographer Kar-Mei Quach — natural light portrait",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 11.jpg",
+    alt: "Children photography Montreal — Kar-Mei Quach Photography",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 12.jpg",
+    alt: "Kids portrait session Montreal by Kar-Mei Quach",
+  },
+  {
+    src: "/assets/kids/Kids Portfolio 13.jpg",
+    alt: "Montreal children photographer Kar-Mei Quach — spirited portrait",
   },
 ];
 
@@ -72,7 +100,7 @@ export default function Page() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex h-[calc(100dvh-var(--navbar-height,0px))] min-h-0 md:h-[80vh] md:min-h-[520px] w-full overflow-hidden">
+      <section className="relative flex h-[calc(100dvh-var(--navbar-height,0px))] min-h-0 md:h-[80vh] md:min-h-[520px] w-full overflow-hidden pt-4">
 
         {/* ── White gradient top to bottom ── */}
         <div className="hidden xl:block absolute top-0 left-0 bottom-0 w-1/2 bg-gradient-to-b from-white to-transparent dark:from-transparent pointer-events-none z-10" />
@@ -108,7 +136,7 @@ export default function Page() {
               Portfolio — Kids
             </motion.p>
             <motion.h2
-              className="text-[5rem] font-medium tracking-tight leading-[1.05] text-white"
+              className="text-5xl font-medium tracking-tight leading-[1.05] text-white"
 
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -157,7 +185,7 @@ export default function Page() {
               transition={{ duration: 1.6, ease, delay: 0.1 }}
             >
               <Image
-                src="/assets/km-portfolio-kids-left.jpg"
+                src={heroImages[0].src}
                 alt={heroImages[0].alt}
                 width={1200}
                 height={1600}
@@ -214,7 +242,7 @@ export default function Page() {
         </div>
 
         {/* ── Desktop: text — identical container to gallery ── */}
-        <div className="hidden md:flex absolute inset-0 flex-col justify-between pt-4 md:pt-8 xl:pt-10 pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
+        <div className="hidden md:flex absolute inset-0 flex-col justify-between pb-16 lg:pb-20 px-8 md:px-16 lg:px-24 xl:px-48 z-10">
           <div className="max-w-5xl xl:max-w-screen-2xl mx-auto w-full">
             <div className="w-1/2 pr-8 md:pr-12 lg:pr-16">
               <motion.p

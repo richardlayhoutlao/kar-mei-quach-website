@@ -3,8 +3,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import LogoLight from "@/public/assets/km_logo.png"
-import LogoDark from "@/public/assets/km_logo_dark_mode.png"
+import LogoLight from "@/public/assets/commons/km-logo.png"
+import LogoDark from "@/public/assets/commons/km-logo-dark-mode.png"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { motion } from "framer-motion"
@@ -28,7 +28,7 @@ const NavbarDesktop = ({ portfolioItems, moreItems }: NavbarDesktopProps) => {
   useEffect(() => setMounted(true), [])
 
   return (
-    <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center h-60 px-8 lg:px-16 xl:px-24">
+    <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center h-60 px-8 md:px-16">
 
       {/* Left */}
       <div className="flex items-center justify-end gap-10 xl:gap-14">
